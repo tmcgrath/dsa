@@ -1,10 +1,13 @@
 # dsa
 
-Free Requirements for Hands On Exercises:
+Mac and Linux
+https://academy.datastax.com/downloads/welcome
+
+Free Reference and Environments:
 
 1) https://www.virtualbox.org/wiki/Downloads
 
-DS201
+DS201 (Note: OS Cassandra based and links to CSV files)
 2) https://s3.amazonaws.com/datastaxtraining/VM/DS201.tar.gz
 
 DS220
