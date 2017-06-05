@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="266px" height="254px" viewBox="0 0 266 254" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="CLStrongQuorum" sketch:type="MSArtboardGroup" transform="translate(-255.000000, -3.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(257.000000, -3.000000)">
+                <text id="-WRITE-CL=ONE" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                    <tspan x="107.987305" y="19"> WRITE CL=ONE</tspan>
+                </text>
+                <path d="M0.5,241.5 L126.5,115.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M126.5,115.5 L116.741926,121.015433 L120.984567,125.258074 L126.5,115.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square"></path>
+                <ellipse id="Oval-15-Copy" stroke="#979797" sketch:type="MSShapeGroup" transform="translate(149.521933, 74.774938) rotate(-45.000000) translate(-149.521933, -74.774938) " cx="149.521933" cy="74.7749375" rx="53.5" ry="48.351907"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

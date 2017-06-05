@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="137px" height="249px" viewBox="0 0 137 249" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Blue-Blank-Copy" sketch:type="MSArtboardGroup" transform="translate(-186.000000, -69.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(186.000000, 69.000000)">
+                <rect id="Rectangle-1" stroke="#979797" fill="#9CD233" sketch:type="MSShapeGroup" x="1" y="174" width="136" height="75" rx="8"></rect>
+                <text id="Master" sketch:type="MSTextLayer" font-family="Helvetica" font-size="32" font-weight="normal" fill="#000000">
+                    <tspan x="19" y="220">Leader</tspan>
+                </text>
+                <g id="Rectangle-1-Copy-2-+-Slave" transform="translate(1.000000, 87.000000)">
+                    <rect id="Rectangle-1-Copy-2" stroke="#979797" fill="#C41425" sketch:type="MSShapeGroup" x="0" y="0" width="136" height="75" rx="8"></rect>
+                    <text id="Slave" sketch:type="MSTextLayer" font-family="Helvetica" font-size="32" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="8" y="46">Follower</tspan>
+                    </text>
+                </g>
+                <g id="Rectangle-1-Copy-3-+-Slave-Copy">
+                    <rect id="Rectangle-1-Copy-3" stroke="#979797" fill="#C41425" sketch:type="MSShapeGroup" x="0" y="0" width="136" height="75" rx="8"></rect>
+                    <text id="Slave-Copy" sketch:type="MSTextLayer" font-family="Helvetica" font-size="32" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="8" y="46">Follower</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

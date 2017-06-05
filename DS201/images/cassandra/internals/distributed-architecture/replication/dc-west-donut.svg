@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+   <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+     "http://www.w3.org/TR/2001/
+      REC-SVG-20010904/DTD/svg10.dtd">
+      <svg xmlns="http://www.w3.org/2000/svg" width="210" height="210" aria-label="A chart." style="overflow: hidden;">
+        <defs id="defs"/><rect x="0" y="0" width="210" height="210" stroke="none" stroke-width="0" fill="none"/>
+        <g><path d="M106,106L106,12A94,94,0,0,1,200,106L106,106A0,0,0,0,0,106,106" stroke="#ffffff" stroke-width="0" fill="#ca5f14"/></g>
+        <g><path d="M106,106L12,106.00000000000001A94,94,0,0,1,106,12L106,106A0,0,0,0,0,106,106" stroke="#ffffff" stroke-width="0" fill="#9cd233"/></g>
+        <g><path d="M106,106L106,200A94,94,0,0,1,12,106.00000000000001L106,106A0,0,0,0,0,106,106" stroke="#ffffff" stroke-width="0" fill="#c41425"/></g>
+        <g><path d="M106,106L200,106A94,94,0,0,1,106,200L106,106A0,0,0,0,0,106,106" stroke="#ffffff" stroke-width="0" fill="#227b64"/></g>
+        <g/><circle cx="106" cy="106" r="80" fill="#9EACAB" stroke="none" stroke-width="0"/>
+      </svg>

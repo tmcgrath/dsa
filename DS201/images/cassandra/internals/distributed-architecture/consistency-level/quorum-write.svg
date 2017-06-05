@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="385px" height="326px" viewBox="0 0 385 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="CLStrongQuorum" sketch:type="MSArtboardGroup" transform="translate(-256.000000, -3.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(258.000000, -21.000000)">
+                <text id="-WRITE-CL=QUORUM" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                    <tspan x="88.984375" y="37"> WRITE CL=QUORUM</tspan>
+                </text>
+                <path d="M0.5,281.5 L125.5,133.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M125.5,133.5 L116.239404,139.815169 L120.823244,143.686656 L125.5,133.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M0.5,281.5 L290.5,289.5" id="Line-Copy-2" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-2-decoration-1" d="M290.5,289.5 L279.786834,286.203323 L279.62138,292.201041 L290.5,289.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square"></path>
+                <ellipse id="Oval-15-Copy" stroke="#979797" sketch:type="MSShapeGroup" transform="translate(233.016609, 199.968098) rotate(-45.000000) translate(-233.016609, -199.968098) " cx="233.016609" cy="199.968098" rx="93.5" ry="188.845423"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.3" name="generator" />
+<title>Duplication and Consistency</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/goto/deck.goto.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/datastax.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Duplication and Consistency</h1>
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-replication">
+<h2>Replication</h2>
+
+</section>
+<section class="slide" id="replication">
+<h2>Replication</h2>
+<div class="paragraph" id="replr"><p><strong>Simple Strategy</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>One of Cassandra&#8217;s fault-tolerance strategies is replication. Replication is simply a matter of duplicating data across nodes. Cassandra performs this duplication on a partition basis. We set the replication factor on a per-table basis. Here we first examine SimpleStrategy replication.</p></div>
+<div class="paragraph"><p>Animation 1: We will first look at a replication factor of one, meaning Cassandra will store only one copy of each partition in the cluster. This is a dangerous place to be, but it&#8217;s a good place to start the discussion.</p></div>
+<div class="paragraph"><p>Animation 2: A write request to store data for partition 59 arrives.</p></div>
+<div class="paragraph"><p>Animation 3: The upper right node will act as the coordinator.</p></div>
+<div class="paragraph"><p>Animation 4: Notice 59 falls into the purple range. We change the partition color to purple to indicate this.</p></div>
+<div class="paragraph"><p>Animation 5: The coordinator forwards the write request to the appropriate node.</p></div>
+<div class="paragraph"><p>Animation 6: [Graphics clear.]</p></div>
+<div class="paragraph"><p>Animation 7: Let&#8217;s increase the replication factor to two.</p></div>
+<div class="paragraph"><p>Animation 8: This has the effect of doubling the range that each node is responsible for. For example, node 75 is not only responsible for tokens falling in the red range, but now node 75 will also store tokens falling in the purple range as well. Increasing the replication factor with SimpleStrategy has the effect of causing nodes to store replicas moving in a clockwise direction.</p></div>
+<div class="paragraph"><p>Animation 9: Again our request to write partition with token 59 arrives.</p></div>
+<div class="paragraph"><p>Animation 10: This time the coordinator forwards the write request to not only the purple node but also the red node as well.</p></div>
+<div class="paragraph"><p>Animation 11: [Graphics fade.]</p></div>
+<div class="paragraph"><p>Animation 12: Let&#8217;s increase the replication factor to three. Can you reason about how this changes our replication animation?</p></div>
+<div class="paragraph"><p>Animation 13: Now the sky blue node, the red node, and the purple node are all responsible for the purple range. (It may help to consider each node and consider the colors leading into it from a counter-clockwise direction.)</p></div>
+<div class="paragraph"><p>Animation 14: The write request comes in.</p></div>
+<div class="paragraph"><p>Animation 15: The coordinator forwards the request to the appropriate replica nodes.</p></div>
+<div class="paragraph"><p>Animation 16: [Graphics fade.]</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="node-failure">
+<h2>Node Failure</h2>
+<div class="paragraph"><p><span class="image"><img alt="shark attack" src="images/cassandra/internals/distributed-architecture/replication/shark-attack.png" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Consider what happens when a node (or a few nodes) fail due to unforeseen circumstances.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="request">
+<h2>Request</h2>
+<div class="paragraph" id="rqst"><p><strong>Simple Strategy</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Here we have two nodes that failed to survive the natural disaster. Notice these two also happen to be replica nodes for our partition 59 that we wrote to the cluster.</p></div>
+<div class="paragraph"><p>Animation 1: A request for partition 59 arrives. Note any node can coordinate this request. We chose the bottom right node (which differs from the earlier write request coordinator node) for illustrative purposes.</p></div>
+<div class="paragraph"><p>Animation 2: The coordinator can retrieve the replica from any of the three nodes. However, only one node is up.</p></div>
+<div class="paragraph"><p>Animation 3: This node services the request, and the coordinator forwards the response back to the client. The client is blissfully unaware that a disaster has occurred.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="multi-data-center-replication">
+<h2>Multi Data Center Replication</h2>
+<div class="paragraph" id="mdat"><p><strong>Network Topology Strategy</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Using SimpleStrategy is fine for training and tinkering purposes, however, in production, you most likely will have multiple data centers and want to distribute your replicas intelligently among them.</p></div>
+<div class="paragraph"><p>Animation 1: We moved the nodes into separate data centers. Data centers are a logical concept to Cassandra, however, you will also want to physically position your nodes in correlation with your logical data centers. Notice we now have TWO rings instead of one. Although we maintained each node&#8217;s token value, both data centers make their own individual rings. It may help to cover one of the rings with your hand and look at them separately as individual rings.</p></div>
+<div class="paragraph"><p>Animation 2: Here we show how to create a keyspace using NetworkTopologyStrategy. Notice the west data center will store two replicas, and the east data center will store three. How many replicas you store per data center is based on your organizational needs.</p></div>
+<div class="paragraph"><p>Animation 3: A request comes to ANY node in the cluster. Again, this node acts as the coordinator. Before advancing the animation, try to determine which node in this data center must store replicas of this partition. Within the individual data center, it may help to think in terms of SimpleStrategy.</p></div>
+<div class="paragraph"><p>Animation 4: Nodes 75 and 0 store the replicas as 59 falls into 75&#8217;s primary range, and 59 falls into 0&#8217;s secondary range. The coordinator also forwards the write request to the second data center. The node handling the write in the second data center acts as the <em>remote coordinator</em>. Can you determine which nodes will store the replicas before you advance the animation?</p></div>
+<div class="paragraph"><p>Animation 5: Token 59 falls into the remote coordinator&#8217;s token range. With a replication factor of three in this data center, both nodes 88 and 13 store replicas as well.</p></div>
+<div class="paragraph"><p>If one data center dies, no worries, the second data center can pick up the slack. Ideally you will also place your data centers geographically close to your clients as well to get around the speed of light problem.</p></div>
+<div class="paragraph"><p>The major point to note here is that with simple strategy, replication simply walked around the ring. With network topology strategy, replication walks across data centers and replicates in each ring individually.</p></div>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-11">
+<h2>Exercise 11&#8212;&#8203;Replication</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-consistency-level">
+<h2>Consistency</h2>
+
+</section>
+<section class="slide" id="cap-theorem">
+<h2>CAP Theorem</h2>
+<div class="paragraph" id="dueji"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>CAP stands for consistency, availability, and partition tolerance. The CAP theorem applies only when you have a distributed system (like Cassandra) and there is a failure. When there is no failure, you get have all three.</p></div>
+<div class="paragraph"><p>Consistency: The database replicas agree on the current state of the data.</p></div>
+<div class="paragraph"><p>Availability: The cluster can return a response.</p></div>
+<div class="paragraph"><p>Partition Tolerance: During a network partition (failure), Cassandra still serves requests.</p></div>
+<div class="paragraph"><p><em>The CAP theorem only applies when there is a failure</em>. During a failure, a distributed database can only guarantee two of these. For example, during a network partition, we can be available and continue serving requests from both halves, but each half may not serve consistent data. If we decide we must be consistent and available, then we won&#8217;t put up with network partitions. If we want partition tolerance and consistency, then we simply won&#8217;t be available.</p></div>
+<div class="paragraph"><p>Animation 1: Cassandra defaults to choosing partition tolerant and available. If there is a failure, by default, Cassandra feels it is better to serve some type of response, even if it is a stale response, rather than no response at all.</p></div>
+<div class="paragraph"><p>However, Cassandra supports configuring your CAP choices at a <em>per query level</em>. Thus for one query, you can change Cassandra from being an AP database to an AC database for just a single query. We call this tunable consistency.</p></div>
+<div class="paragraph"><p>In a big data scenario where there are multiple machines acting as your database, you have to make a choice here. There is no way around it. If you are serving users around the planet, unless you are willing to pay the time penalty for every request, there is no physical way to keep two geographically separated clusters in sync 100% of the time.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-levels">
+<h2>Consistency Levels</h2>
+<div class="paragraph" id="cftw"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Here we have a simple cluster with a replication factor of one. Let&#8217;s explore what consistency levels mean in this scenario.</p></div>
+<div class="paragraph"><p>Consistency comes into play with both writes and reads.</p></div>
+<div class="paragraph"><p>Animation 1: A client makes a read or write request to the cluster. The top node acts as coordinator.</p></div>
+<div class="paragraph"><p>Animation 2: The coordinator forwards the request to the appropriate replica nodes.</p></div>
+<div class="paragraph"><p>Animation 3: We will first consider a consistency level of one.</p></div>
+<div class="paragraph"><p>Animation 4: With consistency level one, only one replica node must acknowledge the write or return a result on a read.</p></div>
+<div class="paragraph"><p>Animation 5: The coordinator returns the result to the client.</p></div>
+<div class="paragraph"><p>Animation 6: Next we consider a consistency level of quorum.</p></div>
+<div class="paragraph"><p>Animation 7: With quorum, a majority of the replica nodes must return a response. The coordinator selects the records with the latest timestamps and returns the result.</p></div>
+<div class="paragraph"><p>Animation 8: Next we consider a consistency level of all.</p></div>
+<div class="paragraph"><p>Animation 9: This is much like quorum except ALL replica nodes must provide a result for the coordinator to consider.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="strong-consistency">
+<h2>Strong Consistency</h2>
+<div class="paragraph" id="hicu"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>If you require strong consistency (that is, you always have the latest result), there are a few ways to accomplish that. However, you will pay for it in latency.</p></div>
+<div class="paragraph"><p>Animation 1: Client makes a WRITE request. Left node acts as coordinator.</p></div>
+<div class="paragraph"><p>Animation 2: Coordinator forwards the write request to replica nodes.</p></div>
+<div class="paragraph"><p>Animation 3: Consistency level ALL requires that all three replica nodes acknowledge the write.</p></div>
+<div class="paragraph"><p>Animation 4: Since you know that all three nodes acknowledged the previous write, you only need to read at consistency level ONE to get the latest result. Any of the three replica nodes will return the latest data.</p></div>
+<div class="paragraph"><p>Animation 5: The cluster returns a response back to the client.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-level-quorum">
+<h2>Consistency Level Quorum</h2>
+<div class="paragraph" id="strq"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Let&#8217;s consider what you must do to get a strong (latest result) response back when using consistency level QUORUM.</p></div>
+<div class="paragraph"><p>Animation 1: Client writes at QUORUM.</p></div>
+<div class="paragraph"><p>Animation 2: The client must also read at quorum. Notice the data read from the bottom node which is not yet consistent with the data on the top and right node. However, the read also read from the right node which is consistent. The coordinator will drop the stale data from the bottom node and return the latest data from the right node.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-level-one">
+<h2>Consistency Level One</h2>
+<div class="paragraph" id="cloney"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Now we will consider the situation with a consistency level of ONE.</p></div>
+<div class="paragraph"><p>Animation 1: Client writes at consistency level of one. The top node acknowledges the write. The right and bottom nodes will eventually acknowledge the writes, but for this instant in time, they still have stale data.</p></div>
+<div class="paragraph"><p>Animation 2: Client reads at consistency level one. The bottom node returns a result faster than the other two, however, that result is stale.</p></div>
+<div class="paragraph"><p>When writing at one and reading at one, we cannot guarantee consistent (latest, not stale) data. In order to guarantee consistent results, our write consistency level plus our read consistency level must be greater than our replication factor.</p></div>
+<div class="paragraph"><p>Again, you will pay for this with latency.</p></div>
+<div class="paragraph"><p>But you may be surprised. Writing and reading at consistency level one is the least latent way to go, and there is a chance you may not get consistent results. But Netflix did a stress test with this scenario and found that they could always rely on writing and reading at one: <a class="bare" href="https://youtu.be/A6qzx_HE3EU?t=4m7s">https://youtu.be/A6qzx_HE3EU?t=4m7s</a></p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-across-data-centers">
+<h2>Consistency Across Data Centers</h2>
+<div class="ulist" id="qvlq">
+<ul>
+<li>QUORUM vs. LOCAL_QUORUM</li>
+<li>Cross DC consistency is a performance hit!</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Now we will examine how consistency levels affect performance in a multi-data center scenario. Here we have two data centers.</p></div>
+<div class="paragraph"><p>Animation 1: Client makes a write or read request to the cluster.</p></div>
+<div class="paragraph"><p>Animation 2: If the consistency level is LOCAL_QUORUM, then only the target data center must achieve quorum consistency before acknowledging the write or returning a result set on a read.</p></div>
+<div class="paragraph"><p>Animation 3: As we have seen before, however, the coordinator will forward the request to the second data center via a remote coordinator.</p></div>
+<div class="paragraph"><p>Animation 4: If your request is consistency level QUORUM vs. LOCAL_QUORUM, then to have a majority vote, both coordinators must concur on the result since two in this case would make the majority.</p></div>
+<div class="paragraph"><p>Again, the cost here is time.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-settings">
+<h2>Consistency Settings</h2>
+<div class="paragraph"><p><strong>In order of weakest to strongest</strong></p></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:50%" />
+<col style="width:50%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Setting</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ANY</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storing a hint at minimum is satisfactory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ALL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Every node must participate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ONE, TWO, THREE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks closest node(s) to coordinator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUORUM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Majority vote, (sum_of_replication_factors / 2) + 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LOCAL_ONE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Closest node to coordinator in same data center</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LOCAL_QUORUM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Closest quorum of nodes in same data center</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EACH_QUORUM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quorum of nodes in each data center, applies to writes only</p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Search for the term closest in the page at <a class="bare" href="https://wiki.apache.org/cassandra/ArchitectureInternals">https://wiki.apache.org/cassandra/ArchitectureInternals</a> for more information.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-settings-2">
+<h2>Consistency Settings</h2>
+<div class="ulist">
+<ul>
+<li><p>
+The higher the consistency, the less chance you may get stale data<div class="ulist">
+<ul>
+<li>Pay for this with latency</li>
+<li>Depends on your situational needs</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-12">
+<h2>Exercise 12&#8212;&#8203;Consistency Level</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-hinted-handoff">
+<h2>Hinted Handoff</h2>
+
+</section>
+<section class="slide" id="failed-writes">
+<h2>Failed Writes</h2>
+<div class="paragraph" id="hhdoff"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Depending on your consistency level, you can still service write requests even when nodes are down. Cassandra accomplishes this via hinted handoff.</p></div>
+<div class="paragraph"><p>Animation 1: A write request comes into the cluster. Replication factor is three.</p></div>
+<div class="paragraph"><p>Animation 2: As usual, the coordinator forwards the write requests to the replica nodes.</p></div>
+<div class="paragraph"><p>Animation 3: [Replica 2 forward]</p></div>
+<div class="paragraph"><p>Animation 4: The coordinator forwards the request to the third replica node. However, this node is down.</p></div>
+<div class="paragraph"><p>Animation 5: Although the coordinator is NOT a replica node, it stores the replica to send to the down node after that node comes online again.</p></div>
+<div class="paragraph"><p>Animation 6: Cassandra acknowledges the write back to the client as successful.</p></div>
+<div class="paragraph"><p>Animation 7: Our node comes back online.</p></div>
+<div class="paragraph"><p>Animation 8: Once aware, the former coordinator node forwards the write to the now online replica node.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="consistency-level">
+<h2>Consistency Level</h2>
+<div class="ulist">
+<ul>
+<li>Consistency level of ANY means storing a hint suffices</li>
+<li>Consistency level of ONE or more means at least one replica must successfully write</li>
+<li>Hint does not suffice</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="settings">
+<h2>Settings</h2>
+<div class="ulist">
+<ul>
+<li>cassandra.yaml</li>
+<li>You can disable hinted handoff</li>
+<li>Set the amount of time a node will store a hint</li>
+<li>Default is three hours</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-13">
+<h2>Exercise 13&#8212;&#8203;Hinted Handoff</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-read-repair">
+<h2>Read Repair</h2>
+
+</section>
+<section class="slide" id="anti-entropy-operations">
+<h2>Anti-Entropy Operations</h2>
+<div class="ulist">
+<ul>
+<li>Network partitions cause nodes to get out of sync</li>
+<li>You must choose between availability vs. consistency level</li>
+<li>CAP Theorem</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Due to network troubles, nodes failing, corrupted disks, etc. over time nodes can get out of sync with each other concerning replicas.</p></div>
+<div class="paragraph"><p>When querying your Cassandra database, you have to decide between consistency vs. availability <em>during a network partition</em>. This goes back to the CAP theorem. With Cassandra, you can tune whether nodes are always in sync with each other vs. being highly available. When there is a network partition, do you want to force clients to wait until the system is in a consistent state, or do you want to give the clients the best possible answer available?</p></div>
+<div class="paragraph"><p>Choosing availability means there could be a disagreement between replicas as to the actual data value during a partition.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="normal-read">
+<h2>Normal Read</h2>
+<div class="paragraph" id="nrred"><p><strong>Satisfying Consistency Level</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Let&#8217;s examine in detail what generally happens on a read with a full consistency level. Here is our cluster with data.</p></div>
+<div class="paragraph"><p>Animation 1: A request comes into the cluster. Left node acts as the coordinator.</p></div>
+<div class="paragraph"><p>Animation 2: This request has a consistency level of ALL, the highest consistency level you can require. These three nodes store the replicas of interest.</p></div>
+<div class="paragraph"><p>Animation 3: The coordinator forwards the request to the most responsive node which is the node on the bottom.</p></div>
+<div class="paragraph"><p>Animation 4: The coordinator also forwards the request to the other replica nodes, but the coordinator only requires a digest (a checksum) of the data, not the actual data. This is an optimization.</p></div>
+<div class="paragraph"><p>Animation 5: This first node retrieves the replica.</p></div>
+<div class="paragraph"><p>Animation 6: The other nodes perform the checksum.</p></div>
+<div class="paragraph"><p>Animation 7: The first node returns the replica.</p></div>
+<div class="paragraph"><p>Animation 8: The other two return their checksums.</p></div>
+<div class="paragraph"><p>Animation 9: The coordinator executes the checksum on the data returned by the bottom node.</p></div>
+<div class="paragraph"><p>Animation 10: The coordinator compares all of the checksums and determines that they match.</p></div>
+<div class="paragraph"><p>Animation 12: The coordinator returns the data to the client.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="read-repair">
+<h2>Read Repair</h2>
+<div class="paragraph" id="rdrpairr"><p><strong>Keeping data in sync</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Now let&#8217;s consider a similar scenario where the checksums don&#8217;t match, however.</p></div>
+<div class="paragraph"><p>Animation 1: Again, a request comes into the cluster; left node acts as coordinator.</p></div>
+<div class="paragraph"><p>Animation 2: Consistency level is ALL, meaning, the coordinator must verify ALL replicas are in sync.</p></div>
+<div class="paragraph"><p>Animation 3: Coordinator forwards the request to the most responsive node.</p></div>
+<div class="paragraph"><p>Animation 4: Coordinator requests checksums from the other two nodes.</p></div>
+<div class="paragraph"><p>Animation 5: Bottom node retrieves the replica.</p></div>
+<div class="paragraph"><p>Animation 6: Other nodes compute the checksums. Notice the checksum values do not match in this case.</p></div>
+<div class="paragraph"><p>Animation 7: Bottom node returns the replica.</p></div>
+<div class="paragraph"><p>Animation 8: Other two return their checksums.</p></div>
+<div class="paragraph"><p>Animation 9: Coordinator performs checksum on the replica that the bottom node returned.</p></div>
+<div class="paragraph"><p>Animation 10: Coordinator compares the checksums and finds they do not match. The coordinator is responsible for syncing all the nodes with the latest data.</p></div>
+<div class="paragraph"><p>Animation 11: [Checksums fade out.]</p></div>
+<div class="paragraph"><p>Animation 12: Recall that each cell of data stores a timestamp. The coordinator can use this timestamp to determine which replica has the latest data. In this case, the replica returned by the bottom node has a timestamp of 135.</p></div>
+<div class="paragraph"><p>Animation 13: The coordinator requests the full replicas from the other two nodes.</p></div>
+<div class="paragraph"><p>Animation 14: The two replica nodes retrieve their copies.</p></div>
+<div class="paragraph"><p>Animation 15: The two nodes return their replicas. Notice the right node has the latest timestamp of 159.</p></div>
+<div class="paragraph"><p>Animation 16: The coordinator discards the older replicas.</p></div>
+<div class="paragraph"><p>Animation 17: The coordinator sends copies of the latest replica to the nodes that are out of date.</p></div>
+<div class="paragraph"><p>Animation 18: The coordinator returns the requested (latest) data.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="read-repair-chance">
+<h2>Read Repair Chance</h2>
+<div class="ulist">
+<ul>
+<li>Performed when read is at a consistency level less than ALL</li>
+<li>Request reads only a subset of the replicas</li>
+<li>We can&#8217;t be sure replicas are in sync</li>
+<li>Generally you are safe, but no guarantees</li>
+<li>Response sent immediately when consistency level is met</li>
+<li>Read repair done asynchronously in the background</li>
+<li>10% by default</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Obviously executing queries with a consistency level of ALL trades time for having correct results 100% of the time. Depending on your situation, you may find you require less consistency where only most of the time you will get the correct result.</p></div>
+<div class="paragraph"><p>In cases where you query for a consistency level less than ALL, Cassandra will still perform a read repair probabilistically. This probability is configurable, but it defaults to 10% of the time. However, when Cassandra performs a read repair under these circumstances, it does so asynchronously. That is, the client may receive stale data, but Cassandra synchronizes the data immediately after for any further requests on that particular result set.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="nodetool-repair">
+<h2>Nodetool Repair</h2>
+<div class="ulist">
+<ul>
+<li>Syncs all data in the cluster</li>
+<li><p>
+Expensive<div class="ulist">
+<ul>
+<li>Grows with amount of data in cluster</li>
+</ul>
+</div></p></li>
+<li>Use with clusters servicing high writes/deletes</li>
+<li>Last line of defense</li>
+<li>Run to synchronize a failed node coming back online</li>
+<li>Run on nodes not read from very often</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-14">
+<h2>Exercise 14&#8212;&#8203;Read Repair</h2>
+
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<form action="." class="goto-form" method="get">
+<label for="goto-slide">Go to Slide:</label>
+<input id="goto-slide" list="goto-datalist" name="slidenum" type="text" />
+<datalist id="goto-data-list"></datalist>
+<input type="submit" value="Go" />
+</form>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/d3.v2.js"></script>
+<script src="deck.js/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/split/deck.split.js"></script>
+<script src="deck.js/extensions/animation/deck.animation.js"></script>
+<script src="deck.js/extensions/deck.js-notes/deck.notes.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/clone/deck.clone.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="js/module-4.js"></script>
+<footer>
+<div class="flex-element deck-course">
+<p>&copy; 2016 DataStax. Use only with permission. &bull;
+<span class="course-title">Duplication and Consistency</span></p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://academy.datastax.com" target="blank">DataStax Academy</a>
+</div>
+<div class="deck-progressbar">
+<span></span>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="669px" height="395px" viewBox="0 0 669 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 1 Copy + cqlsh:killrvideo&gt; CO Copy 2 + student@ds220:~$ cql copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-Copy-+-cqlsh:killrvideo&gt;-CO-Copy-2-+-student@ds220:~$-cql-copy" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-1-Copy" stroke="#000000" fill="#000000" sketch:type="MSShapeGroup" x="0" y="0" width="669" height="395"></rect>
+            <text id="cqlsh:killrvideo&gt;-CO-Copy-2" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="11" y="112">cqlsh:killrvideo&gt; CONSISTENCY </tspan>
+                <tspan x="11" y="131">Current consistency level is ONE.</tspan>
+            </text>
+            <text id="student@ds220:~$-cql-copy" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="10" y="16">student@ds220:~$ cqlsh</tspan>
+                <tspan x="10" y="35">Connected to DS220 Cluster at 127.0.0.1:9042.</tspan>
+                <tspan x="10" y="54">[cqlsh 5.0.1 | Cassandra 2.1.3 | CQL spec 3.2.0 | Native protocol v3]</tspan>
+                <tspan x="10" y="73">Use HELP for help.</tspan>
+                <tspan x="10" y="92">cqlsh&gt;  USE killrvideo;</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="108px" height="38px" viewBox="0 0 108 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M2.5,2.5 L102.5,35.5" id="Line" stroke="#D1870E" stroke-width="3" stroke-linecap="square" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M102.5,35.5 L93.184143,29.2666375 L91.3038782,34.9644094 L102.5,35.5 Z" stroke="#D1870E" stroke-width="3" stroke-linecap="square" fill="#D8D8D8"></path>
+    </g>
+</svg>

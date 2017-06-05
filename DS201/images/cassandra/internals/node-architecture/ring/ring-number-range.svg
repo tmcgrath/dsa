@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="479px" height="538px" viewBox="0 0 479 538" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Blank-Ring" sketch:type="MSArtboardGroup" transform="translate(-9.000000, -7.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(11.000000, 2.000000)">
+               <path d="M216.547255,66.9115564 C95.1932207,77.5191982 0,179.392815 0,303.5 C0,434.667628 106.332372,541 237.5,541 L237.5,541 C368.667628,541 475,434.667628 475,303.5 C475,172.332372 368.667628,66 237.5,66" id="Oval-1" stroke="#979797" stroke-width="3" sketch:type="MSShapeGroup"></path>
+                <path id="Oval-1-decoration-1" d="M216.547255,66.9115564 L206.049515,70.8406104 L205.527043,64.8634018 L216.547255,66.9115564 Z" stroke="#979797" stroke-width="3"></path>
+                <text id="+2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="bold" fill="#000000">
+                    <tspan x="145" y="50">+2</tspan>
+                </text>
+                <text id="-1" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="bold" fill="#000000">
+                    <tspan x="190" y="50">-1</tspan>
+                </text>
+                <text id="63" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20" font-weight="bold" fill="#000000">
+                    <tspan x="175" y="22">63</tspan>
+                </text>
+                <text id="-2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="bold" fill="#000000">
+                    <tspan x="253" y="50">-2</tspan>
+                </text>
+                <text id="63" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20" font-weight="bold" fill="#000000">
+                    <tspan x="280" y="22">63</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

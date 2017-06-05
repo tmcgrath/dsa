@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1430px" height="462px" viewBox="0 0 1430 462" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Orange-Blank-4-nodes" sketch:type="MSArtboardGroup" transform="translate(-113.000000, -10.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(120.000000, 14.000000)">
+                <g transform="translate(467.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-29" stroke="#1B7387" stroke-width="15" cx="226.5" cy="227" r="194"></circle>
+                    <circle id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="37.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="415.5" cy="227.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="416.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="37.5" cy="227.5" r="37.5"></circle>
+                </g>
+                <circle id="Oval-29" stroke="#1B7387" stroke-width="15" sketch:type="MSShapeGroup" cx="194.5" cy="227" r="194"></circle>
+                <circle id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" sketch:type="MSShapeGroup" cx="194.5" cy="37.5" r="37.5"></circle>
+                <circle id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" sketch:type="MSShapeGroup" cx="194.5" cy="416.5" r="37.5"></circle>
+                <g transform="translate(966.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-29" stroke="#1B7387" stroke-width="15" cx="226.5" cy="227" r="194"></circle>
+                    <circle id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="37.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="360.5" cy="91.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="415.5" cy="227.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-3" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="360.5" cy="363.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="416.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-5" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="92.5" cy="363.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="37.5" cy="227.5" r="37.5"></circle>
+                    <circle id="Oval-10-Copy-7" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="92.5" cy="91.5" r="37.5"></circle>
+                </g>
+                <text id="------------100,000" sketch:type="MSTextLayer" font-family="Arial" font-size="30" font-weight="bold" fill="#000000">
+                    <tspan x="135" y="211">100,000</tspan>
+                    <tspan x="49" y="245">transactions/second</tspan>
+                </text>
+                <text id="------------200,000" sketch:type="MSTextLayer" font-family="Arial" font-size="30" font-weight="bold" fill="#000000">
+                    <tspan x="633" y="215">200,000</tspan>
+                    <tspan x="548" y="249">transactions/second</tspan>
+                </text>
+                <text id="------------400,000" sketch:type="MSTextLayer" font-family="Arial" font-size="30" font-weight="bold" fill="#000000">
+                    <tspan x="1132" y="211">400,000</tspan>
+                    <tspan x="1047" y="245">transactions/second</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

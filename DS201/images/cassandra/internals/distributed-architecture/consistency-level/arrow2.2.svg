@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="262px" height="271px" viewBox="0 0 262 271" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Line + Line Copy + Line Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="CLimmediatenew-Copy" sketch:type="MSArtboardGroup" transform="translate(-228.000000, -95.000000)" stroke-linecap="square" stroke="#979797" stroke-width="3">
+            <g id="Line-+-Line-Copy-+-Line-Copy-2" sketch:type="MSLayerGroup" transform="translate(229.000000, 99.000000)">
+                <path d="M1.09280936,132.664151 L110.415552,0.860377358" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M110.415552,0.860377358 L101.211616,7.25784339 L105.829784,11.0883164 L110.415552,0.860377358 Z"></path>
+                <path d="M1.09280936,132.664151 L119.161371,262.686792" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-decoration-1" d="M119.161371,262.686792 L114.12197,252.674578 L109.680055,256.708111 L119.161371,262.686792 Z"></path>
+                <path d="M1.09280936,132.664151 L254.721572,139.788679" id="Line-Copy-2" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-2-decoration-1" d="M254.721572,139.788679 L244.010068,136.486606 L243.841592,142.48424 L254.721572,139.788679 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

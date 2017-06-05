@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="587px" height="512px" viewBox="0 0 587 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval-1" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup" cx="169" cy="169" r="169"></circle>
+            <circle id="Oval-1-Copy" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup" cx="416" cy="171" r="169"></circle>
+            <circle id="Oval-1-Copy-2" stroke="#979797" stroke-width="2" sketch:type="MSShapeGroup" cx="292" cy="341" r="169"></circle>
+            <text id="Consistency" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="95.828125" y="84">Consistency</tspan>
+            </text>
+            <text id="Availability" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="367.265625" y="84">Availability</tspan>
+            </text>
+            <text id="Partition-Tolerance" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="243.332031" y="432">Partition</tspan>
+                <tspan x="236.195312" y="461">Tolerance</tspan>
+            </text>
+            <path d="M261,238.5 C252.697334,219.572674 247.5,179.5 247.5,179.5 C247.5,179.5 282.460938,172 291.804688,172 C300.127604,172 337,179.5 337,179.5 C337,179.5 331.235189,221.213824 323.5,238.5 C316.170085,254.88049 291.804688,283.5 291.804688,283.5 C291.804688,283.5 267.465563,253.239341 261,238.5 Z" id="Triangle-1" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="980px" height="80px" viewBox="0 0 980 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-1-Copy" fill="#9EACAB" sketch:type="MSShapeGroup" x="0.803887801" y="0.202511774" width="978.79214" height="79.6546311" rx="8"></rect>
+            <rect id="Rectangle-4" fill="#007A97" sketch:type="MSShapeGroup" x="9.21069145" y="9.65306122" width="70.8573451" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4" fill="#007A97" sketch:type="MSShapeGroup" x="86.0728963" y="9.65306122" width="189.753568" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4-Copy-22" fill="#007A97" sketch:type="MSShapeGroup" x="86.0728963" y="9.65306122" width="189.753568" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4-Copy" fill="#007A97" sketch:type="MSShapeGroup" x="413.938239" y="9.65306122" width="168.061761" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4-Copy-21" fill="#007A97" sketch:type="MSShapeGroup" x="280.029866" y="9.65306122" width="129.104485" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4-Copy-3" fill="#007A97" sketch:type="MSShapeGroup" x="589.280143" y="11.0031397" width="86.4699804" height="62.1036107" rx="8"></rect>
+            <rect id="Rectangle-4-Copy-6" fill="#007A97" sketch:type="MSShapeGroup" x="920.748402" y="9.65306122" width="51.6417939" height="62.1036107" rx="8"></rect>
+            <text id="7" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="21.7808645" y="47.1036107">7</tspan>
+            </text>
+            <text id="13" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="97.4420974" y="47.1036107">13</tspan>
+            </text>
+            <text id="21" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="425.30744" y="47.1036107">21</tspan>
+            </text>
+            <text id="18" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="293.200525" y="47.1036107">18</tspan>
+            </text>
+            <text id="36" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="594.644485" y="47.1036107">36</tspan>
+            </text>
+            <rect id="Rectangle-4-Copy-4" fill="#007A97" sketch:type="MSShapeGroup" x="682.955956" y="11.0031397" width="230.044044" height="62.1036107" rx="8"></rect>
+            <text id="58" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="693.124185" y="47.1036107">58</tspan>
+            </text>
+            <text id="92" sketch:type="MSTextLayer" font-family="Courier" font-size="24" font-weight="normal" fill="#FFFFFF">
+                <tspan x="930.356177" y="47.1036107">92</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

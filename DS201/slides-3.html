@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.3" name="generator" />
+<title>Distributed Architecture</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/goto/deck.goto.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/datastax.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Distributed Architecture</h1>
+</section>
+<section class="slide transition-green" id="cassandra-internals-node-architecture-node">
+<h2>Node</h2>
+
+</section>
+<section class="slide" id="node">
+<h2>Node</h2>
+<div class="paragraph" id="ndrynde"><p><strong>Cassandra Node</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>A Cassandra node is a single Cassandra instance. It can serve as a database by itself, but we will soon see that there is strength in numbers.</p></div>
+<div class="paragraph"><p>Animation 1: Cassandra is a Java application executing on the Java virtual machine.</p></div>
+<div class="paragraph"><p>Animation 2: You can deploy Cassandra to the cloud.</p></div>
+<div class="paragraph"><p>Animation 3: You can deploy Cassandra to your own hardware as well.</p></div>
+<div class="paragraph"><p>Animation 4: Cassandra requires direct-attached storage. Do not use Cassandra with any type of network-attached storage.</p></div>
+<div class="paragraph"><p>Animation 5: [Images fade out.]</p></div>
+<div class="paragraph"><p>Animation 6: Both Cassandra read and write requests are simple. Cassandra acts as a huge hashtable storing partitions keyed off their partition key.</p></div>
+<div class="paragraph"><p>Animation 7: Here we see partition data with a token value of 55 stored inside this Cassandra node.</p></div>
+<div class="paragraph"><p>Animation 8: Here a request for the partition with a token value of 22 arrives.</p></div>
+<div class="paragraph"><p>Animation 9: Cassandra quickly locates the partition using some basic hashing principles discussed elewhere.</p></div>
+<div class="paragraph"><p>Animation 10: And returns the data</p></div>
+<div class="paragraph"><p>Animation 11: A typical Cassandra node can handle 3,000 to 5,000 such request per second per core. We recommend a rough max of one to three terabytes of data per node.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="nodetool">
+<h2>Nodetool</h2>
+<div class="paragraph"><p><strong>Node management</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Located in the <code>bin/ folder</code></li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>bin/nodetool help</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Management tool with several sub commands</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:50%" />
+<col style="width:50%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Command</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">help</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lists all possible sub commands</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current node settings and stats</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reports basic node health information</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>Many more</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-6">
+<h2>Exercise 6&#8212;&#8203;Node</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-node-architecture-ring">
+<h2>Ring</h2>
+
+</section>
+<section class="slide" id="the-pressures-of-scale">
+<h2>The Pressures of Scale</h2>
+<div class="paragraph" id="overloadednode"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Here we have a single yet happy Cassandra node.</p></div>
+<div class="paragraph"><p>Animation 1: As long as this single node receives fewer write/read requests than it can handle, life is good.</p></div>
+<div class="paragraph"><p>Animation 2: However, as soon as the number of requests passes this threshold, things get scary. The node can either lag or crash depending on circumstances.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="the-ring">
+<h2>The Ring</h2>
+<div class="paragraph" id="thering"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>So what we do in Cassandra is add more nodes, each node taking a slice of the workload. The requests no longer outnumber any node&#8217;s ability to serve them. Notice we structured the nodes in a ring-like fashion.</p></div>
+<div class="paragraph"><p>Animation 1: [Ring moves up.]</p></div>
+<div class="paragraph"><p>Animation 2: Having a ring however poses a question. When a request to store a partition arrives, how do we decide which node will handle the request and/or store the data?</p></div>
+<div class="paragraph"><p>Animation 3: It turns out that ANY node in the ring can service the request because all nodes are peers. Cassandra has zero concept of a leader/follower relationship. The node chosen to handle the request is called the <em>coordinator</em>. Although the top-left node acts as the coordinator, we must still determine which node will actually store the data.</p></div>
+<div class="paragraph"><p>Animation 4: We do this by having each node take a slice of the token range value. The token range in this case is 0-99. Notice the top node stores all partitions whose token falls in the range of 88-0. The next node clockwise stores partitions with token values falling in the range of 1-13, and so on.</p></div>
+<div class="paragraph"><p>Animation 5: Since the bottom node is responsible for partition tokens from 51 to 63 (purple range), the coordinator forwards the data to that node since this partition has a token value of 59.</p></div>
+<div class="paragraph"><p>Animation 6: [Coordinator forwards the data.]</p></div>
+<div class="paragraph"><p>Note: ANY node can act as the coordinator. All nodes are aware of the ring token value distribution, and all nodes (should be configured to) use the same partitioner. Thus any node can determine which nodes store which data. There is no leader node in Cassandra.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="the-range">
+<h2>The Range</h2>
+<div class="paragraph" id="fullrng"><p>100 values is just not enough.</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>We often consider rings with a token range of 100 values, however, chances are you will store more than 100 partitions in your database.</p></div>
+<div class="paragraph"><p>Animation 1: The actual token range runs from -2^63 to 2^63 - 1. This is a large enough range to store your data.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="token-value-distribution">
+<h2>Token Value Distribution</h2>
+<div class="paragraph" id="csthsh"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The partitioner is responsible for hashing the partition key to a token value. Some partitioners are better than others. A poor partitioner does not give an even spread of token values around the ring.</p></div>
+<div class="paragraph"><p>Animation 1: This partitioner does not have an even distribution in its token values, so most of the partitions end up on the top and bottom nodes putting undue stress upon them. The other two nodes are severely underutilized.</p></div>
+<div class="paragraph"><p>Animation 2: Cassandra uses a Mumur3Partitioner, which spreads its token values uniformly around the ring.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="joining-the-cluster">
+<h2>Joining the Cluster</h2>
+<div class="ulist">
+<ul>
+<li>Nodes join the cluster by communicating with any node</li>
+<li>Cassandra finds these <em>seed nodes</em> list of possible nodes in cassandra.yaml</li>
+<li>Seed nodes communicate cluster topology to the joining node</li>
+<li>Once the new node joins the cluster, all nodes are peers</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="drivers">
+<h2>Drivers</h2>
+<div class="ulist">
+<ul>
+<li>Drivers intelligently choose which node would best coordinate a request</li>
+<li>Per-query basis:</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>ResultSet results = session.execute("&lt;query&gt;");</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>TokenAwarePolicy - driver chooses node which contains the data</li>
+<li>RoundRobinPolicy - driver round robins the ring</li>
+<li>DCAwareRoundRobinPolicy - driver round robins the target data center</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="scale">
+<h2>Scale</h2>
+<div class="paragraph"><p><strong>Cassandra scales at a near-linear rate</strong></p></div>
+<div class="paragraph"><p><span class="image"><img alt="write mostly workload" height="600px" src="images/cassandra/internals/node-architecture/ring/write-mostly-workload.png" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>END POINT, a third party, tested several big-data databases and produced the following paper: <a class="bare" href="http://www.datastax.com/wp-content/themes/datastax-2014-08/files/NoSQL_Benchmarks_EndPoint.pdf">http://www.datastax.com/wp-content/themes/datastax-2014-08/files/NoSQL_Benchmarks_EndPoint.pdf</a></p></div>
+<div class="paragraph"><p>Video: <a class="bare" href="http://youtu.be/ioZugO2MEAk?t=59m40s">http://youtu.be/ioZugO2MEAk?t=59m40s</a></p></div>
+<div class="paragraph"><p>Here we see that Cassandra dominates. Read the entire paper for even more awesome details.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Cassandra scales at a near-linear rate</strong></p></div>
+<div class="paragraph"><p><span class="image"><img alt="read mostly workload" height="600px" src="images/cassandra/internals/node-architecture/ring/read-mostly-workload.png" /></span></p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Cassandra scales at a near-linear rate</strong></p></div>
+<div class="paragraph"><p><span class="image"><img alt="read write mix" height="600px" src="images/cassandra/internals/node-architecture/ring/read-write-mix.png" /></span></p></div>
+</section>
+<section class="slide" id="horizontal-vs-vertical-scaling">
+<h2>Horizontal vs Vertical Scaling</h2>
+<div class="ulist">
+<ul>
+<li>Vertical scaling requires one large expensive machine</li>
+<li>Horizontal scaling requires multiple less-expensive commodity hardware</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="horizontal scaling" src="images/cassandra/internals/node-architecture/ring/horizontal-scaling.svg" /></span></p></div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-7">
+<h2>Exercise 7&#8212;&#8203;Ring</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-peer-to-peer">
+<h2>Peer to Peer</h2>
+
+</section>
+<section class="slide" id="leader-follower">
+<h2>Leader-Follower</h2>
+<div class="paragraph" id="mrslv"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Here&#8217;s a typical client-sever simple application scenario.</p></div>
+<div class="paragraph"><p>Animation 1: However, storing your data on a single server lends your application to stop responding due to this single point of failure. So we add some redundant servers setting the original as the leader. The leader serves requests and also updates the follower&#8217;s copies as time progresses. If the leader fails, then the system can elect a follower as a new leader.</p></div>
+<div class="paragraph"><p>Animation 2: Eventually as your company progresses, you outgrow the capacity of just one server. You can only scale your hardware up so far due to physical CPU limits or financial limits. So you shard your data across multiple leader servers.</p></div>
+<div class="paragraph"><p>Animation 3: However, now that we shard, we must place a routing service at the head of this to determine which leaders store which pieces of data.</p></div>
+<div class="paragraph"><p>Animation 4: When a request comes into this system, the router determines which shard owns that data.</p></div>
+<div class="paragraph"><p>Animation 5: However, if that server goes down&#8230;&#8203;</p></div>
+<div class="paragraph"><p>Animation 6: We spend precious time determining it&#8217;s down before electing a new leader.</p></div>
+<div class="paragraph"><p>Animation 7: Eventually we elect a new leader.</p></div>
+<div class="paragraph"><p>Animation 8: [Resetting for next illustration.] Another fault in this architecture is that it is brittle.</p></div>
+<div class="paragraph"><p>Animation 9: What happens when we have a network partition? (A switch or router fails.) Both groups of servers can communicate with each other, but they cannot communicate with other servers across the groups.</p></div>
+<div class="paragraph"><p>Animation 10: Both halves of the partition elect new leaders and start accepting requests. This is called a split-brain scenario. Multiple leaders accepting updates for the same data causes corruption.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="peer-to-peer">
+<h2>Peer-to-Peer</h2>
+<div class="paragraph" id="prtopr"><p>&#160;</p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In contrast, Cassandra has no (as in zero, nada, noooooo) leader-follower architecture built into it. Each node can handle reads/writes independently of the others.</p></div>
+<div class="paragraph"><p>Animation 1: For example, here are three nodes each storing a copy of our data.</p></div>
+<div class="paragraph"><p>Animation 2: When a request comes in to retrieve the data, any of the three nodes can service that request.</p></div>
+<div class="paragraph"><p>Animation 3: Any node in the cluster can also act as the coordinator as well. No single node is a leader of the cluster.</p></div>
+<div class="paragraph"><p>Animation 4: [Request graphics clear.]</p></div>
+<div class="paragraph"><p>Animation 5: Cassandra handles network partitions cleanly as well.</p></div>
+<div class="paragraph"><p>Animation 6: A request on the left half of the partition is handled by that half.</p></div>
+<div class="paragraph"><p>Animation 7: A request on the right half does the same.</p></div>
+<div class="paragraph"><p>When the dust settles and the network partition is resolved, Cassandra uses the last write as the most current data. You can tune how much fault tolerance you&#8217;re willing to put up with on a per-query basis. We discuss this elsewhere.</p></div>
+</div>
+</div>
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-vnodes">
+<h2>VNodes</h2>
+
+</section>
+<section class="slide" id="regular-token-range-assignment">
+<h2>Regular Token Range Assignment</h2>
+<div class="paragraph" id="drawing"><p><strong>Token assignment is not always an even spread</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In a perfect world, we would not have to decomission/recommision nodes. But, we are not in a perfect world and adding/removing nodes to your cluster is common. That said, with normal token range assignments, you have to ensure that your token assignments are evenly spread. Adding/removing nodes to your cluster can also make the system unbalanced for a time, and it also requires nodes with existing data to stream the data to the new node(s).</p></div>
+<div class="paragraph"><p>For example, here is an unbalanced cluster. Notice the yellow node owns half of the token range.</p></div>
+<div class="paragraph"><p>Animation 1: Here we see smaller circles representing partitions. A good partitioner evenly spreads the partition token assignments. The yellow node has double the number of partitions as the other two nodes.</p></div>
+<div class="paragraph"><p>Animation 2: We wish to add a new node to the cluster.</p></div>
+<div class="paragraph"><p>Animation 3: Ideally the new node splits the yellow node&#8217;s token range assignment in half.</p></div>
+<div class="paragraph"><p>Animation 4: Notice the new node does just that.</p></div>
+<div class="paragraph"><p>Animation 5: Notice half the partitions in the yellow node fall into this light-blue token range, and thus Cassandra must now move them to the new node.</p></div>
+<div class="paragraph"><p>Animation 6: The yellow node streams the pertinent replicas to the new nodes. Unfortunately this puts strain on the yellow node.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="vnodes">
+<h2>VNodes</h2>
+<div class="paragraph" id="vndes"><p><strong>Each node has several tokens it manages</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Cassandra&#8217;s vnode feature helps mitigate this problem by having each physical node act more like several smaller virtual nodes. Let&#8217;s examine how this works.</p></div>
+<div class="paragraph"><p>Animation 1: Each node is now responsible for several smaller slices of the ring instead of just one large slice.</p></div>
+<div class="paragraph"><p>Animation 2: Notice, with a consistent hash, all three nodes have roughly the same amount of data. That&#8217;s because each node&#8217;s smaller portions of the ring add up to one-third of the ring instead of one-half plus two one-fourth sections as we saw in the previous slide. This isn&#8217;t such a big win so far however because in the previous example with just three nodes, we could have split our range into even thirds instead.</p></div>
+<div class="paragraph"><p>Animation 3: One of the real wins with vnodes, however, is when a node wants to join or leave this cluster. Here the blue node wants to join the cluster as it did on the previous slide.</p></div>
+<div class="paragraph"><p>Animation 4: Notice the token assignments again change, however, instead of the new node simply taking over one node&#8217;s token range, the new node takes over portions of every node&#8217;s range.</p></div>
+<div class="paragraph"><p>Animation 5: Notice our partition colors for the blue node change to blue themselves. Now every node has some data that it must stream to the new node.</p></div>
+<div class="paragraph"><p>Animation 6: Each node streams its data in parallel with the other nodes. This makes bootstrapping a new node into the cluster take much less time and takes the burden of doing this streaming off any single node.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="vnode-details">
+<h2>VNode Details</h2>
+<div class="ulist">
+<ul>
+<li>Adding/removing nodes with vnodes should not make the cluster unbalanced</li>
+<li>By default, each node has 256 vnodes</li>
+<li>VNodes automate token range assignment</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="configuration">
+<h2>Configuration</h2>
+<div class="ulist">
+<ul>
+<li>Configure vnode settings in cassandra.yaml</li>
+<li>num_tokens</li>
+<li>Value greater than one turns on vnodes</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-8">
+<h2>Exercise 8&#8212;&#8203;VNodes</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-gossip">
+<h2>Gossip</h2>
+
+</section>
+<section class="slide" id="gossip">
+<h2>Gossip</h2>
+<div class="paragraph"><p><span class="image"><img alt="gossip" src="images/cassandra/internals/distributed-architecture/gossip/gossip.jpg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Understanding Gossip video: <a class="bare" href="https://www.youtube.com/watch?v=FuP1Fvrv6ZQ">https://www.youtube.com/watch?v=FuP1Fvrv6ZQ</a></p></div>
+<div class="paragraph"><p>Cassandra Wiki on Gossip: <a class="bare" href="https://wiki.apache.org/cassandra/ArchitectureGossip">https://wiki.apache.org/cassandra/ArchitectureGossip</a></p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="epidemic">
+<h2>Epidemic</h2>
+<div class="paragraph" id="gspr"><p><strong>Gossip is an epidemic protocol that spreads through the cluster.</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Gossip is a broadcast protocol for disseminating data. No centralized server holds the cluster information, but instead, the peers spread this information among themselves maintaining only the latest information automatically.</p></div>
+<div class="paragraph"><p>Animation 1: Here&#8217;s our first node that has some information it wants to share.</p></div>
+<div class="paragraph"><p>Animation 2: The first node picks the bottom node and shares that information.</p></div>
+<div class="paragraph"><p>Animation 3: That second node then shares that information with the left node. The first node also shares the information with the node at the upper right.</p></div>
+<div class="paragraph"><p>Animation 4: In the next round, all the nodes with the information also share it with other nodes. Now the entire cluster knows that information. The information in this case spreads out in a polynomial fashion.</p></div>
+<div class="paragraph"><p>A node can gossip with as many nodes as we like during each round. Nodes don&#8217;t necessarily gossip in such an ordered fashion, but instead pick nodes based on some criteria we will discuss.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="choosing-a-gossip-node">
+<h2>Choosing a Gossip Node</h2>
+<div class="ulist">
+<ul>
+<li>Each node initiates a gossip round every second</li>
+<li>Picks one to three nodes to gossip with</li>
+<li>Nodes can gossip with ANY other node in the cluster</li>
+<li>Probabilistically (slightly favor) seed and downed nodes</li>
+<li>Nodes do not track which nodes they gossiped with prior</li>
+<li>Reliably and efficiently spreads node metadata through the cluster</li>
+<li>Fault tolerant&#8212;&#8203;continues to spread when nodes fail</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="what-to-gossip">
+<h2>What to Gossip?</h2>
+<div class="paragraph" id="whtgsp"><p><strong>Cluster Metadata</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Let&#8217;s look at what data gossip spreads through the cluster. Gossip spreads only node metatdata (not client data).</p></div>
+<div class="paragraph"><p>Animation 1: All nodes are similar, so we will focus on only one node.</p></div>
+<div class="paragraph"><p>Animation 2: Each node has an overarching data structure called an endpoint state. This essentially stores all the gossip state information for a single node (endpoint).</p></div>
+<div class="paragraph"><p>Animation 3: The endpoint state nests another data structure called the heartbeat state.</p></div>
+<div class="paragraph"><p>Animation 4: The heartbeat state tracks two values. The first is the generation, which is a timestamp of when the node bootstrapped.</p></div>
+<div class="paragraph"><p>Animation 5: The version is a simple integer. Each node increments its value every second. Heartbeat values incrementing then spreading through the cluster allow nodes to make assumptions as to whether other nodes are up or not.</p></div>
+<div class="paragraph"><p>Animation 6: Endpoint states nest a second data structure called the application state. The application state stores the metadata for this node. The application state is the data about the node gossip spreads throughout the cluster.</p></div>
+<div class="paragraph"><p>Animation 7: One piece of metadata is the STATUS. STATUS can have one of several values: BOOTSTRAP (node is coming online), NORMAL, LEAVING/LEFT (you are decommissioning a node), REMOVING/REMOVE (you are removing a node that you can&#8217;t physically access). Nodes declare their own status. Although each node’s FailureDetector will determine if a peer appears to be up/down, nodes do not gossip these assumptions about peers.</p></div>
+<div class="paragraph"><p>Animation 8: DC is for a node&#8217;s data center.</p></div>
+<div class="paragraph"><p>Animation 9: Rack is the node&#8217;s rack.</p></div>
+<div class="paragraph"><p>Animation 10: Schema changes as any schemas in the node are changed.</p></div>
+<div class="paragraph"><p>Animation 11: Load is disk space usage.</p></div>
+<div class="paragraph"><p>Animation 12: Severity is a heuristic of IO pressure on the node.</p></div>
+<div class="paragraph"><p>Animation 13: Etc.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="node-gossip-communication">
+<h2>Node Gossip Communication</h2>
+<div class="paragraph" id="snc"><p><strong>Let&#8217;s look at a single gossip exchange.</strong></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Gossip is a simple messaging protocol. Here we will examine a single gossip exchange between two nodes.</p></div>
+<div class="paragraph"><p>Animation 1: We will examine an exchange between nodes A and C.</p></div>
+<div class="paragraph"><p>Animation 2: Here we see each node storing three endpoint states, one for each node in the cluster including itself. (We eliminated our fourth node from the discussion for simplicity.) EP is short for endpoint, indicating the IP address of the node that this endpoint state data belongs to. HB is heartbeat state, the first number being the generation and second number being the version (the heartbeat). Although each endpoint state stores several different values in its application state, we will only examine one in this demonstration: LOAD. Note that any of these endpoint states could be for the current node, but that doesn&#8217;t matter to gossip.</p></div>
+<div class="paragraph"><p>Animation 3: [Message arrow appears.]</p></div>
+<div class="paragraph"><p>Animation 4: The left node initiates the gossip via a SYN message to the right node. This message stores a simple digest of information for the receiving node to examine.</p></div>
+<div class="paragraph"><p>Animation 5: Each digest stores the endpoint address, generation, and version (complete heartbeat) for each node that this node has information about.</p></div>
+<div class="paragraph"><p>Animation 6: The first digest is for node 127.0.0.1. The SYN message store this node&#8217;s endpoint/heartbeat information in the digest.</p></div>
+<div class="paragraph"><p>Animation 7: Same for node 127.0.0.2.</p></div>
+<div class="paragraph"><p>Animation 8: Same for node 127.0.0.3.</p></div>
+<div class="paragraph"><p>Animation 9: The left node then transports the SYN message to the right node.</p></div>
+<div class="paragraph"><p>Animation 10: The receiving node compares what it currently knows to what is in the SYN. It sees that the heartbeat generations match but the heartbeat versions do not. The information this node has about node 127.0.0.1 is stale because its heartbeat version is 15 which is less than the version that the initiating node has of 20. This node needs the details about this updated information from the sending node.</p></div>
+<div class="paragraph"><p>Animation 11: The receiving node constructs an ACK message in reply to the sending node&#8217;s SYN. Similar to the SYN, the ACK stores digest information as well.</p></div>
+<div class="paragraph"><p>Animation 12: The receiving node stores its digest information about node 127.0.0.1 in the ACK. In this way, the receiving node tells the sending node that it knows all information about node 127.0.0.1 up to version 15 and it needs the updated information about node 127.0.0.1 from the sending node.</p></div>
+<div class="paragraph"><p>Animation 13: In comparing values for node 127.0.0.2, the receiving node sees that it has more up to date data than the sending node. Heartbeat version 50 is greater than 40.</p></div>
+<div class="paragraph"><p>Animation 14: The receiving node packs the updated information into the ACK message instead of a simple digest for node 127.0.0.2.</p></div>
+<div class="paragraph"><p>Animation 15: For node 127.0.0.3, the receiving node sees its data is out of date.</p></div>
+<div class="paragraph"><p>Animation 16: So it places a digest concerning 127.0.0.3 into the ACK message, thus requesting the latest information from the sending node.</p></div>
+<div class="paragraph"><p>Animation 17: The receiving node sends the ACK back to the initiator.</p></div>
+<div class="paragraph"><p>Animation 18: The initiator sees that the second node needs updated information for nodes 127.0.0.1 and 127.0.0.2.</p></div>
+<div class="paragraph"><p>Animation 19: The initiator creates an ACK2 in response to the second node. The initiator places the updated values inside the ACK2.</p></div>
+<div class="paragraph"><p>Animation 20: The initiator also sees that the second node responded with updated data for node 127.0.0.2.</p></div>
+<div class="paragraph"><p>Animation 21: The initiator updates its data for node 127.0.0.2.</p></div>
+<div class="paragraph"><p>Animation 22: The ACK completes, and the initiator sends the ACK2 message to the second node.</p></div>
+<div class="paragraph"><p>Animation 23: The second node sees the updated information it requested in the ACK2 message.</p></div>
+<div class="paragraph"><p>Animation 24: The second node updates its data accordingly.</p></div>
+<div class="paragraph"><p>Animation 25: The gossip round completes, and the two nodes are now in sync.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="network-traffic">
+<h2>Network Traffic</h2>
+<div class="ulist">
+<ul>
+<li>Constant rate (trickle) of network traffic</li>
+<li>Minimal compared to data streaming, hints</li>
+<li>Doesn&#8217;t cause network spikes</li>
+<li>However, gossip indicating that a node is joining the cluster or back online causes other nodes to stream data to the new node</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-9">
+<h2>Exercise 9&#8212;&#8203;Gossip</h2>
+
+</section>
+<section class="slide transition-green" id="cassandra-internals-distributed-architecture-snitches">
+<h2>Snitch</h2>
+
+</section>
+<section class="slide" id="snitch">
+<h2>Snitch</h2>
+<div class="paragraph"><p><span class="image" style="float: right"><img alt="snitch" src="images/cassandra/internals/distributed-architecture/snitches/snitch.jpg" /></span></p></div>
+<div class="ulist">
+<ul>
+<li>Nothing to do with Harry Potter</li>
+<li>Determines/declares each node&#8217;s rack and data center</li>
+<li>The "topology" of the cluster</li>
+<li>Several different types of snitches</li>
+<li>Configured in cassandra.yaml</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>endpoint_snitch: SimpleSnitch</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="snitches">
+<h2>Snitches</h2>
+<div class="paragraph"><p><strong>There are two main groups of snitches.</strong></p></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:50%" />
+<col style="width:50%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Regular</th>
+<th class="tableblock halign-left valign-top">Cloud Based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SimpleSnitch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ec2Snitch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PropertyFileSnitch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ec2MultiRegionSnitch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GossipingPropertyFileSnitch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GoogleCloudSnitch</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DynamicSnitch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CloudstackSnitch</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide" id="simple-snitch">
+<h2>Simple Snitch</h2>
+<div class="ulist">
+<ul>
+<li>Places all nodes in the same data center and rack</li>
+<li>Default snitch</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>public class SimpleSnitch extends AbstractEndpointSnitch
+{
+   public String getRack(InetAddress endpoint)
+   {
+       return "rack1";
+   }
+
+   public String getDatacenter(InetAddress endpoint)
+   {
+       return "datacenter1";
+   }
+}</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="property-file-snitch">
+<h2>Property File Snitch</h2>
+<div class="ulist">
+<ul>
+<li>Reads datacenter and rack information for all nodes from a file</li>
+<li>You must keep files in sync with all nodes in the cluster</li>
+<li>cassandra-topology.properties file</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>175.56.12.105=DC1:RAC1
+175.50.13.200=DC1:RAC1
+175.54.35.197=DC1:RAC2
+175.54.35.152=DC1:RAC2
+
+120.53.24.101=DC2:RAC1
+120.55.16.200=DC2:RAC1
+120.57.18.103=DC2:RAC2
+120.57.18.177=DC2:RAC2</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="gossiping-property-file-snitch">
+<h2>Gossiping Property File Snitch</h2>
+<div class="ulist">
+<ul>
+<li>Relieves the pain of the property file snitch</li>
+<li>Declare the current node&#8217;s DC/rack information in a file</li>
+<li>You must set each individual node&#8217;s settings</li>
+<li>But you don&#8217;t have to copy settings as with property file snitch</li>
+<li>Gossip spreads the setting through the cluster</li>
+<li>cassandra-rackdc.properties file</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>dc=DC1
+rack=RAC1</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="rack-inferring-snitch">
+<h2>Rack Inferring Snitch</h2>
+<div class="ulist">
+<ul>
+<li>Infers the rack and DC from the IP address</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="rack inferring" src="images/cassandra/internals/distributed-architecture/snitches/rack-inferring.svg" /></span></p></div>
+</section>
+<section class="slide" id="cloud-based-snitches">
+<h2>Cloud-Based Snitches</h2>
+<div class="paragraph"><p><strong>See documentation for details</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Ec2Snitch<div class="ulist">
+<ul>
+<li>Single region Amazon EC2 deployment</li>
+</ul>
+</div></p></li>
+<li><p>
+Ec2MultiRegionSnitch<div class="ulist">
+<ul>
+<li>Multi-region Amazon EC2 deployment</li>
+</ul>
+</div></p></li>
+<li><p>
+GoogleCloudSnitch<div class="ulist">
+<ul>
+<li>Multi-region Google cloud deployment</li>
+</ul>
+</div></p></li>
+<li><p>
+Cloudstack Snitch<div class="ulist">
+<ul>
+<li>For Cloudstack environments</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="dynamic-snitch">
+<h2>Dynamic Snitch</h2>
+<div class="ulist">
+<ul>
+<li>Layered on top of your actual snitch</li>
+<li>Maintains a pulse on each node&#8217;s performance</li>
+<li>Determines which node to query replicas from depending on node health</li>
+<li>Turned on by default for all snitches</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>For more information, see: <a class="bare" href="http://www.datastax.com/dev/blog/dynamic-snitching-in-cassandra-past-present-and-future">http://www.datastax.com/dev/blog/dynamic-snitching-in-cassandra-past-present-and-future</a></p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="configuring-snitches">
+<h2>Configuring Snitches</h2>
+<div class="ulist">
+<ul>
+<li>All nodes in the cluster must use the same snitch</li>
+<li>Changing cluster network topology requires restarting all nodes</li>
+<li>Run sequential repair and cleanup on each node</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><a class="bare" href="http://www.slideshare.net/planetcassandra/datastax-7-deadly-sins-for-cassandra-ops">http://www.slideshare.net/planetcassandra/datastax-7-deadly-sins-for-cassandra-ops</a></p></div>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-10">
+<h2>Exercise 10&#8212;&#8203;Snitches</h2>
+
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<form action="." class="goto-form" method="get">
+<label for="goto-slide">Go to Slide:</label>
+<input id="goto-slide" list="goto-datalist" name="slidenum" type="text" />
+<datalist id="goto-data-list"></datalist>
+<input type="submit" value="Go" />
+</form>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/d3.v2.js"></script>
+<script src="deck.js/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/split/deck.split.js"></script>
+<script src="deck.js/extensions/animation/deck.animation.js"></script>
+<script src="deck.js/extensions/deck.js-notes/deck.notes.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/clone/deck.clone.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="js/module-3.js"></script>
+<footer>
+<div class="flex-element deck-course">
+<p>&copy; 2016 DataStax. Use only with permission. &bull;
+<span class="course-title">Distributed Architecture</span></p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://academy.datastax.com" target="blank">DataStax Academy</a>
+</div>
+<div class="deck-progressbar">
+<span></span>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

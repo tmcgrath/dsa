@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="395px" height="395px" viewBox="0 0 395 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" id="radialGradient-1">
+            <stop stop-color="#F3C716" offset="0%"></stop>
+            <stop stop-color="#CA5F14" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M197.5,395 C306.576238,395 395,306.576238 395,197.5 C395,88.4237619 306.576238,0 197.5,0 C88.4237619,0 0,88.4237619 0,197.5 C0,306.576238 88.4237619,395 197.5,395 Z" id="Oval-1" fill="url(#radialGradient-1)"></path>
+        <text id="NODE" font-family="HelveticaNeue-Thin, Helvetica Neue" font-size="53" font-weight="300" fill="#FFFFFF">
+            <tspan x="127" y="211">NODE</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="233px" height="106px" viewBox="0 0 233 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 1 + TX Copy + Line + Line Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1-+-TX-Copy-+-Line-+-Line-Copy" sketch:type="MSLayerGroup" transform="translate(2.000000, 0.000000)">
+            <g id="Rectangle-1-+-TX-Copy" transform="translate(26.000000, 0.000000)">
+                <rect id="Rectangle-1-Copy-3" stroke="#007A97" fill="#007A97" sketch:type="MSShapeGroup" x="0" y="0" width="170" height="106" rx="8"></rect>
+                <text id="Partitioner" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="31" y="59">Partitioner</tspan>
+                </text>
+            </g>
+            <path d="M0.5,52.5 L45.5,52.5" id="Line" stroke="#9EACAB" stroke-width="5" stroke-linecap="square" fill="#9EACAB" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M45.5,52.5 L34.7,49.5 L34.7,55.5 L45.5,52.5 Z" stroke="#9EACAB" stroke-width="5" stroke-linecap="square" fill="#9EACAB"></path>
+            <path d="M186.5,52.5 L221.5,52.5" id="Line-Copy" stroke="#9EACAB" stroke-width="5" stroke-linecap="square" fill="#9EACAB" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-decoration-1" d="M221.5,52.5 L210.7,49.5 L210.7,55.5 L221.5,52.5 Z" stroke="#9EACAB" stroke-width="5" stroke-linecap="square" fill="#9EACAB"></path>
+        </g>
+    </g>
+</svg>

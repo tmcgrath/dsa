@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="385px" height="183px" viewBox="0 0 385 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Line Copy 2 + Line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Orange-Blank-Copy-8" sketch:type="MSArtboardGroup" transform="translate(-106.000000, -251.000000)" stroke-linecap="square" stroke="#D07333" stroke-width="8">
+            <g id="Line-Copy-2-+-Line" sketch:type="MSLayerGroup" transform="translate(112.000000, 257.000000)">
+                <path d="M0,0 L213,95" id="Line-Copy-2" sketch:type="MSShapeGroup"></path>
+                <path id="Line-Copy-2-decoration-1" d="M213,95 L204.358567,87.8609777 L201.914578,93.3406597 L213,95 Z"></path>
+                <path d="M311,145 L365,170" id="Line" sketch:type="MSShapeGroup"></path>
+                <path id="Line-decoration-1" d="M365,170 L356.459728,162.740265 L353.938987,168.185066 L365,170 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

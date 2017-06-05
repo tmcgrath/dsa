@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="669px" height="395px" viewBox="0 0 669 395" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-1-Copy-5" stroke="#000000" fill="#000000" sketch:type="MSShapeGroup" x="0" y="0" width="669" height="395"></rect>
+            <text id="cqlsh:killrvideo&gt;-se-copy-5" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="10.5" y="244">cqlsh:killrvideo&gt; select * from users ;</tspan>
+                <tspan x="10.5" y="263"></tspan>
+                <tspan x="10.5" y="282"> id | firstname | lastname</tspan>
+                <tspan x="10.5" y="301">----+-----------+----------</tspan>
+                <tspan x="10.5" y="320">  1 | cassandra |   deebee</tspan>
+            </text>
+            <text id="cqlsh:killrvideo&gt;-CO-Copy-15" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="10.5" y="206">cqlsh:killrvideo&gt; CONSISTENCY ALL;</tspan>
+                <tspan x="10.5" y="225">Consistency level set to ALL.</tspan>
+            </text>
+            <text id="cqlsh:killrvideo&gt;-CO-Copy-14" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="10.5" y="112">cqlsh:killrvideo&gt; CONSISTENCY </tspan>
+                <tspan x="10.5" y="131">Current consistency level is ONE.</tspan>
+            </text>
+            <text id="student@ds220:~$-cql-copy-5" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="9.5" y="16">student@ds220:~$ cqlsh</tspan>
+                <tspan x="9.5" y="35">Connected to DS220 Cluster at 127.0.0.1:9042.</tspan>
+                <tspan x="9.5" y="54">[cqlsh 5.0.1 | Cassandra 2.1.3 | CQL spec 3.2.0 | Native protocol v3]</tspan>
+                <tspan x="9.5" y="73">Use HELP for help.</tspan>
+                <tspan x="9.5" y="92">cqlsh&gt;  USE killrvideo;</tspan>
+            </text>
+            <text id="cqlsh:killrvideo&gt;-CO-Copy-13" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="9.5" y="149">cqlsh:killrvideo&gt; CONSISTENCY QUORUM ;</tspan>
+                <tspan x="9.5" y="168">Consistency level set to QUORUM.</tspan>
+            </text>
+            <text id="cqlsh:killrvideo&gt;-in-copy-5" sketch:type="MSTextLayer" font-family="Helvetica" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="9.5" y="187">cqlsh:killrvideo&gt; insert into users(id, firstname, lastname) values (1, ‘cassandra', ‘deebee');</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="518px" height="255px" viewBox="0 0 518 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(2.000000, -7.000000)">
+            <text id="RF=3-Copy" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                <tspan x="91.0094089" y="190.269343">RF=3</tspan>
+            </text>
+            <text id="DC-EAST" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                <tspan x="355.145759" y="19.6284948">DC EAST</tspan>
+            </text>
+            <text id="DC-WEST" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                <tspan x="73.0064792" y="19.6284948">DC WEST</tspan>
+            </text>
+            <text id="RF=3" sketch:type="MSTextLayer" font-family="Courier" font-size="20" font-weight="bold" sketch:alignment="middle" fill="#D1870E">
+                <tspan x="373.148689" y="190.269343">RF=3</tspan>
+            </text>
+            <g id="Page-1" transform="translate(0.000000, 22.000000)" sketch:type="MSShapeGroup">
+                <g id="Orange-Blank-4-nodes">
+                    <g id="Group">
+                        <ellipse id="Oval-29" stroke="#1B7387" stroke-width="15" cx="114.457111" cy="124.553444" rx="101.160271" ry="106.446556"></ellipse>
+                        <ellipse id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="114.457111" cy="20.5760095" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="211.445824" cy="102.331354" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="167.64447" cy="209.875297" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="47.1907449" cy="199.998812" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-6-Copy" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="19.5541761" cy="79.8349169" rx="19.5541761" ry="20.5760095"></ellipse>
+                    </g>
+                </g>
+            </g>
+            <g id="Page-1-Copy" transform="translate(282.641266, 23.015930)" sketch:type="MSShapeGroup">
+                <g id="Orange-Blank-4-nodes">
+                    <g id="Group">
+                        <ellipse id="Oval-29" stroke="#1B7387" stroke-width="15" cx="114.457111" cy="124.553444" rx="101.160271" ry="106.446556"></ellipse>
+                        <ellipse id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="114.457111" cy="20.5760095" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="211.445824" cy="102.331354" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="167.64447" cy="209.875297" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="47.1907449" cy="199.998812" rx="19.5541761" ry="20.5760095"></ellipse>
+                        <ellipse id="Oval-10-Copy-6-Copy" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="19.5541761" cy="79.8349169" rx="19.5541761" ry="20.5760095"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

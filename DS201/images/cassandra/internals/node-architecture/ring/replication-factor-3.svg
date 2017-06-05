@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="461px" height="462px" viewBox="0 0 461 462" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy + RF=3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Orange-Blank-Copy" sketch:type="MSArtboardGroup" transform="translate(-16.000000, -14.000000)">
+            <g id="Group-Copy-+-RF=3" sketch:type="MSLayerGroup" transform="translate(20.000000, 18.000000)">
+                <g id="Group-Copy">
+                    <g id="Group" sketch:type="MSShapeGroup">
+                        <circle id="Oval-29" stroke="#1B7387" stroke-width="15" cx="226.5" cy="227" r="194"></circle>
+                        <circle id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="37.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="360.5" cy="91.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="415.5" cy="227.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-3" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="360.5" cy="363.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="226.5" cy="416.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-5" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="92.5" cy="363.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="37.5" cy="227.5" r="37.5"></circle>
+                        <circle id="Oval-10-Copy-7" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="92.5" cy="91.5" r="37.5"></circle>
+                    </g>
+                    <text id="88-99" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="61" y="98">88-99</tspan>
+                    </text>
+                    <text id="75-87" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="8" y="238">75-87</tspan>
+                    </text>
+                    <text id="63-74" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="61" y="371">63-74</tspan>
+                    </text>
+                    <text id="50-62" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="195" y="424">50-62</tspan>
+                    </text>
+                    <text id="38-49" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="329" y="371">38-49</tspan>
+                    </text>
+                    <text id="25-37" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="385" y="235">25-37</tspan>
+                    </text>
+                    <text id="0-12" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="201" y="46">0-12</tspan>
+                    </text>
+                    <text id="13-24" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="328" y="98">13-24</tspan>
+                    </text>
+                </g>
+                <text id="RF=3" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="64" font-weight="bold">
+                    <tspan x="147" y="244" fill="#000000">RF=3</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

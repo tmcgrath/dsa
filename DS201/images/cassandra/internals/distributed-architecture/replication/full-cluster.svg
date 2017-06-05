@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="884px" height="415px" viewBox="0 0 884 415" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(2.000000, -4.000000)">
+            <g id="Page-1" transform="translate(0.000000, 33.000000)" sketch:type="MSShapeGroup">
+                <g id="Orange-Blank-4-nodes">
+                    <g id="Group">
+                        <ellipse id="Oval-29" stroke="#1B7387" stroke-width="15" cx="192.715187" cy="196.266033" rx="170.326862" ry="167.733967"></ellipse>
+                        <ellipse id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="192.715187" cy="32.4228029" rx="32.9240068" ry="32.4228029"></ellipse>
+                        <ellipse id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="356.018261" cy="161.249406" rx="32.9240068" ry="32.4228029"></ellipse>
+                        <ellipse id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="282.268485" cy="330.712589" rx="32.9240068" ry="32.4228029"></ellipse>
+                        <ellipse id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="79.4566032" cy="315.149644" rx="32.9240068" ry="32.4228029"></ellipse>
+                        <ellipse id="Oval-10-Copy-6-Copy" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="32.9240068" cy="125.800475" rx="32.9240068" ry="32.4228029"></ellipse>
+                    </g>
+                </g>
+            </g>
+            <text id="RF=3" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="17.8833427" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="171.904424" y="216.869359">RF=3</tspan>
+            </text>
+            <text id="RF=2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="17.8833427" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="656.923391" y="219.622844">RF=2</tspan>
+            </text>
+            <text id="DC-WEST" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="17.8833427" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="152.760305" y="17.8693587">DC WEST</tspan>
+            </text>
+            <text id="DC-EAST" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="17.8833427" font-weight="bold" sketch:alignment="middle" fill="#007B98">
+                <tspan x="651.827672" y="17.8693587">DC EAST</tspan>
+            </text>
+            <text id="0-19" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="173.387079" y="71.1567696">0-19</tspan>
+            </text>
+            <text id="0-19" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="173.387079" y="71.1567696">0-19</tspan>
+            </text>
+            <text id="0-19-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="609.119394" y="84.4493104">0-19</tspan>
+            </text>
+            <text id="80-99" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="6.19044172" y="164.534442">80-99</tspan>
+            </text>
+            <text id="60-79" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="52.7230381" y="356.477435">60-79</tspan>
+            </text>
+            <text id="40-59" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="255.53492" y="372.04038">40-59</tspan>
+            </text>
+            <text id="20-39" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.3219803" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="329.284696" y="202.577197">20-39</tspan>
+            </text>
+            <g id="Orange-Blank-4-nodes-Copy" transform="translate(480.166943, 35.000000)" sketch:type="MSShapeGroup">
+                <g id="Page-1">
+                    <g id="Orange-Blank-4-nodes">
+                        <g id="Group">
+                            <ellipse id="Oval-29" stroke="#1B7387" stroke-width="15" cx="199.5" cy="191" rx="170.874172" ry="163.23348"></ellipse>
+                            <ellipse id="Oval-10" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="199.5" cy="31.5528634" rx="33.0298013" ry="31.5528634"></ellipse>
+                            <ellipse id="Oval-10-Copy-2" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="365.970199" cy="191.420705" rx="33.0298013" ry="31.5528634"></ellipse>
+                            <ellipse id="Oval-10-Copy-4" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="199.5" cy="350.447137" rx="33.0298013" ry="31.5528634"></ellipse>
+                            <ellipse id="Oval-10-Copy-6" stroke="#FFFFFF" stroke-width="4" fill="#BC5E2E" cx="33.0298013" cy="191.420705" rx="33.0298013" ry="31.5528634"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <text id="0-24-copy-4" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.656958" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="659.235349" y="70.9740279">0-24</tspan>
+            </text>
+            <text id="75-99-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.656958" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="486.825772" y="230.339824">75-99</tspan>
+            </text>
+            <text id="50-74-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.656958" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="653.492715" y="388.974028">50-74</tspan>
+            </text>
+            <text id="25-49-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="20.656958" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="821.159659" y="230.339824">25-49</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

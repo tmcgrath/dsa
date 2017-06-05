@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1083px" height="546px" viewBox="0 0 1083 546" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <g>
+                <rect id="Rectangle-1-Copy" fill="#9EACAB" sketch:type="MSShapeGroup" x="0" y="0" width="1083" height="546" rx="39"></rect>
+                <rect id="Rectangle-2-Copy-3" fill="#CA5F14" sketch:type="MSShapeGroup" x="36.1141299" y="15.0256881" width="1020.88587" height="242.444037" rx="15"></rect>
+                <rect id="Rectangle-2-Copy-2" fill="#007A97" sketch:type="MSShapeGroup" x="36.1141299" y="284" width="1020.88587" height="246.972477" rx="15"></rect>
+                <text id="RAM" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32.0382775" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="67.5909091" y="420.713761">RAM</tspan>
+                </text>
+                <text id="HDD" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32.0382775" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="53.5909091" y="140.234862">HDD</tspan>
+                    <tspan x="53.5909091" y="179.234862">  #2</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

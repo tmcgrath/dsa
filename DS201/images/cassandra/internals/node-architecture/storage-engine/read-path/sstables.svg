@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="494px" height="400px" viewBox="0 0 494 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-1-Copy-3" fill="#9EACAB" sketch:type="MSShapeGroup" x="0" y="0" width="493.60916" height="122.857143" rx="8"></rect>
+            <text id="SSTable-#1" sketch:type="MSTextLayer" font-family="Courier" font-size="29.4226434" font-weight="normal" fill="#000000">
+                <tspan x="12.9343558" y="28">SSTable #1</tspan>
+            </text>
+            <text id="(data)" sketch:type="MSTextLayer" font-family="Courier" font-size="25.2194087" font-weight="normal" fill="#000000">
+                <tspan x="305.518405" y="66.5450426">(data)</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-5" fill="#9EACAB" sketch:type="MSShapeGroup" x="0" y="139.285714" width="493.60916" height="122.857143" rx="8"></rect>
+            <text id="SSTable-#2" sketch:type="MSTextLayer" font-family="Courier" font-size="29.4226434" font-weight="normal" fill="#000000">
+                <tspan x="12.9343558" y="167.285714">SSTable #2</tspan>
+            </text>
+            <text id="(data)-copy-2" sketch:type="MSTextLayer" font-family="Courier" font-size="25.2194087" font-weight="normal" fill="#000000">
+                <tspan x="305.518405" y="206.373744">(data)</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-6" fill="#9EACAB" sketch:type="MSShapeGroup" x="0" y="277.142857" width="493.60916" height="122.857143" rx="8"></rect>
+            <text id="SSTable-#3" sketch:type="MSTextLayer" font-family="Courier" font-size="29.4226434" font-weight="normal" fill="#000000">
+                <tspan x="12.9343558" y="305.142857">SSTable #3</tspan>
+            </text>
+            <text id="(data)-copy-3" sketch:type="MSTextLayer" font-family="Courier" font-size="25.2194087" font-weight="normal" fill="#000000">
+                <tspan x="305.518405" y="344.230887">(data)</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

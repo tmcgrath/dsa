@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.3" name="generator" />
+<title>Install DataStax Enterprise</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top;line-height:1.45}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/goto/deck.goto.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/datastax.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Install DataStax Enterprise</h1>
+</section>
+<section class="slide transition-green" id="courses-DS201-custom-content-quick-wins-challenge-1">
+<h2>Installing and Starting Cassandra</h2>
+
+</section>
+<section class="slide" id="install-and-start-cassandra">
+<h2>Install and Start Cassandra</h2>
+<div class="ulist">
+<ul>
+<li>Install</li>
+<li>Start</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="cassandra-install-options">
+<h2>Cassandra Install Options</h2>
+<div class="ulist">
+<ul>
+<li><p>
+DataStax Enterprise with OpsCenter, DevCenter, and Drivers<div class="ulist">
+<ul>
+<li><a class="bare" href="http://www.datastax.com/download">http://www.datastax.com/download</a></li>
+<li>Integrated search and analytics</li>
+<li>Free for development</li>
+<li>License required for production</li>
+</ul>
+</div></p></li>
+<li><p>
+Open Source Cassandra<div class="ulist">
+<ul>
+<li><a class="bare" href="http://cassandra.apache.org/download">http://cassandra.apache.org/download</a></li>
+<li><a class="bare" href="https://github.com/apache/cassandra">https://github.com/apache/cassandra</a></li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>There are two options when choosing a Cassandra distribution:</p></div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+DataStax Enterprise&#8482;
+</li>
+<li>
+Apache Cassandra&#8482; open source
+</li>
+</ol>
+</div>
+<div class="paragraph"><p>DataStax Enterprise offers several enhancements to Cassandra&#8217;s core features such as security, enhanced testing, management services, analytics, search with Solr, in-memory operation features for lowest latency, etc. You can download DataStax enterprise tinker with it at no cost. Any production use requires licensing from DataStax.</p></div>
+<div class="paragraph"><p>Apache Cassandra&#8482; open source is just that, a free distribution where you can look at the source code and also build/run Apache Cassandra&#8482; as well.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="tarball-install">
+<h2>Tarball Install</h2>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="tar ball contents" height="300" src="images/courses/DS201/custom-content/quick-wins/challenge-1/tar-ball-contents.png" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Download and extract a simple tar.gz file</li>
+<li>Contains Cassandra, configuration, tools, etc.</li>
+<li>Cassandra runs directly from one self-contained folder</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In this course, we will choose the simplest route of install which is to extract a tarball and run Cassandra directly from the target directory.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="starting-cassandra">
+<h2>Starting Cassandra</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>bin/cassandra</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Cassandra writes several log messages</li>
+<li>Look for "state jump to normal"</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>INFO  15:09:21 Node localhost/127.0.0.1 state jump to normal</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Starting Cassandra is straightforward. You will find the executable in the bin/ folder. This folder also hosts several tools we will tinker with through the course.</p></div>
+<div class="paragraph"><p>Cassandra will output several log messages. The one we are most interested in is "state jump to normal" which indicates this Cassandra instance is ready to service requests.</p></div>
+<div class="paragraph"><p>Once you see this message, simply press enter to get back to your command prompt.</p></div>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-1">
+<h2>Exercise 1&#8212;&#8203;Cassandra Install and Start</h2>
+
+</section>
+<section class="slide transition-green" id="courses-DS201-custom-content-quick-wins-challenge-2">
+<h2>CQL</h2>
+
+</section>
+<section class="slide" id="cql-fundamentals">
+<h2>CQL Fundamentals</h2>
+<div class="ulist">
+<ul>
+<li>CQL</li>
+<li>Keyspaces</li>
+<li>Tables</li>
+<li>Core datatypes</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="cql">
+<h2>CQL</h2>
+<div class="ulist">
+<ul>
+<li>Cassandra Query Language (CQL)</li>
+<li>Similar to SQL</li>
+</ul>
+</div>
+<div class="listingblock right">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">SELECT</span> *
+<span class="keyword">FROM</span> users;</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Cassandra Query Language (CQL) is a simple data manipulation and query language built to give a familiar environment to those knowing SQL.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="keyspaces">
+<h2>Keyspaces</h2>
+<div class="ulist">
+<ul>
+<li>Top-level namespace/container</li>
+<li>Similar to a relational database schema</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">CREATE</span> KEYSPACE killrvideo
+WITH REPLICATION = {
+  <span class="string"><span class="delimiter">'</span><span class="content">class</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">SimpleStrategy</span><span class="delimiter">'</span></span>,
+  <span class="string"><span class="delimiter">'</span><span class="content">replication_factor</span><span class="delimiter">'</span></span> : <span class="integer">1</span>
+};</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Replication parameters required</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Keyspaces are very similar to database schemas in that they serve as a namespace/wrapper around database objects. When crating a keyspace, we must also set its replication parameters (discussed elsewhere). For now, we will use the most basic settings of SimpleStrategy and a replication factor of one.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="use">
+<h2>USE</h2>
+<div class="ulist">
+<ul>
+<li>USE switches between keyspaces</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql">USE killrvideo;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="tables">
+<h2>Tables</h2>
+<div class="ulist">
+<ul>
+<li>Keyspaces contain tables</li>
+<li>Tables contain data</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">CREATE</span> <span class="type">TABLE</span> table1 (
+  column1 <span class="predefined-type">TEXT</span>,
+  column2 <span class="predefined-type">TEXT</span>,
+  column3 <span class="predefined-type">INT</span>,
+  <span class="directive">PRIMARY</span> <span class="type">KEY</span> (column1)
+);
+
+<span class="class">CREATE</span> <span class="type">TABLE</span> users (
+  user_id UUID,
+  first_name <span class="predefined-type">TEXT</span>,
+  last_name <span class="predefined-type">TEXT</span>,
+  <span class="directive">PRIMARY</span> <span class="type">KEY</span> (user_id)
+);</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>CQL tables look and feel much like SQL tables. There are some key differences we explore later, but for now, thinking of CQL tables as similar to SQL tables is fine.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="basic-data-types">
+<h2>Basic Data Types</h2>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:50%" />
+<col style="width:50%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>UTF8 encoded string</li>
+<li>varchar is same as text</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>Signed</li>
+<li>32 bits</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timestamp</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>Date and time</li>
+<li>64 bit integer</li>
+<li>Stores number of seconds since Jan. 1, 1970 00:00:00 GMT</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Cassandra supports several primitive data types. Most core are text (strings) and ints. You can use VARCHAR in Cassandra, but Cassandra simply replaces it with the <em>text</em> data type. Cassandra does not have fixed-width textual data types such as VARCHAR(50).</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="uuid-timeuuid">
+<h2>UUID &amp; TIMEUUID</h2>
+<div class="paragraph"><p><strong>Used in place of integer IDs because Cassandra is a distributed database</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Universally Unique Identifier<div class="ulist">
+<ul>
+<li>Ex: 52b11d6d-16e2-4ee2-b2a9-5ef1e9589328</li>
+<li>Generate via uuid()</li>
+</ul>
+</div></p></li>
+<li><p>
+TIMEUUID embeds a TIMESTAMP value<div class="ulist">
+<ul>
+<li>Ex: 1be43390-9fe4-11e3-8d05-425861b86ab6</li>
+<li>Sortable</li>
+<li>Generate via now()</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Cassandra is a distribute database, thus, INSERT commands can arrive at any node. Synching/locking an incrementing integer ID value would prove prohibitive. Thus, we identify records using UUIDs instead. UUIDs enable several nodes to generate non-clashing ID values without any inter-node communication in that regard.</p></div>
+<div class="paragraph"><p>Use in places of integer IDs because Cassandra is a distributed database.</p></div>
+<div class="paragraph"><p>Value format: hex{8}-hex{4}-hex{4}-hex{4}-hex{12}. UUID is called GUID by some developers.</p></div>
+<div class="paragraph"><p>There are different versions/formats of UUIDs. The first digit in the third group of digits indicates the version number. Cassandra&#8217;s TIMEUUID is version 1 and generated using time (60 bits), a clock sequence number (14 bits), and a MAC address (48 bits). Cassandra&#8217;s UUID is version 4 and simply creates unique values.</p></div>
+<div class="paragraph"><p>You can order on a TIMEUUID to produce time-ordered data.</p></div>
+<div class="paragraph"><p>CQL&#8217;s dateOf() function extracts the time portion of a TIMEUUID.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="insert">
+<h2>INSERT</h2>
+<div class="paragraph"><p><strong>Similar to relational syntax</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> users (user_id, first_name, last_name)
+<span class="keyword">VALUES</span> (uuid(), <span class="string"><span class="delimiter">'</span><span class="content">Joseph</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Chu</span><span class="delimiter">'</span></span>);</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="select">
+<h2>SELECT</h2>
+<div class="paragraph"><p><strong>Similar to relational syntax</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">SELECT</span> *
+<span class="keyword">FROM</span> users;
+
+<span class="class">SELECT</span> first_name, last_name
+<span class="keyword">FROM</span> users;
+
+<span class="class">SELECT</span> *
+<span class="keyword">FROM</span> users
+<span class="keyword">WHERE</span> user_id = <span class="integer">4</span>b516be3-ddf0<span class="integer">-4</span>c43-bab6-b91d674b64a5;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="copy">
+<h2>COPY</h2>
+<div class="ulist">
+<ul>
+<li>Imports/exports CSV (comma-separated values)</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql">COPY table1 (column1, column2, column3) <span class="keyword">FROM</span> <span class="string"><span class="delimiter">'</span><span class="content">table1data.csv</span><span class="delimiter">'</span></span>;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Header parameter skips the first line in the file</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql">COPY table1 (column1, column2, column3) <span class="keyword">FROM</span> <span class="string"><span class="delimiter">'</span><span class="content">table1data.csv</span><span class="delimiter">'</span></span>
+WITH HEADER=<span class="predefined-constant">true</span>;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS201-transitions-exercises-exercise-2">
+<h2>Exercise 2&#8212;&#8203;CQL</h2>
+
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<form action="." class="goto-form" method="get">
+<label for="goto-slide">Go to Slide:</label>
+<input id="goto-slide" list="goto-datalist" name="slidenum" type="text" />
+<datalist id="goto-data-list"></datalist>
+<input type="submit" value="Go" />
+</form>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/d3.v2.js"></script>
+<script src="deck.js/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/split/deck.split.js"></script>
+<script src="deck.js/extensions/animation/deck.animation.js"></script>
+<script src="deck.js/extensions/deck.js-notes/deck.notes.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/clone/deck.clone.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="js/module-1.js"></script>
+<footer>
+<div class="flex-element deck-course">
+<p>&copy; 2016 DataStax. Use only with permission. &bull;
+<span class="course-title">Install DataStax Enterprise</span></p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://academy.datastax.com" target="blank">DataStax Academy</a>
+</div>
+<div class="deck-progressbar">
+<span></span>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

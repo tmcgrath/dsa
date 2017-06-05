@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="363px" height="86px" viewBox="0 0 363 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>CREATE KEYSPACE kill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <text id="CREATE-KEYSPACE-kill" sketch:type="MSTextLayer" font-family="Courier New" font-size="16" font-weight="bold" fill="#4B3C37">
+            <tspan x="1" y="11">CREATE KEYSPACE killrvideo</tspan>
+            <tspan x="1" y="29">WITH REPLICATION = {</tspan>
+            <tspan x="1" y="47">    'class':'NetworkTopologyStrategy',</tspan>
+            <tspan x="1" y="65">    'dc-west':2, 'dc-east':3</tspan>
+            <tspan x="1" y="83">}</tspan>
+        </text>
+    </g>
+</svg>

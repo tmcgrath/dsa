@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+   <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+     "http://www.w3.org/TR/2001/
+      REC-SVG-20010904/DTD/svg10.dtd">
+      <svg xmlns="http://www.w3.org/2000/svg" width="498" height="498" aria-label="A chart." style="overflow: hidden;"><defs id="defs"/>
+      <rect x="0" y="0" width="498" height="498" stroke="none" stroke-width="0" fill="none"/>
+      <g><path d="M249,249L249,25A224,224,0,0,1,407.3919189857867,90.60808101421338L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#9bd333"/></g>
+      <g><path d="M249,249L407.3919189857867,90.60808101421338A224,224,0,0,1,473,249L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#007A97"/></g>
+      <g><path d="M249,249L473,249A224,224,0,0,1,407.3919189857867,407.3919189857866L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#ca5f14"/></g>
+      <g><path d="M249,249L407.3919189857867,407.3919189857866A224,224,0,0,1,249,473L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#f3c716"/></g>
+      <g><path d="M249,249L249,473A224,224,0,0,1,90.60808101421338,407.3919189857867L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#227b63"/></g>
+      <g><path d="M249,249L90.60808101421338,407.3919189857867A224,224,0,0,1,25,249.00000000000003L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#8031a7"/></g>
+      <g><path d="M249,249L25,249.00000000000003A224,224,0,0,1,90.60808101421333,90.60808101421338L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#c41426"/></g>
+      <g><path d="M249,249L90.60808101421333,90.60808101421338A224,224,0,0,1,249,25L249,249A0,0,0,0,0,249,249" stroke="#ffffff" stroke-width="0" fill="#0cb6e1"/></g>
+      <g/><circle cx="249" cy="249" r="205" fill="#FFFFFF" stroke="none" stroke-width="0"/></svg>

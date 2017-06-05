@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="244px" height="196px" viewBox="0 0 244 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>cassandra-backdrop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cassandra-backdrop">
+            <g id="Page-1">
+                <g id="Imported-Layers-+-JVM">
+                    <rect id="Rectangle-1" fill="#0CB7E1" x="0" y="0" width="244" height="196" rx="11"></rect>
+                    <text id="JVM" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="14" y="32">JVM</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

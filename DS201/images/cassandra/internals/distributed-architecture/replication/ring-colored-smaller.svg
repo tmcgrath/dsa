@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+   <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
+     "http://www.w3.org/TR/2001/
+      REC-SVG-20010904/DTD/svg10.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="444" height="444" aria-label="A chart." style="overflow: hidden;"><defs id="defs"/>
+      <rect x="0" y="0" width="444" height="444" stroke="none" stroke-width="0" fill="none"/>
+      <g><path d="M222,222L222,22A200,200,0,0,1,363.4213562373095,80.57864376269052L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#007A97"/></g>
+      <g><path d="M222,222L363.4213562373095,80.57864376269052A200,200,0,0,1,422,222L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#ca6014"/></g>
+      <g><path d="M222,222L422,222A200,200,0,0,1,363.4213562373095,363.4213562373095L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#f3c716"/></g>
+      <g><path d="M222,222L363.4213562373095,363.4213562373095A200,200,0,0,1,222,422L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#227b63"/></g>
+      <g><path d="M222,222L222,422A200,200,0,0,1,80.57864376269052,363.4213562373095L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#8031a7"/></g>
+      <g><path d="M222,222L80.57864376269052,363.4213562373095A200,200,0,0,1,22,222.00000000000003L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#c41425"/></g>
+      <g><path d="M222,222L22,222.00000000000003A200,200,0,0,1,80.57864376269046,80.57864376269052L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#0cb7e1"/></g>
+      <g><path d="M222,222L80.57864376269046,80.57864376269052A200,200,0,0,1,222,22L222,222A0,0,0,0,0,222,222" stroke="#ffffff" stroke-width="0" fill="#9cd233"/></g>
+      <g/><circle cx="220" cy="222" r="180" fill="#FFFFFF" stroke="none" stroke-width="0"/></svg>
