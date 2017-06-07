@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="814px" height="302px" viewBox="0 0 814 302" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>access-patterns</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M326.5,203.5 L478.769241,203.5" id="Line-Copy" stroke="#979797" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-decoration-1" d="M478.769241,203.5 L467.969241,200.5 L467.969241,206.5 L478.769241,203.5 Z" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+        <g id="table-diagrams" sketch:type="MSLayerGroup" transform="translate(1.000000, 160.000000)">
+            <g id="comments_by_video" transform="translate(487.000000, 0.000000)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="325" height="48"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="325" height="38"></rect>
+                <text id="Table-B" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#007B98">
+                    <tspan x="122" y="31">Table B</tspan>
+                </text>
+                <text id="…" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                    <tspan x="10" y="71">…</tspan>
+                </text>
+            </g>
+            <g id="comments_by_user">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="325" height="48"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="325" height="38"></rect>
+                <text id="Table-A" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#007B98">
+                    <tspan x="124" y="30">Table A</tspan>
+                </text>
+                <text id="…" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                    <tspan x="10" y="71">…</tspan>
+                </text>
+            </g>
+        </g>
+        <path d="M159.5,105.5 L159.5,150.5" id="Line" stroke="#979797" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M159.5,150.5 L162.5,139.7 L156.5,139.7 L159.5,150.5 Z" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+        <text id="Q1,Q2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#007B98">
+            <tspan x="177" y="151">Q1,Q2</tspan>
+        </text>
+        <text id="Q3" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#007B98">
+            <tspan x="425" y="189">Q3</tspan>
+        </text>
+        <text id="Entry-point-(as-in-a" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="24" font-weight="normal" fill="#007B98">
+            <tspan x="211" y="22">Entry point (as in application workflow)</tspan>
+        </text>
+        <text id="One-or-more-queries-" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="24" font-weight="normal" fill="#007B98">
+            <tspan x="385" y="60">One or more queries supported by a table</tspan>
+        </text>
+        <text id="Transition-(as-in-ap" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="24" font-weight="normal" fill="#007B98">
+            <tspan x="386" y="296">Transition (as in application workflow)</tspan>
+        </text>
+        <path d="M215.5,31.5 L164.5,95.5" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M164.5,95.5 L173.576779,88.923368 L168.884421,85.1841457 L164.5,95.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M391.5,69.5 L295.5,122.5" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M295.5,122.5 L306.404757,119.906495 L303.504847,114.653827 L295.5,122.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M404.5,71.5 L442.5,150.5" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M442.5,150.5 L440.521996,139.466981 L435.114996,142.067817 L442.5,150.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M420.5,271.5 L401.5,215.5" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M401.5,215.5 L402.129064,226.691259 L407.810937,224.763481 L401.5,215.5 Z" stroke="#979797" stroke-linecap="square"></path>
+    </g>
+</svg>

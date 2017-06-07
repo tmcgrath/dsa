@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="2016px" height="323px" viewBox="0 0 2016 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>step7alt</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feMorphology radius="6" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.133333333   0 0 0 0 0.51372549   0 0 0 0 0.415686275  0 0 0 0.295213428 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.105882353   0 0 0 0 0.450980392   0 0 0 0 0.529411765  0 0 0 0.7 0" in="shadowBlurOuter2" type="matrix" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.133333333   0 0 0 0 0.51372549   0 0 0 0 0.415686275  0 0 0 0.295213428 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.105882353   0 0 0 0 0.450980392   0 0 0 0 0.529411765  0 0 0 0.7 0" in="shadowBlurOuter2" type="matrix" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="step7alt" sketch:type="MSArtboardGroup">
+            <rect id="Rectangle-1-Copy-3" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="719" y="111.175781" width="235" height="90"></rect>
+            <text id="Analysis-and-Validat" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#405255">
+                <tspan x="772.595" y="149">Analysis and </tspan>
+                <tspan x="787.478" y="176">Validation</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-6" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="1044" y="111.175781" width="235" height="90"></rect>
+            <text id="Logical--Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#405255">
+                <tspan x="1125.106" y="149">Logical </tspan>
+                <tspan x="1103.315" y="176">Data Model</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-5" stroke="#5CA2B4" stroke-width="3" fill="#D5E6EE" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="1736" y="111.175781" width="235" height="90"></rect>
+            <text id="Physical" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+                <tspan x="1811.397" y="149.313">Physical</tspan>
+                <tspan x="1795.315" y="176.313">Data Model</tspan>
+            </text>
+            <rect id="Rectangle-1" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="29" y="37" width="235" height="90"></rect>
+            <text id="Conceptual-Data-Mode" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#405255">
+                <tspan x="88.524" y="76">Conceptual </tspan>
+                <tspan x="88.315" y="103">Data Model</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="29" y="191" width="235" height="90"></rect>
+            <text id="Application" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#405255">
+                <tspan x="89.536" y="230">Application</tspan>
+                <tspan x="99.315" y="257">Workflow</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-2" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="355" y="111.175781" width="273" height="90" rx="10"></rect>
+            <text id="Mapping-Conceptual-t" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#405255">
+                <tspan x="384.641" y="151">Mapping Conceptual </tspan>
+                <tspan x="440.862" y="178">to Logical</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy-4" stroke="#5CA2B4" stroke-width="3" fill="#D5E6EE" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="1371" y="111.175781" width="273" height="90" rx="10"></rect>
+            <text id="Physical--Optimizati" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+                <tspan x="1464.897" y="149">Physical </tspan>
+                <tspan x="1443.117" y="176">Optimization</tspan>
+            </text>
+            <path d="M631.5,157.5 L713.001534,157.5" id="Line" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M713.001534,157.5 L702.201534,154.5 L702.201534,160.5 L713.001534,157.5 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M304.929037,172.5 L349.001534,172.5" id="Line-Copy-3" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-3-decoration-1" d="M349.001534,172.5 L338.201534,169.5 L338.201534,175.5 L349.001534,172.5 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M957.5,157.5 L1039.00153,157.5" id="Line-Copy" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-decoration-1" d="M1039.00153,157.5 L1028.20153,154.5 L1028.20153,160.5 L1039.00153,157.5 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M1282.5,157.5 L1364.00153,157.5" id="Line-Copy-5" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-5-decoration-1" d="M1364.00153,157.5 L1353.20153,154.5 L1353.20153,160.5 L1364.00153,157.5 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M1647.5,157.5 L1729.00153,157.5" id="Line-Copy-2" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup"></path>
+            <path id="Line-Copy-2-decoration-1" d="M1729.00153,157.5 L1718.20153,154.5 L1718.20153,160.5 L1729.00153,157.5 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M266.422852,237.435547 L303.505801,237.435547 L303.505802,171.571289" id="Path-6" stroke="#435B61" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <path d="M304.929037,146.717774 L349.001534,146.717774" id="Line-Copy-4" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61" sketch:type="MSShapeGroup" transform="translate(327.000000, 146.717774) scale(1, -1) translate(-327.000000, -146.717774) "></path>
+            <path id="Line-Copy-4-decoration-1" d="M349.001534,146.717774 L338.201534,143.717774 L338.201534,149.717774 L349.001534,146.717774 Z" stroke="#435B61" stroke-width="2" stroke-linecap="square" fill="#435B61"></path>
+            <path d="M266.422852,147.683105 L303.505801,147.683105 L303.505802,82.0536272" id="Path-6-Copy" stroke="#435B61" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(284.964327, 114.868366) scale(1, -1) translate(-284.964327, -114.868366) "></path>
+        </g>
+    </g>
+</svg>

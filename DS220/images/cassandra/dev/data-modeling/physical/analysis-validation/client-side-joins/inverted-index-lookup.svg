@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1205px" height="441px" viewBox="0 0 1205 441" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>inverted-index-lookup</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M607.5,164.5 L862.5,164.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M862.5,164.5 L851.7,161.5 L851.7,167.5 L862.5,164.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797"></path>
+        <g id="Line-+-Index-lookup-query" sketch:type="MSLayerGroup" transform="translate(2.000000, 60.000000)">
+            <path d="M0.5,39.5 L206.5,39.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M206.5,39.5 L195.7,36.5 L195.7,42.5 L206.5,39.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797"></path>
+            <text id="Index-lookup-query" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#007B98">
+                <tspan x="0" y="23">Index lookup query</tspan>
+            </text>
+        </g>
+        <g id="Line-+-Index-lookup-query-Copy" sketch:type="MSLayerGroup" transform="translate(2.000000, 206.000000)">
+            <path d="M0.5,39.5 L206.5,39.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+            <path id="Line-decoration-1" d="M206.5,39.5 L195.7,36.5 L195.7,42.5 L206.5,39.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797"></path>
+            <text id="Index-lookup-query" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#007B98">
+                <tspan x="0" y="23">Index lookup query</tspan>
+            </text>
+        </g>
+        <path d="M549.5,93.5 L607.5,93.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M607.5,93.5 L607.5,249.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M607.5,249.5 L548.5,249.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <text id="Get-content" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#007B98">
+            <tspan x="621" y="151">Get content</tspan>
+        </text>
+        <text id="Inverted-index" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#D1870E">
+            <tspan x="364" y="23">Inverted index</tspan>
+        </text>
+        <text id="Inverted-index-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#D1870E">
+            <tspan x="364" y="332">Inverted index</tspan>
+        </text>
+        <text id="Content-is-stored-on" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#FF3400">
+            <tspan x="595" y="345">Content is stored once</tspan>
+        </text>
+        <path d="M845.5,339.5 L867.5,339.5" id="Line" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M867.5,339.5 L856.7,336.5 L856.7,342.5 L867.5,339.5 Z" stroke="#979797" stroke-width="3" stroke-linecap="square" fill="#979797"></path>
+        <text id="Trade-off-between-ef" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#464646">
+            <tspan x="286" y="432">Trade-off between efficiency and space</tspan>
+        </text>
+        <g id="videos" sketch:type="MSLayerGroup" transform="translate(879.000000, 38.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="41.7869416" width="325" height="278.213058"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="325" height="41.7869416"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29.5979381">videos</tspan>
+            </text>
+            <text id="video_id" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="75.7835052">video_id</tspan>
+                <tspan x="10" y="104.783505">uploaded_timestamp</tspan>
+                <tspan x="10" y="133.783505">title</tspan>
+                <tspan x="10" y="162.783505">description</tspan>
+                <tspan x="10" y="191.783505">type</tspan>
+                <tspan x="10" y="220.783505">release_date</tspan>
+                <tspan x="10" y="249.783505">{tags}</tspan>
+                <tspan x="10" y="278.783505">&lt;preview_thumbnails&gt;</tspan>
+                <tspan x="10" y="307.783505" fill="#FF3400">video_file</tspan>
+                <tspan x="110.872" y="307.783505"></tspan>
+            </text>
+            <text id="K" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="276" y="75.7835052">K</tspan>
+                <tspan x="276" y="104.783505"></tspan>
+                <tspan x="276" y="133.783505"></tspan>
+                <tspan x="276" y="162.783505"></tspan>
+                <tspan x="276" y="191.783505"></tspan>
+                <tspan x="276" y="220.783505"></tspan>
+                <tspan x="276" y="249.783505"></tspan>
+                <tspan x="276" y="278.783505"></tspan>
+                <tspan x="276" y="307.783505"></tspan>
+            </text>
+        </g>
+        <g id="videos-copy" sketch:type="MSLayerGroup" transform="translate(224.000000, 31.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="40.7869416" width="325" height="80.2099991"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="325" height="41.7869416"></rect>
+            <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="11" y="28.5979381">videos_by_tag</tspan>
+            </text>
+            <text id="tag" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="11" y="74.7835052">tag</tspan>
+                <tspan x="11" y="103.783505">video_id</tspan>
+            </text>
+            <text id="K" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="277" y="74.7835052">K</tspan>
+                <tspan x="277" y="103.783505">C</tspan>
+                <tspan x="294.328" y="103.783505" font-family="Lucida Grande">↑</tspan>
+            </text>
+        </g>
+        <g id="videos-copy-2" sketch:type="MSLayerGroup" transform="translate(223.000000, 187.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="40.7869416" width="325" height="80.2099991"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="325" height="41.7869416"></rect>
+            <text id="videos_by_date" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="11" y="28.5979381">videos_by_date</tspan>
+            </text>
+            <text id="release_date" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="11" y="74.7835052">release_date</tspan>
+                <tspan x="11" y="103.783505">video_id</tspan>
+            </text>
+            <text id="K" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="277" y="74.7835052">K</tspan>
+                <tspan x="277" y="103.783505">C</tspan>
+                <tspan x="294.328" y="103.783505" font-family="Lucida Grande">↑</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

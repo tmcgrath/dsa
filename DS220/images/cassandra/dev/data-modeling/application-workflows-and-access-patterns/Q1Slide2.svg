@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1593px" height="1023px" viewBox="0 0 1593 1023" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Q1Slide2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="2" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M459.5,3 L459.5,103" id="Line" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M459.5,103 L462.5,92.2 L456.5,92.2 L459.5,103 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="289" y="113" width="325" height="150" rx="17"></rect>
+        <text id="User-logs-into-site" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="30" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="330.945" y="200">User logs into site</tspan>
+        </text>
+        <text id="Q1" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="398" y="98">Q1</tspan>
+        </text>
+        <g id="Access-Patterns" sketch:type="MSLayerGroup" transform="translate(2.000000, 698.000000)">
+            <rect id="Rectangle-29" stroke="#000000" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0.232932565" y="0" width="1584.76707" height="315.694"></rect>
+            <text id="Q1:-Find-a-user-with" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#000000">
+                <tspan x="20" y="106">Q1: Find a user with a </tspan>
+                <tspan x="382.088" y="106" font-weight="bold">specified email</tspan>
+            </text>
+            <text id="ACCESS-PATTERNS" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32" font-weight="bold" fill="#435B61">
+                <tspan x="19" y="49">ACCESS PATTERNS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

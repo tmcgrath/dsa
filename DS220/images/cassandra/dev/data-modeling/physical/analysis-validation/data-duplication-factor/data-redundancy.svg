@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="982px" height="338px" viewBox="0 0 982 338" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>data-redundancy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(284.000000, 49.000000)">
+            <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="258" height="288"></rect>
+            <g id="Chebotko-Logical" transform="translate(9.371795, 41.083491)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="1.42108547e-14" width="73.3205128" height="9.5247267"></rect>
+                <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">videos_by_tag</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(90.410256, 77.020873)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="1.42108547e-14" width="73.3205128" height="9.5247267"></rect>
+                <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">videos_by_actor</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(9.371795, 115.394687)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="video_interactions_b" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">video_interactions_by_user…</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(90.410256, 154.377609)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">comments_by_video</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(9.371795, 197.015180)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="playlists" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">playlists</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(171.448718, 41.083491)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="1.42108547e-14" width="73.3205128" height="9.5247267"></rect>
+                <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">videos_by_genre</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(171.448718, 116.612903)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">videos_by_user</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(171.448718, 197.624288)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">video_rating</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(90.410256, 226.861480)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="channels" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">channels</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+            <g id="Chebotko-Logical" transform="translate(90.410256, 4.537002)">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="9.5247267" width="73.3205128" height="47.1223321"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="73.3205128" height="9.5247267"></rect>
+                <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal" fill="#007B98">
+                    <tspan x="2.25601578" y="6.50390422">videos</tspan>
+                </text>
+                <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="5.41443787" font-weight="normal">
+                    <tspan x="2.25601578" y="17.0312337">.</tspan>
+                    <tspan x="2.25601578" y="23.0312337">.</tspan>
+                    <tspan x="2.25601578" y="29.0312337">.</tspan>
+                    <tspan x="2.25601578" y="35.0312337">title</tspan>
+                    <tspan x="2.25601578" y="41.0312337">.</tspan>
+                    <tspan x="2.25601578" y="47.0312337">.</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(1.000000, 141.000000)">
+            <rect id="Rectangle-1" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="170" height="47.5"></rect>
+            <text id="title" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="34.2857143" font-weight="normal" fill="#D1870D">
+                <tspan x="11.4285714" y="37.5967742">title</tspan>
+            </text>
+            <text id="Rocky" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32" font-weight="normal" fill="#2A2A2A">
+                <tspan x="11.8571429" y="82.0322581">Rocky</tspan>
+            </text>
+            <rect id="Rectangle-1-Copy" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="47.5" width="170" height="47.5"></rect>
+        </g>
+        <text id="Original-Data" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#435B61">
+            <tspan x="1" y="23">Original Data</tspan>
+        </text>
+        <text id="Duplication" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#435B61">
+            <tspan x="284" y="23">Duplication</tspan>
+        </text>
+        <text id="Replication" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#435B61">
+            <tspan x="697" y="23">Replication</tspan>
+        </text>
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(697.000000, 55.000000)">
+            <ellipse id="Oval-1" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="143.126984" cy="32.9926108" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="143.126984" cy="32.9926108" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy-2" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="143.126984" cy="249.007389" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy-3" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="247.560847" cy="185.800493" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy-4" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="36.4391534" cy="183.022167" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy-5" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="240.047619" cy="90.6428571" rx="36.4391534" ry="32.9926108"></ellipse>
+            <ellipse id="Oval-1-Copy-6" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="49.2116402" cy="82.3078818" rx="36.4391534" ry="32.9926108"></ellipse>
+            <g transform="translate(129.978836, 20.142857)">
+                <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="27.7989418" height="26.3940887"></rect>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_tag</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 7.813051)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_actor</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 10.968321)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="table-name" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_event</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 14.173676)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">comments_by_video</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 17.679532)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_playlist" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_playlist</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_genre</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 11.068489)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_user</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 17.729616)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_rating</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 20.133631)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_channel" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_channel</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 1.853095)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-4" transform="translate(22.539683, 169.477833)">
+                <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="27.7989418" height="26.3940887"></rect>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_tag</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 7.813051)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_actor</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 10.968321)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="table-name" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_event</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 14.173676)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">comments_by_video</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 17.679532)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_playlist" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_playlist</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_genre</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 11.068489)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_user</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 17.729616)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_rating</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 20.133631)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_channel" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_channel</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 1.853095)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+            </g>
+            <text id="RF=5" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="16.6699507" font-weight="normal" fill="#007B98">
+                <tspan x="126.222222" y="146.275862">RF=5</tspan>
+            </text>
+            <path d="M75.5079365,59.3866995 L107.063492,39.9384236" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M33.4338624,114.258621 L33.4338624,148.987685" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M58.2275132,208.027094 L107.814815,237.199507" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M177.687831,239.283251 L227.275132,214.972906" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M247.560847,151.76601 L247.560847,122.593596" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M214.502646,67.0270936 L178.439153,42.0221675" id="Line" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <g id="Group-Copy" transform="translate(129.978836, 236.157635)">
+                <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="27.7989418" height="26.3940887"></rect>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_tag</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 7.813051)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_actor</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 10.968321)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="table-name" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_event</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 14.173676)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">comments_by_video</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 17.679532)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_playlist" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_playlist</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_genre</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 11.068489)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_user</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 17.729616)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_rating</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 20.133631)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_channel" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_channel</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 1.853095)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-2" transform="translate(226.148148, 77.098522)">
+                <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="27.7989418" height="26.3940887"></rect>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_tag</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 7.813051)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_actor</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 10.968321)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="table-name" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_event</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 14.173676)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">comments_by_video</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 17.679532)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_playlist" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_playlist</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_genre</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 11.068489)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_user</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 17.729616)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_rating</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 20.133631)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_channel" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_channel</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 1.853095)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-Copy-3" transform="translate(235.164021, 172.950739)">
+                <rect id="Rectangle-23" stroke="#979797" fill="#DCEDFF" sketch:type="MSShapeGroup" x="0" y="0" width="27.7989418" height="26.3940887"></rect>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_tag" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_tag</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 7.813051)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_actor" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_actor</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 10.968321)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="table-name" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_event</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 14.173676)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="comments_by_video" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">comments_by_video</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(1.009791, 17.679532)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_playlist" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_playlist</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 4.858115)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_genre" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_genre</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 11.068489)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos_by_user" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos_by_user</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(18.473228, 17.729616)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_rating" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_rating</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 20.133631)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="video_channel" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">video_channel</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+                <g id="Chebotko-Logical" transform="translate(9.741510, 1.853095)">
+                    <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0.783166608" width="7.90012662" height="3.87461375"></rect>
+                    <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="7.90012662" height="0.783166608"></rect>
+                    <text id="videos" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal" fill="#007B98">
+                        <tspan x="0.243080819" y="0.123657885">videos</tspan>
+                    </text>
+                    <text id="." fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="0.49189859" font-weight="normal">
+                        <tspan x="0.243080819" y="0.989263084">.</tspan>
+                        <tspan x="0.243080819" y="0.989363084">.</tspan>
+                        <tspan x="0.243080819" y="0.989463084">.</tspan>
+                        <tspan x="0.243080819" y="0.989563084">video_title</tspan>
+                        <tspan x="0.243080819" y="0.989663084">.</tspan>
+                        <tspan x="0.243080819" y="0.989763084">.</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <text id="x" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="64" font-weight="420" fill="#000000">
+            <tspan x="212" y="202">x</tspan>
+        </text>
+        <text id="x-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="64" font-weight="420" fill="#000000">
+            <tspan x="615" y="205">x</tspan>
+        </text>
+    </g>
+</svg>

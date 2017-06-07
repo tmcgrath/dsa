@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1445px" height="273px" viewBox="0 0 1445 273" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-1-Copy-6" stroke="#D2A854" stroke-width="5" fill-opacity="0.5" fill="#000000" sketch:type="MSShapeGroup" x="609" y="67.1933906" width="235" height="115"></rect>
+        <text id="Logical" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="667.982" y="116.693391">Logical</tspan>
+        </text>
+        <text id="Data-Model" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="634.305" y="157.693391">Data Model</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy-5" stroke="#FFFFFF" stroke-width="3" fill-opacity="0.5" fill="#000000" sketch:type="MSShapeGroup" x="1208" y="67.1933906" width="235" height="115"></rect>
+        <text id="Physical" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="1259.659" y="116.693391">Physical</tspan>
+        </text>
+        <text id="Data-Model" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="1234.805" y="157.693391">Data Model</tspan>
+        </text>
+        <rect id="Rectangle-1" stroke-opacity="0.53943048" stroke="#FFFFFF" stroke-width="3" fill-opacity="0.216428895" fill="#000000" sketch:type="MSShapeGroup" x="2" y="2" width="235" height="115"></rect>
+        <text id="Conceptual" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="24.628" y="48">Conceptual</tspan>
+        </text>
+        <text id="Data-Model" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="24.305" y="89">Data Model</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy" stroke-opacity="0.53943048" stroke="#FFFFFF" stroke-width="3" fill-opacity="0.216428895" fill="#000000" sketch:type="MSShapeGroup" x="2" y="156" width="235" height="115"></rect>
+        <text id="Application" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="29.192" y="207">Application</tspan>
+        </text>
+        <text id="Workflow" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="44.305" y="248">Workflow</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy-2" stroke="#D2A854" stroke-width="5" fill-opacity="0.5" fill="#000000" sketch:type="MSShapeGroup" x="291" y="43.1757813" width="273" height="163.035219" rx="10"></rect>
+        <text id="Mapping" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="352.225" y="96.193391">Mapping</tspan>
+        </text>
+        <text id="Conceptual" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="331.128" y="137.193391">Conceptual</tspan>
+        </text>
+        <text id="to-Logical" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="344.014" y="178.193391">to Logical</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy-4" stroke="#FFFFFF" stroke-width="3" fill-opacity="0.5" fill="#000000" sketch:type="MSShapeGroup" x="886" y="67.1933906" width="273" height="115" rx="10"></rect>
+        <text id="Physical" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="956.659" y="116.693391">Physical</tspan>
+        </text>
+        <text id="Optimization" fill="#FFFFFF" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.5234578" font-weight="420">
+            <tspan x="922.999" y="157.693391">Optimization</tspan>
+        </text>
+        <path d="M564.5,124.693391 L597.643627,124.693391" id="Line" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M597.643627,124.693391 L586.843627,121.693391 L586.843627,127.693391 L597.643627,124.693391 L597.643627,124.693391 Z" id="Line-decoration-1" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M844.5,124.693391 L877.643627,124.693391" id="Line-Copy" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M877.643627,124.693391 L866.843627,121.693391 L866.843627,127.693391 L877.643627,124.693391 L877.643627,124.693391 Z" id="Line-Copy-decoration-1" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M1159,124.693391 L1192.14363,124.693391" id="Line-Copy-Copy" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M1200.14363,124.693391 L1189.34363,121.693391 L1189.34363,127.693391 L1200.14363,124.693391 L1200.14363,124.693391 Z" id="Line-Copy-decoration-1-Copy" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M255.5,139.5 L279.413774,139.5" id="Line-Copy-3" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M279.413774,139.5 L268.613774,136.5 L268.613774,142.5 L279.413774,139.5 L279.413774,139.5 Z" id="Line-Copy-3-decoration-1" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M239.422852,203.435547 L257.964326,203.435547 L257.964327,137.571289" id="Path-6" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup"></path>
+        <path d="M255.5,112 L280.413774,112" id="Line-Copy-4" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M280.413774,112 L269.613774,109 L269.613774,115 L280.413774,112 L280.413774,112 Z" id="Line-Copy-4-decoration-1" stroke="#FFFFFF" stroke-width="5" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M239.422852,112.683105 L257.964326,112.683105 L257.964327,47.053627" id="Path-6-Copy" stroke="#FFFFFF" stroke-width="5" sketch:type="MSShapeGroup" transform="translate(248.693590, 79.868366) scale(1, -1) translate(-248.693590, -79.868366) "></path>
+    </g>
+</svg>

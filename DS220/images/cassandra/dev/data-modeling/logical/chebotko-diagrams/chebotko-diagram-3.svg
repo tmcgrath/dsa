@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1399px" height="572px" viewBox="0 0 1399 572" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>chebotko-diagram-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="2" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-29" stroke="#000000" opacity="0.2" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="2.23293257" y="393" width="1390.76707" height="170"></rect>
+        <text id="Q1:-Find-a-video-wit" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#000000">
+            <tspan x="22" y="499">Q1: Find a video with a </tspan>
+            <tspan x="402.088" y="499" font-weight="bold">specified video id</tspan>
+            <tspan x="702.652" y="499"></tspan>
+            <tspan x="22" y="543">Q2: Find actors for a </tspan>
+            <tspan x="362.74" y="543" font-weight="bold">video with a known id</tspan>
+            <tspan x="734.656" y="543"> (show actor names in ascending order)</tspan>
+        </text>
+        <text id="ACCESS-PATTERNS" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32" font-weight="bold" fill="#435B61">
+            <tspan x="21" y="442">ACCESS PATTERNS</tspan>
+        </text>
+        <rect id="Rectangle-29" stroke="#000000" opacity="0.2" fill="#FFFFFF" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="893" y="64" width="500" height="290"></rect>
+        <text id="UDTs" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32" font-weight="bold" fill="#435B61">
+            <tspan x="913" y="115">UDTs</tspan>
+        </text>
+        <rect id="Body" stroke="#979797" opacity="0.2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="913" y="181" width="200" height="137"></rect>
+        <rect id="Header" stroke="#979797" opacity="0.2" fill="#D8D8D8" sketch:type="MSShapeGroup" x="913" y="143" width="200" height="38"></rect>
+        <text id="*encoding*" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+            <tspan x="923" y="172">*encoding*</tspan>
+        </text>
+        <text id="encoding" opacity="0.2" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+            <tspan x="923" y="214">encoding</tspan>
+            <tspan x="923" y="243">height</tspan>
+            <tspan x="923" y="272">width</tspan>
+            <tspan x="923" y="301" fill="#D1870E">{bit_rates}</tspan>
+            <tspan x="1031.432" y="301"></tspan>
+        </text>
+        <rect id="Body" stroke="#979797" opacity="0.2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="484" y="100.375" width="325" height="108"></rect>
+        <rect id="Header" stroke="#979797" opacity="0.2" fill="#D8D8D8" sketch:type="MSShapeGroup" x="484" y="63" width="325" height="38"></rect>
+        <text id="actors_by_video" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+            <tspan x="494" y="92.375">actors_by_video</tspan>
+        </text>
+        <text id="video_id" opacity="0.2" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+            <tspan x="494" y="134">video_id</tspan>
+            <tspan x="494" y="163">actor_name</tspan>
+            <tspan x="494" y="192">character_name</tspan>
+        </text>
+        <text id="K" opacity="0.2" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+            <tspan x="768" y="134">K</tspan>
+            <tspan x="768" y="163">C</tspan>
+            <tspan x="785.328" y="163" font-family="Lucida Grande" fill="#D1870E">↑</tspan>
+            <tspan x="768" y="192" fill="#D1870E">C</tspan>
+            <tspan x="785.328" y="192" font-family="Lucida Grande" fill="#D1870E">↑</tspan>
+        </text>
+        <rect id="Body" stroke="#979797" opacity="0.2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="2" y="102" width="325" height="281"></rect>
+        <rect id="Header" stroke="#979797" opacity="0.2" fill="#D8D8D8" sketch:type="MSShapeGroup" x="2" y="64" width="325" height="38"></rect>
+        <text id="videos" opacity="0.2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+            <tspan x="12" y="93">videos</tspan>
+        </text>
+        <text id="video_id" opacity="0.2" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+            <tspan x="12" y="135">video_id</tspan>
+            <tspan x="12" y="164">uploaded_timestamp</tspan>
+            <tspan x="12" y="193">title</tspan>
+            <tspan x="12" y="222">description</tspan>
+            <tspan x="12" y="251">type</tspan>
+            <tspan x="12" y="280">url</tspan>
+            <tspan x="12" y="309">*encoding*</tspan>
+            <tspan x="12" y="338">{tags}</tspan>
+            <tspan x="12" y="367">&lt;preview_thumbnails&gt;</tspan>
+        </text>
+        <text id="K" opacity="0.2" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+            <tspan x="278" y="135">K</tspan>
+            <tspan x="278" y="164"></tspan>
+            <tspan x="278" y="193"></tspan>
+            <tspan x="278" y="222"></tspan>
+            <tspan x="278" y="251"></tspan>
+            <tspan x="278" y="280"></tspan>
+            <tspan x="278" y="309"></tspan>
+            <tspan x="278" y="338"></tspan>
+            <tspan x="278" y="367"></tspan>
+        </text>
+        <path d="M164.5,5.13401985 L164.5,54.5" id="Line-Copy-4" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-4-decoration-1" d="M164.5,54.5 L167.5,43.7 L161.5,43.7 L164.5,54.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M328.5,136.13402 L474.538803,136.13402" id="Line-Copy-5" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-5-decoration-1" d="M474.538803,136.13402 L463.738803,133.13402 L463.738803,139.13402 L474.538803,136.13402 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <text id="Q1-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="104" y="55">Q1</tspan>
+        </text>
+        <text id="Q2-Copy-2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="423" y="121">Q2</tspan>
+        </text>
+        <text id="Application-Workflow" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#435B61">
+            <tspan x="352" y="295">Application Workflow</tspan>
+        </text>
+        <path d="M389.5,251.5 L172.5,81.5" id="Line-Copy-2" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-2-decoration-1" d="M172.5,81.5 L179.151648,90.5219501 L182.851844,85.7987579 L172.5,81.5 Z" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M423.5,251.5 L423.5,161.5" id="Line-Copy-3" stroke="#979797" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-3-decoration-1" d="M423.5,161.5 L420.5,172.3 L426.5,172.3 L423.5,161.5 Z" stroke="#979797" stroke-linecap="square"></path>
+    </g>
+</svg>

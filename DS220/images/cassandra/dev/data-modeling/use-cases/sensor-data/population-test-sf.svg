@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 403.3 98.3" enable-background="new 0 0 403.3 98.3" xml:space="preserve">
+<g>
+	<rect x="0" y="0" fill="#EAEAEB" width="403.3" height="98.3"/>
+	<g>
+		<g>
+			<rect x="12.2" y="16.7" fill="#D1D2D4" width="179.7" height="23.3"/>
+			<rect x="12.2" y="16.7" fill="none" stroke="#D1D2D4" stroke-miterlimit="10" width="179.7" height="23.3"/>
+		</g>
+		<g>
+			<rect x="12.2" y="14.7" fill="#FDFDFE" width="179.7" height="23.3"/>
+			<rect x="12.2" y="14.7" fill="none" stroke="#D2D3D4" stroke-miterlimit="10" width="179.7" height="23.3"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="215.1" y="16.7" fill="#D1D2D4" width="179.7" height="23.3"/>
+			<rect x="215.1" y="16.7" fill="none" stroke="#D1D2D4" stroke-miterlimit="10" width="179.7" height="23.3"/>
+		</g>
+		<g>
+			<rect x="215.1" y="14.7" fill="#FDFDFE" width="179.7" height="23.3"/>
+			<rect x="215.1" y="14.7" fill="none" stroke="#D2D3D4" stroke-miterlimit="10" width="179.7" height="23.3"/>
+		</g>
+	</g>
+	<g>
+		<line fill="none" stroke="#CA6328" stroke-width="2" stroke-miterlimit="10" x1="102.1" y1="39.8" x2="102.1" y2="54.9"/>
+		<g>
+			<polygon fill="#CA6328" points="98,53.8 102.1,60.8 106.2,53.8 			"/>
+		</g>
+	</g>
+	<g>
+		<line fill="none" stroke="#CA6328" stroke-width="2" stroke-miterlimit="10" x1="304.9" y1="39.8" x2="304.9" y2="54.9"/>
+		<g>
+			<polygon fill="#CA6328" points="300.9,53.8 304.9,60.8 309,53.8 			"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 43.4213 29.6668)"><tspan x="0" y="0" fill="#188B74" font-family="'HelveticaNeue-Medium'" font-size="12">San Francisco</tspan><tspan x="79.2" y="0" fill="#435B61" font-family="'HelveticaNeue-Medium'" font-size="12">:</tspan><tspan x="82.5" y="0" fill="#CA6328" font-family="'HelveticaNeue-Medium'" font-size="12">mayor</tspan></text>
+	<text transform="matrix(1 0 0 1 234.1424 29.6668)"><tspan x="0" y="0" fill="#188B74" font-family="'HelveticaNeue-Medium'" font-size="12">San Francisco</tspan><tspan x="79.2" y="0" fill="#435B61" font-family="'HelveticaNeue-Medium'" font-size="12">:</tspan><tspan x="82.5" y="0" fill="#CA6328" font-family="'HelveticaNeue-Medium'" font-size="12">population</tspan></text>
+	<g>
+		<g>
+			<rect x="48.1" y="64" fill="#D1D2D4" width="107.9" height="23.3"/>
+			<rect x="48.1" y="64" fill="none" stroke="#D1D2D4" stroke-miterlimit="10" width="107.9" height="23.3"/>
+		</g>
+		<g>
+			<rect x="48.1" y="62" fill="#FDFDFE" width="107.9" height="23.3"/>
+			<rect x="48.1" y="62" fill="none" stroke="#D2D3D4" stroke-miterlimit="10" width="107.9" height="23.3"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 82.8411 78.0001)" fill="#CA6328" font-family="'HelveticaNeue-Medium'" font-size="12">Ed Lee</text>
+	<g>
+		<g>
+			<rect x="251" y="64" fill="#D1D2D4" width="107.9" height="23.3"/>
+			<rect x="251" y="64" fill="none" stroke="#D1D2D4" stroke-miterlimit="10" width="107.9" height="23.3"/>
+		</g>
+		<g>
+			<rect x="251" y="62" fill="#FDFDFE" width="107.9" height="23.3"/>
+			<rect x="251" y="62" fill="none" stroke="#D2D3D4" stroke-miterlimit="10" width="107.9" height="23.3"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 283.2531 78.0001)" fill="#CA6328" font-family="'HelveticaNeue-Medium'" font-size="12">837,442</text>
+</g>
+</svg>

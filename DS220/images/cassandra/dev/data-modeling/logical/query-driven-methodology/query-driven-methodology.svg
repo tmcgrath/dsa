@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="603px" height="315px" viewBox="0 0 603 315" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>query-driven-methodology</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Line-+-Triangle-1" sketch:type="MSLayerGroup" transform="translate(117.000000, 125.000000)">
+            <path d="M7.5,0.628378378 L7.5,76.6621622" id="Line" stroke="#007B98" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <polygon id="Triangle-1" fill="#007B98" sketch:type="MSShapeGroup" transform="translate(7.500000, 81.689189) scale(-1, -1) translate(-7.500000, -81.689189) " points="7.5 70.3783784 15 93 0 93 "></polygon>
+        </g>
+        <g id="Line-+-Triangle-1-Copy" sketch:type="MSLayerGroup" transform="translate(242.500000, 171.500000) scale(-1, 1) rotate(-90.000000) translate(-242.500000, -171.500000) translate(235.000000, 55.000000)">
+            <path d="M7.5,0.626344086 L7.5,222.978495" id="Line" stroke="#CB6015" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <polygon id="Triangle-1" fill="#CB6015" sketch:type="MSShapeGroup" transform="translate(7.500000, 221.725806) scale(-1, -1) translate(-7.500000, -221.725806) " points="7.5 210.451613 15 233 0 233 "></polygon>
+        </g>
+        <rect id="Rectangle-1" stroke="#979797" stroke-width="1.25" fill="#FBFBFB" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="5" y="2" width="240" height="124"></rect>
+        <text id="Conceptual" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="30" font-weight="420" sketch:alignment="middle" fill="#007B98">
+            <tspan x="45.76" y="38">Conceptual</tspan>
+            <tspan x="45.475" y="75">Data Model</tspan>
+            <tspan x="58.24" y="112">&amp; Queries</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy" stroke="#979797" stroke-width="1.25" fill="#FBFBFB" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="5" y="217" width="240" height="90"></rect>
+        <text id="Logical" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="30" font-weight="420" sketch:alignment="middle" fill="#007B98">
+            <tspan x="75.19" y="254">Logical</tspan>
+            <tspan x="45.475" y="291">Data Model</tspan>
+        </text>
+        <rect id="Rectangle-1-Copy-2" stroke="#979797" stroke-width="1.25" fill="#FBFBFB" filter="url(#filter-3)" sketch:type="MSShapeGroup" x="358" y="125" width="240" height="90"></rect>
+        <text id="Query-Driven" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="30" font-weight="420" sketch:alignment="middle" fill="#CB6015">
+            <tspan x="387.29" y="163">Query-Driven</tspan>
+            <tspan x="387.575" y="200">Methodology</tspan>
+        </text>
+    </g>
+</svg>

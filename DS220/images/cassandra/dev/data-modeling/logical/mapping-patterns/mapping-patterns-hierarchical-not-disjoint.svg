@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1728px" height="756px" viewBox="0 0 1728 756" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>mapping-patterns-hierarchical-not-disjoint</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M1027.5,723.5 L1116.5,723.5" id="Line-Copy-6" stroke="#979797" stroke-width="15" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-6-decoration-1" d="M1116.5,723.5 L1105.7,720.5 L1105.7,726.5 L1116.5,723.5 Z" stroke="#979797" stroke-width="15" stroke-linecap="square"></path>
+        <rect id="Rectangle-5-Copy" stroke="#979797" stroke-width="1.5" fill="#D8D8D8" sketch:type="MSShapeGroup" x="29" y="650" width="890" height="101"></rect>
+        <text id="ACCESS-PATTERN" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="40" font-weight="bold" sketch:alignment="middle">
+            <tspan x="304.3" y="692" fill="#435B61">ACCESS PATTERN</tspan>
+            <tspan x="660.7" y="692" font-size="36" font-weight="normal" fill="#000000"></tspan>
+            <tspan x="315.352" y="741" font-size="36" font-weight="normal" fill="#000000">WHERE </tspan>
+            <tspan x="453.34" y="741" font-size="36" font-weight="normal" fill="#007695">video_id = ?</tspan>
+        </text>
+        <g id="videos-copy-3" sketch:type="MSLayerGroup" transform="translate(1224.000000, 329.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="1.5" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="57" width="503" height="369"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="1.5" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="503" height="57"></rect>
+            <text id="videos" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#1B7387">
+                <tspan x="15.0149254" y="43">videos</tspan>
+            </text>
+            <text id="video_id" fill="#007695" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal">
+                <tspan x="15.0149254" y="106">video_id</tspan>
+                <tspan x="149.690925" y="106" fill="#43A58C"></tspan>
+                <tspan x="15.0149254" y="149" fill="#43A58C">release_date</tspan>
+                <tspan x="15.0149254" y="192" fill="#43A58C">title</tspan>
+                <tspan x="15.0149254" y="235" fill="#43A58C">description</tspan>
+                <tspan x="15.0149254" y="278" fill="#DC8456">season</tspan>
+                <tspan x="15.0149254" y="321" fill="#DC8456">episode</tspan>
+                <tspan x="143.030925" y="321" fill="#43A58C"></tspan>
+                <tspan x="15.0149254" y="364" fill="#965FA4">mpaa_rating</tspan>
+                <tspan x="215.066925" y="364" fill="#43A58C"></tspan>
+                <tspan x="15.0149254" y="407" fill="#D2565F">{type}</tspan>
+            </text>
+            <text id="K" fill="#0089A6" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal">
+                <tspan x="414.41194" y="106">K</tspan>
+            </text>
+        </g>
+        <path d="M400.25,137 L346.479074,137" id="Line-Copy-53" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M594.5,63.5 L532.5,104.5" id="Line-Copy-54" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M485.75,104.517189 L421.5,65.5" id="Line-Copy-55" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M620.492241,136.677188 L664.125,136.677188" id="Line-Copy-56" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M512.5,168.5 L512.5,248.5" id="Line-Copy-40" stroke="#1B7387" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <g id="entity_white-copy" sketch:type="MSLayerGroup" transform="translate(399.000000, 102.000000)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <rect id="entity_white" sketch:type="MSShapeGroup" x="0.5" y="0.34749349" width="220" height="70"></rect>
+        </g>
+        <text id="Video-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="490.268" y="144">Video</tspan>
+        </text>
+        <g id="attribute_white-copy-26" sketch:type="MSLayerGroup" transform="translate(185.000000, 103.000000)" stroke="#5CA2B4" stroke-width="3" fill="#D5E6EE">
+            <ellipse id="attribute_blue" sketch:type="MSShapeGroup" cx="82" cy="33" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <g id="attribute_white-copy-27" sketch:type="MSLayerGroup" transform="translate(295.000000, 5.000000)" stroke="#8BBEB1" stroke-width="3" fill="#DAEAE6">
+            <path d="M82,65.1875 C127.287349,65.1875 164,50.6554092 164,32.7291667 C164,14.8029242 127.287349,0.270833333 82,0.270833333 C36.7126505,0.270833333 0,14.8029242 0,32.7291667 C0,50.6554092 36.7126505,65.1875 82,65.1875 Z" id="attribute_green" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="attribute_white-copy-28" sketch:type="MSLayerGroup" transform="translate(540.000000, 3.000000)" stroke="#8BBEB1" stroke-width="3" fill="#DAEAE6">
+            <path d="M82,65.1875 C127.287349,65.1875 164,50.6554092 164,32.7291667 C164,14.8029242 127.287349,0.270833333 82,0.270833333 C36.7126505,0.270833333 0,14.8029242 0,32.7291667 C0,50.6554092 36.7126505,65.1875 82,65.1875 Z" id="attribute_green" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="attribute_white-copy-34" sketch:type="MSLayerGroup" transform="translate(666.000000, 102.847000)" stroke="#8BBEB1" stroke-width="3" fill="#DAEAE6">
+            <path d="M82,65.1875 C127.287349,65.1875 164,50.6554092 164,32.7291667 C164,14.8029242 127.287349,0.270833333 82,0.270833333 C36.7126505,0.270833333 0,14.8029242 0,32.7291667 C0,50.6554092 36.7126505,65.1875 82,65.1875 Z" id="attribute_green" sketch:type="MSShapeGroup"></path>
+        </g>
+        <text id="id-copy-2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" text-decoration="underline" fill="#B94850">
+            <tspan x="259.165" y="138.847">id</tspan>
+        </text>
+        <text id="release-date" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="328.333" y="43.347">release date</tspan>
+        </text>
+        <text id="title-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="605.001" y="40">title</tspan>
+        </text>
+        <text id="description-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="700.162" y="139.847">description</tspan>
+        </text>
+        <path d="M187.5,486 L146.5,459.5" id="Line-Copy-44" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M187.5,553 L94.5,591.5" id="Line-Copy-45" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M840.099868,517.5 L878.388062,517.5" id="Line-Copy-46" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M428.5,390 L297.375,482.5" id="Line-Copy-43" stroke="#1B7387" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M601.5,393 L730.375,480.5" id="Line-Copy-42" stroke="#1B7387" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <g id="hierarchy_white-copy-2" sketch:type="MSLayerGroup" transform="translate(420.000000, 249.000000)" stroke-width="3" stroke="#B6BBB7" fill="#F0F0F0">
+            <polygon id="hierarchy_white" sketch:type="MSShapeGroup" points="92.375 0.50374349 184.375 144.503743 0.375 144.503743 "></polygon>
+        </g>
+        <g id="entity_white-copy-4" sketch:type="MSLayerGroup" transform="translate(185.000000, 482.000000)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <rect id="entity_white" sketch:type="MSShapeGroup" x="0.5" y="0.34749349" width="220" height="70"></rect>
+        </g>
+        <g id="entity_white-copy-5" sketch:type="MSLayerGroup" transform="translate(620.000000, 479.000000)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <rect id="entity_white" sketch:type="MSShapeGroup" x="0.5" y="0.34749349" width="220" height="70"></rect>
+        </g>
+        <text id="TV-Show" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="250.175" y="523">TV Show</tspan>
+        </text>
+        <text id="Movie" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="699.222" y="520">Movie</tspan>
+        </text>
+        <text id="not-disjoint" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="456.059" y="416">not disjoint</tspan>
+            <tspan x="449.118" y="443">not covering</tspan>
+        </text>
+        <text id="not-disjoint" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="1007.559" y="695">not disjoint</tspan>
+        </text>
+        <text id="IsA-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="495.396" y="350">IsA</tspan>
+        </text>
+        <g id="attribute_white-copy-23" sketch:type="MSLayerGroup" transform="translate(12.000000, 410.000000)" stroke="#E5C0AD" stroke-width="3" fill="#F7ECE6">
+            <ellipse id="attribute_orange" sketch:type="MSShapeGroup" cx="82" cy="32.5" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <g id="attribute_white-copy-24" sketch:type="MSLayerGroup" transform="translate(3.000000, 553.000000)" stroke="#E5C0AD" stroke-width="3" fill="#F7ECE6">
+            <ellipse id="attribute_orange" sketch:type="MSShapeGroup" cx="82" cy="32.5" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <g id="attribute_white-copy-25" sketch:type="MSLayerGroup" transform="translate(873.000000, 484.000000)" stroke="#A390A8" stroke-width="3" fill="#DED8E0">
+            <ellipse id="attribute_purple" sketch:type="MSShapeGroup" cx="82" cy="33.2916667" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <text id="season" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="65.164" y="447">season</tspan>
+        </text>
+        <text id="episode" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="56.496" y="590">episode</tspan>
+        </text>
+        <text id="MPAA-rating" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="904.83" y="520">MPAA rating</tspan>
+        </text>
+    </g>
+</svg>

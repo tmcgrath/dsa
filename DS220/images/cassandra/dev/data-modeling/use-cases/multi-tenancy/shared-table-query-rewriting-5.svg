@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1521px" height="794px" viewBox="0 0 1521 794" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>shared-table-query-rewriting-5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-path" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="523" y="223.221" width="468" height="127.049" rx="22.5"></rect>
+        <text id="Application-" fill="#D1870D" filter="url(#filter-1)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="48" font-weight="normal" sketch:alignment="middle">
+            <tspan x="636.544" y="271.221">Application </tspan>
+            <tspan x="585.016" y="328.221">Query Rewriting</tspan>
+        </text>
+        <rect id="Rectangle-path" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="132.017" y="2.111" width="180" height="117.78"></rect>
+        <text id="Tenant" fill="#007B98" filter="url(#filter-2)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal" sketch:alignment="middle">
+            <tspan x="156.809" y="50.043">Tenant</tspan>
+            <tspan x="207.761" y="102.043">A</tspan>
+        </text>
+        <text id="Tenant" fill="#007B98" filter="url(#filter-3)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal" sketch:alignment="middle">
+            <tspan x="1231.792" y="47.891">Tenant</tspan>
+            <tspan x="1281.93" y="99.891">B</tspan>
+        </text>
+        <rect id="Rectangle-path" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="1207" y="2.111" width="180" height="117.78"></rect>
+        <rect id="Rectangle-path" fill="#FADECB" sketch:type="MSShapeGroup" x="0.7499" y="189.633" width="468" height="160.637"></rect>
+        <text id="SELECT-*" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal">
+            <tspan x="13.75" y="237.4865">SELECT *</tspan>
+            <tspan x="13.75" y="289.4865">FROM </tspan>
+            <tspan x="153.142" y="289.4865" fill="#007B98">sensors_</tspan>
+            <tspan x="329.142" y="289.4865">...</tspan>
+            <tspan x="13.75" y="341.4865">WHERE </tspan>
+            <tspan x="182.402" y="341.4865" fill="#D1870D">network  </tspan>
+            <tspan x="364.914" y="341.4865"> = 1;</tspan>
+        </text>
+        <rect id="Rectangle-path" fill="#FADECB" sketch:type="MSShapeGroup" x="89.75" y="369.693" width="468" height="210.593"></rect>
+        <rect id="Rectangle-path" fill="#FADECB" sketch:type="MSShapeGroup" x="1043" y="192.4755" width="468" height="160.637"></rect>
+        <rect id="Rectangle-path" fill="#FADECB" sketch:type="MSShapeGroup" x="964" y="369.693" width="468" height="210.593"></rect>
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(539.500000, 594.488000)">
+            <g id="users-copy">
+                <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="435" height="160"></rect>
+                <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="435" height="38"></rect>
+                <text id="sensors_by_network" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                    <tspan x="10" y="29">sensors_by_network</tspan>
+                </text>
+                <text id="tenant" fill="#D2565F" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                    <tspan x="10" y="71">tenant</tspan>
+                    <tspan x="77.584" y="71" fill="#D1870D"></tspan>
+                    <tspan x="10" y="100" fill="#D1870D">network</tspan>
+                    <tspan x="10" y="129" fill="#D1870D">sensor</tspan>
+                    <tspan x="10" y="158" fill="#D1870D">location</tspan>
+                    <tspan x="10" y="187" fill="#D1870D">&lt;characteristics&gt;</tspan>
+                </text>
+                <text id="K" fill="#D2565F" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                    <tspan x="392" y="71">K</tspan>
+                    <tspan x="408.008" y="71" fill="#D1870D"></tspan>
+                    <tspan x="392" y="100" fill="#D1870D">K</tspan>
+                    <tspan x="392" y="129" fill="#D1870D">C</tspan>
+                    <tspan x="409.328" y="129" font-family="Lucida Grande" fill="#D1870D">↑</tspan>
+                    <tspan x="424.808469" y="129" fill="#D1870D"></tspan>
+                </text>
+            </g>
+            <g id="TEXT-Copy-23" transform="translate(310.500000, 137.000000)">
+                <text id="TEXT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                    <tspan x="13.67" y="19.153">TEXT</tspan>
+                </text>
+                <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+            </g>
+            <g id="TEXT-Copy-24" transform="translate(217.500000, 165.000000)">
+                <text id="MAP&lt;TEXT,TEXT&gt;" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                    <tspan x="7.284" y="19.153">MAP&lt;TEXT,TEXT&gt;</tspan>
+                </text>
+                <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="163.5" height="25" rx="8"></rect>
+            </g>
+            <g id="TEXT-Copy-22" transform="translate(310.500000, 108.000000)">
+                <text id="TEXT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                    <tspan x="13.67" y="19.153">TEXT</tspan>
+                </text>
+                <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+            </g>
+            <g id="INT-Copy" transform="translate(310.500000, 79.000000)">
+                <text id="INT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                    <tspan x="21.005" y="19">INT</tspan>
+                </text>
+                <rect id="Rectangle-26-Copy-4" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+            </g>
+            <g id="INT-Copy-7" transform="translate(310.500000, 50.000000)">
+                <text id="UUID" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                    <tspan x="13.337" y="19">UUID</tspan>
+                </text>
+                <rect id="Rectangle-26-Copy-4" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+            </g>
+        </g>
+        <text id="SELECT-*" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal">
+            <tspan x="99.75" y="415.693">SELECT *</tspan>
+            <tspan x="99.75" y="467.693">FROM </tspan>
+            <tspan x="239.142" y="467.693" fill="#007B98">sensors_</tspan>
+            <tspan x="415.142" y="467.693">...</tspan>
+            <tspan x="99.75" y="519.693">WHERE </tspan>
+            <tspan x="268.402" y="519.693" fill="#D1870D">network</tspan>
+            <tspan x="426.45" y="519.693"> = 1</tspan>
+            <tspan x="99.75" y="571.693">AND </tspan>
+            <tspan x="203.238" y="571.693" fill="#D2565F">tenant  </tspan>
+            <tspan x="351.606" y="571.693"> = '</tspan>
+            <tspan x="414.702" y="571.693" fill="#D2565F">A</tspan>
+            <tspan x="443.214" y="571.693">'</tspan>
+            <tspan x="455.446" y="571.693">;</tspan>
+        </text>
+        <text id="SELECT-*" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal">
+            <tspan x="975" y="415.693">SELECT *</tspan>
+            <tspan x="975" y="467.693">FROM </tspan>
+            <tspan x="1114.392" y="467.693" fill="#007B98">sensors_</tspan>
+            <tspan x="1290.392" y="467.693">...</tspan>
+            <tspan x="975" y="519.693">WHERE </tspan>
+            <tspan x="1143.652" y="519.693" fill="#D1870D">network</tspan>
+            <tspan x="1301.7" y="519.693"> = 1</tspan>
+            <tspan x="975" y="571.693">AND </tspan>
+            <tspan x="1078.488" y="571.693" fill="#D2565F">tenant  </tspan>
+            <tspan x="1226.856" y="571.693"> = '</tspan>
+            <tspan x="1289.952" y="571.693" fill="#D2565F">B</tspan>
+            <tspan x="1320.092" y="571.693">';</tspan>
+        </text>
+        <text id="SELECT-*" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal">
+            <tspan x="1053" y="237.4865">SELECT *</tspan>
+            <tspan x="1053" y="289.4865">FROM </tspan>
+            <tspan x="1192.392" y="289.4865" fill="#007B98">sensors_</tspan>
+            <tspan x="1368.392" y="289.4865">...</tspan>
+            <tspan x="1053" y="341.4865">WHERE </tspan>
+            <tspan x="1221.652" y="341.4865" fill="#D1870D">network  </tspan>
+            <tspan x="1404.164" y="341.4865"> = 1;</tspan>
+        </text>
+        <path d="M331.5,107.5 L505.5,215.5" id="Line" stroke="#007B98" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M505.5,215.5 L497.905975,207.255561 L494.741798,212.353402 L505.5,215.5 Z" stroke="#007B98" stroke-width="7" stroke-linecap="square"></path>
+        <path d="M653.5,371.5 L653.5,566.5" id="Line" stroke="#D1870E" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M653.5,566.5 L656.5,555.7 L650.5,555.7 L653.5,566.5 Z" stroke="#D1870E" stroke-width="7" stroke-linecap="square"></path>
+        <path d="M860.5,371.5 L860.5,566.5" id="Line-Copy-2" stroke="#D1870E" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-2-decoration-1" d="M860.5,566.5 L863.5,555.7 L857.5,555.7 L860.5,566.5 Z" stroke="#D1870E" stroke-width="7" stroke-linecap="square"></path>
+        <path d="M1188.5,108.5 L1001.5,215.5" id="Line" stroke="#007B98" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1001.5,215.5 L1012.36386,212.740174 L1009.38402,207.53243 L1001.5,215.5 Z" stroke="#007B98" stroke-width="7" stroke-linecap="square"></path>
+    </g>
+</svg>

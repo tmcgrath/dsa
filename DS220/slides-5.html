@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.2" name="generator" />
+<title>Physical Data Modeling</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{font-weight: normal}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#00}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/goto/deck.goto.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/datastax.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Physical Data Modeling</h1>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation">
+<h2>Let&#8217;s get physical!</h2>
+<div class="paragraph"><p><span class="image"><img alt="physical" src="images/cassandra/dev/data-modeling/physical/analysis-validation/physical.jpg" /></span></p></div>
+<div class="paragraph notes"><p>Just in case you haven&#8217;t had your dose of angry bros working out today&#8230;&#8203;</p></div>
+</section>
+<section class="slide" id="physical-data-modeling">
+<h2>Physical Data Modeling</h2>
+<div class="ulist">
+<ul>
+<li>Analysis and validation&#8212;&#8203;finding the problems</li>
+<li>Physical optimization&#8212;&#8203;fixing the problems</li>
+<li>Adding data types&#8212;&#8203;finalizing the model</li>
+<li>CQL CREATE TABLE&#8212;&#8203;creating the tables</li>
+</ul>
+</div>
+<div class="paragraph notes"><p>We add data types to each column of our logical model. We also optimize for efficiency and performance, ensuring our partition sizes won&#8217;t grow too large, our queries return quickly, etc. We then create our tables using CQL CREATE TABLE statements.</p></div>
+</section>
+<section class="slide" id="why-you-need-analysis">
+<h2>Why You Need Analysis</h2>
+<div class="paragraph"><p><strong>Finding the problem</strong></p></div>
+<div class="ulist">
+<ul>
+<li>The Query-driven Methodology <em>should</em> result in a logical data model that is correct and works</li>
+<li>Depends on the modeling principles, mapping rules, and mapping patterns being applied correctly</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="analysis validation" src="images/cassandra/dev/data-modeling/physical/analysis-validation/analysis-validation.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li><p>
+Theoretically, the logical design should have efficient performance with best practices:<div class="ulist">
+<ul>
+<li>Partition per query</li>
+<li>Nesting data</li>
+<li>Duplicating data</li>
+</ul>
+</div></p></li>
+<li><p>
+In reality, the overall efficiency of the logical model is still up in the air<div class="ulist">
+<ul>
+<li>Database engine has limitations</li>
+<li>Cluster resources: nodes, disk space, and memory, are finite</li>
+<li>Operations that are not directly supported by Cassandra are inefficient by design</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Cassandra intentionally disallows operations that are inefficient for distributed systems or for Cassandra&#8217;s storage engine.</p></div>
+<div class="paragraph"><p>However unsupported functionality may be required for particular queries, and need relatively inefficient workarounds to implement.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="what-to-analyze">
+<h2>What To Analyze</h2>
+<div class="paragraph"><p><strong>Finding the problem</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Partition size</li>
+<li>Data redundancy</li>
+<li>Data consistency</li>
+<li>Application-side joins</li>
+<li>Referential integrity constraints</li>
+<li>Transactions</li>
+<li>Data aggregation</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="optimizing-the-model">
+<h2>Optimizing the Model</h2>
+<div class="paragraph"><p><strong>Fixing the problem</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Key optimizations</li>
+<li>Table optimizations</li>
+<li>Concurrent access to data</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="designing-the-model">
+<h2>Designing the Model</h2>
+<div class="paragraph"><p><strong>Finalizing the physical model</strong></p></div>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="physical table example" src="images/cassandra/dev/data-modeling/physical/analysis-validation/physical-table-example.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>This is an example logical to physical table example that you can use as a guideline to fill out remaining tables.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="creating-the-tables">
+<h2>Creating the Tables</h2>
+<div class="paragraph"><p><strong>Writing the CQL statements</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>CREATE TABLE comments_by_user (
+	user_id UUID,
+	posted_timestamp TIMESTAMP,
+	video_id TIMEUUID,
+	comment TEXT,
+	title TEXT,
+	type TEXT,
+	tags SET&lt;TEXT&gt;,
+	preview_thumbnails MAP&lt;INT, BLOB&gt;,
+	PRIMARY KEY ((user_id), posted_timestamp, video_id)
+) WITH CLUSTERING ORDER BY (posted_timestamp DESC, video_id ASC);</code></pre>
+</div>
+</div>
+</section>
+<section class="slide transition-green" id="courses-DS220-transitions-analysis-finding-problem">
+<h2>Analysis&#8212;&#8203;Finding the Problems</h2>
+
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-partition-size">
+<h2>Partition Size Considerations</h2>
+<div class="paragraph"><p><strong>Implementation limit on the size of a partition in Cassandra</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Number of values in a partition&#8201;&#8212;&#8201;2 billion</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="partition size" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/partition-size.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Size of the partition on disk&#8201;&#8212;&#8201;must be able to fit entirely on a node</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Number of values in a partitions is <strong>not the same</strong> as number of rows.
+Since a partition can store multiple CQL rows, the values in each row contribute to the total number of values in a partition.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="recommendations-for-partition-size-and-number-of-values">
+<h2>Recommendations For Partition Size and Number of Values</h2>
+<div class="ulist">
+<ul>
+<li><p>
+Cassandra 2.0 and earlier<div class="ulist">
+<ul>
+<li>Size: About 100 MB or less</li>
+<li>Number of values: 100,000</li>
+</ul>
+</div></p></li>
+<li><p>
+Cassandra 2.1+<div class="ulist">
+<ul>
+<li>100&#8217;s of MB per partition</li>
+<li>Number of values: Hundreds of thousands</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Other sources may say that the number of values in a partition has a practical limit. However, that would still typically be a result of the size of the partition. It is possible to go beyond 100K+ values in a partition with no degradation in performance.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="calculating-number-of-values">
+<h2>Calculating Number Of Values</h2>
+<div class="paragraph"><p><strong>An estimate can be obtained using the following formula</strong></p></div>
+<div class="ulist">
+<ul>
+<li>General formula</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values 1" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-1.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>If the table only has a primary key and static columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values 2" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-2.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Nv = number of values</li>
+<li>Nr = number of CQL rows</li>
+<li>Nc = number of columns in the table</li>
+<li>Npk = number of primary key columns</li>
+<li>Ns = number of static columns</li>
+</ul>
+</div>
+<div class="paragraph"><p></p></div>
+<div class="ulist">
+<ul>
+<li>This formula provides only an estimate</li>
+<li>Not all rows may have values for its columns</li>
+<li>The number of values used in collection columns are not accounted for</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values 3" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-3.svg" width="800" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values row" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-row.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>100</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user all" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-all.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values columns" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-columns.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>100 * (7</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user pk" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-pk.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values pk" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-pk.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>100 * (7 - 3</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user static" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-static.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values static" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-static.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>100 * (7 - 3 - 1) + 1</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Average case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>An average user posts 100 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values 3" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-3.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>100 * (7 - 3 - 1) + 1  = <strong>301</strong></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>comments_by_user</code> table in this example is slightly different from the normal model, since it is missing the <code>tags</code> and <code>type</code> columns and has a static column <code>user_email</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Bad case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>A very active user posts 5,000 comments</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula number values 3" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-number-values-3.svg" width="800" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>5000 * (7 - 3 - 1) + 1 = <strong>15,001</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User&#8201;&#8212;&#8201;Worst case</strong></p></div>
+<div class="ulist">
+<ul>
+<li>What if a bot creates a user and posts 5,000 comments <strong>per second</strong>?</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li class="slide">15,001 values per second * 3,600 seconds = 54,003,600 comments per hour</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li class="slide">Less than 2 days to reach the 2 billion values limit!!</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: An extreme case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="views by video" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/views-by-video.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>KillrVideo&#8217;s most popular video has over 2 billion views</li>
+<li>The number of views definitely exceeds the partition limit</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: An extreme case</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="views by video" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/views-by-video.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>KillrVideo&#8217;s most popular video has over 2 billion views</li>
+<li>The number of views definitely exceeds the partition limit</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="gangnam" height="400" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/gangnam.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Workarounds</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Modify the use case<div class="ulist">
+<ul>
+<li>Store only the number of views as a single column</li>
+<li>Store the number of views for each browser&#8201;&#8212;&#8201;one value per user agent</li>
+</ul>
+</div></p></li>
+<li>Split the partition into multiple partitions&#8201;&#8212;&#8201;discussed elsewhere</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="calculating-partition-size-on-disk">
+<h2>Calculating Partition Size On Disk</h2>
+<div class="paragraph"><p><strong>An estimate can be obtained using the following formula:</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size.svg" />
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-note" title="Note"></i>
+</td>
+<td class="content">
+This formula only provides an estimate for data forecasting and analysis
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>cki = disk size of all partition key columns</li>
+<li>csj = disk size of all static columns</li>
+<li>Nr = number of CQL rows</li>
+<li>crk = disk size of all regular columns</li>
+<li>ccl = disk size of all clustering columns</li>
+<li>8 bytes represents the internal written timestamp for each value</li>
+<li>Nv = number of values in the partition</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>A CQL row may not necessary have values for all of its columns</li>
+<li>Different values of the same type may have different sizes (e.g. text)</li>
+<li>The formula does not account for partition metadata and the variable size of collection columns</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example: Comments by User</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>User posts 100 comments</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:50%" />
+<col style="width:50%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">post_timestamp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8 bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 bytes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user_email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30 bytes (average)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video_title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60 bytes (average)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">preview_thumbnails</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32,768 bytes (average)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300 bytes (average)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Check out the appendix for a list of all of the CQL types and their data size.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size pk" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-pk.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical pk" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical-pk.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Total size of partition key column(s): <strong>16 bytes</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size static" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-static.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical static" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical-static.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Total size of static column(s): <strong>30 bytes</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size rows" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-rows.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Number of CQL rows in partition: <strong>100</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size clustering" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-clustering.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical clustering" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical-clustering.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Total size of clustering column(s):</li>
+<li>8 + 16 = <strong>24 bytes</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size regular" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-regular.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical regular" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical-regular.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Total size of regular columns(s):</li>
+<li>(300 + 24) + (60 + 24) + (32768 + 24) = <strong>33,200 bytes</strong></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>For each regular column, take the size of the column and add the size of the clustering column(s).<br />
+Then sum the size of all of the regular column(s).</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size values" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size-values.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Number of values&#8201;&#8212;&#8201;from previous example: <strong>301</strong></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="formula partition size" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/formula-partition-size.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by user physical" src="images/cassandra/dev/data-modeling/physical/analysis-validation/partition-size/comments-by-user-physical.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>16 + 30 + (100 * 33200) + (8 * 301)</li>
+<li>Result = <strong>3,322,454 bytes</strong> or <strong>~3.17 MB</strong></li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-13-partition-size">
+<h2>Exercise 13&#8212;&#8203;Figuring out partition size</h2>
+
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-data-duplication-factor">
+<h2>Data Duplication</h2>
+<div class="paragraph"><p><strong>Data duplication comes from having multiple copies of the same data</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Byproduct of the modeling principles</li>
+<li>Not replication&#8212;&#8203;Cassandra also duplicates data for availability and locality</li>
+<li>Your dataset is 10 TB and your schema duplicates it 10 times with RF=5</li>
+<li>The resulting amount of data stored in Cassandra is <strong>500 TB</strong></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="data redundancy" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-duplication-factor/data-redundancy.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The modeling principles that can cause data redundancy includes partition per query data access, nesting data, and duplicating data.</p></div>
+<div class="paragraph"><p>Since much of the duplication in Cassandra is intentional, you should plan for more nodes in a cluster to be able to handle the necessary duplication.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Issues to consider with redundant data</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Non-constant duplication factor</li>
+<li>Data consistency</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="analyzing-data-duplication">
+<h2>Analyzing Data Duplication</h2>
+<div class="paragraph"><p><strong>Duplication across tables</strong></p></div>
+<div class="paragraph"><p><span class="image" style="float: right"><img alt="comments-by-video-user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-duplication-factor/comments-by-video-user.svg" /></span></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Copy of the same entity / relationship is stored in different tables<div class="ulist">
+<ul>
+<li>Each comment is stored once in <code>comments_by_video</code></li>
+<li>Each comment is stored once in <code>comments_by_user</code></li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>Duplication factor is a constant&#8201;&#8212;&#8201;2x</li>
+<li>Usually not an issue</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Duplication across partitions</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="videos by actor" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-duplication-factor/videos-by-actor.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Copy of the same data is stored in the same table, but different partitions</li>
+<li>A video with 5 actors is stored in 5 partitions</li>
+</ul>
+</div>
+<div class="paragraph"><p></p></div>
+<div class="ulist">
+<ul>
+<li>Duplication factor is a constant&#8201;&#8212;&#8201;5x</li>
+<li>Usually not an issue</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Duplication across rows</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="videos by actor genre" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-duplication-factor/videos-by-actor-genre.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li><p>
+Copy of the same data is stored in different rows of the same partition<div class="ulist">
+<ul>
+<li>A video with 5 actors is stored in 5 partitions</li>
+<li>A video with 5 genres is stored in 5 rows in each actor partition</li>
+</ul>
+</div></p></li>
+<li>Duplication factor is a constant&#8201;&#8212;&#8201;~25x</li>
+<li>Usually not an issue</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="issues-with-data-duplication">
+<h2>Issues with Data Duplication</h2>
+<div class="paragraph"><p><strong>If data duplication is not a constant</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="videos by actor tag" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-duplication-factor/videos-by-actor-tag.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Duplication factor grows with the dataset</li>
+<li>Users can add new tags to videos</li>
+<li><p>
+There is no limit to the number of tags per video<div class="ulist">
+<ul>
+<li>A video with 5 actors is stored in 5 partitions</li>
+<li>A video with <em>n</em> tags is stored in <em>n</em> rows</li>
+<li>Duplication factor: 5 x n&#8201;&#8212;&#8201;linear function</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Avoid non-constant duplication factors</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Linear</li>
+<li>Quadratic</li>
+<li>Higher order</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The 1:n and m:n relationship patterns may create these higher-order duplication factors when the attributes for the partitioned entity is not declared static.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="non-constant-duplication-factors">
+<h2>Non-Constant Duplication Factors</h2>
+<div class="paragraph"><p><strong>How to deal with non-constant duplication factors</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Rethink a use case&#8212;&#8203;do things differently!</li>
+<li><p>
+Place reasonable limits that can be gradually increased<div class="ulist">
+<ul>
+<li>Number of tags</li>
+<li>Number of playlists</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-data-consistency">
+<h2>Schema Data Consistency</h2>
+<div class="paragraph"><p><strong>Schema data consistency refers to the correctness of data copies</strong></p></div>
+<div class="ulist">
+<ul>
+<li>With data duplication, <strong>you</strong> need to worry about and handle consistency</li>
+<li>All copies of the same data in your schema should have the same values</li>
+<li>Adding, updating, or deleting data may require multiple INSERTs, UPDATEs and DELETEs</li>
+<li>Logged batches were built for maintaining consistency</li>
+<li>Have a documented plan!</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Schema data consistency is not the same as the distributed data consistency in Cassandra. Cassandra handles data consistency in the context of data replication and copies of the same data / partition on different nodes. This is done with tunable consistency and allows developers to balance their consistency needs with availability and performance.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Data consistency example</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="videos videos title" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-consistency/videos-videos-title.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>To insert a new video</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> videos (video_id, ...)
+   <span class="keyword">VALUES</span> (<span class="integer">1</span>, ...);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> videos_by_title (title, video_id, ...)
+   <span class="keyword">VALUES</span> (<span class="string"><span class="delimiter">'</span><span class="content">Jaw</span><span class="delimiter">'</span></span>, <span class="integer">1</span>, ...);</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>To update the title of a video</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">UPDATE</span> videos <span class="class">SET</span> title = <span class="string"><span class="delimiter">'</span><span class="content">Jaws</span><span class="delimiter">'</span></span> <span class="keyword">WHERE</span> video_id = <span class="integer">1</span>;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> videos_by_title (title, video_id, ...)
+   <span class="keyword">VALUES</span> (<span class="string"><span class="delimiter">'</span><span class="content">Jaws</span><span class="delimiter">'</span></span>, <span class="integer">1</span>, ...);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">DELETE</span> <span class="keyword">FROM</span> videos_by_title <span class="keyword">WHERE</span> title = <span class="string"><span class="delimiter">'</span><span class="content">Jaw</span><span class="delimiter">'</span></span>
+   <span class="keyword">AND</span> video_id = <span class="integer">1</span>;</code></pre>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Example of using logged batch for data consistency</strong></p></div>
+<div class="ulist">
+<ul>
+<li>To insert a new video</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">BEGIN</span> BATCH
+   <span class="class">INSERT</span> <span class="class">INTO</span> videos (video_id, ...) <span class="keyword">VALUES</span> (<span class="integer">1</span>, ...);
+   <span class="class">INSERT</span> <span class="class">INTO</span> videos_by_title (title, video_id, ...) <span class="keyword">VALUES</span> (<span class="string"><span class="delimiter">'</span><span class="content">Jaw</span><span class="delimiter">'</span></span>, <span class="integer">1</span>, ...
+APPLY BATCH;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>To update the title of a video</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">BEGIN</span> BATCH
+   <span class="class">UPDATE</span> videos <span class="class">SET</span> title = <span class="string"><span class="delimiter">'</span><span class="content">Jaws</span><span class="delimiter">'</span></span> <span class="keyword">WHERE</span> video_id = <span class="integer">1</span>;
+   <span class="class">INSERT</span> <span class="class">INTO</span> videos_by_title (title, video_id, ...) <span class="keyword">VALUES</span> (<span class="string"><span class="delimiter">'</span><span class="content">Jaws</span><span class="delimiter">'</span></span>, <span class="integer">1</span>);
+   <span class="class">DELETE</span> <span class="keyword">FROM</span> videos_by_title <span class="keyword">WHERE</span> title = <span class="string"><span class="delimiter">'</span><span class="content">Jaw</span><span class="delimiter">'</span></span> <span class="keyword">AND</span> video_id = <span class="integer">1</span>;
+APPLY BATCH;</code></pre>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>More about batches</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Written to a log on the coordinator node and replicas before execution<div class="ulist">
+<ul>
+<li>Batch succeeds when the writes have been applied or hinted</li>
+<li>Replicas take over if the coordinator node fails mid-batch</li>
+</ul>
+</div></p></li>
+<li><p>
+Gets us part of the way to ACID transactions<div class="ulist">
+<ul>
+<li>No need for a rollback implementation since Cassandra will ensure that the batch succeeds</li>
+<li>But no batch isolation&#8212;&#8203;clients may read updated rows before the batch completes</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Misconception of batches</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Not intended for bulk loading<div class="ulist">
+<ul>
+<li>Rarely increases performance of data load</li>
+<li>Can overwork the coordinator and cause performance bottlenecks or other issues</li>
+</ul>
+</div></p></li>
+<li>No ordering for operations in batches&#8212;&#8203;all writes are executed with the same timestamp</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The ideal way to perform bulk loading is to leverage asynchronous write operations with load balancing.</p></div>
+<div class="paragraph"><p>A workaround to implement ordering for the statements in a batch can be done by explicitly providing a write timestamp for each statement with the <code>USING TIMESTAMP</code> clause.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-client-side-joins">
+<h2>Join Queries</h2>
+<div class="ulist">
+<ul>
+<li>An operation that combines data from two or more tables</li>
+<li>Rows from two tables are combined if they satisfy a join condition</li>
+<li><p>
+Joins are an expensive operation, based on:<div class="ulist">
+<ul>
+<li>Number of I/O operations</li>
+<li>Number of nodes / partitions involved</li>
+<li>Amount of data transferred</li>
+<li>Join selectivity factor</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Join selectivity factor is a value that describes the ratio of selected rows in a table compared to total number of rows.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Cassandra does not support joins due to the performance cost</li>
+<li>You can still manually perform a join from the client or application</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-important" title="Important"></i>
+</td>
+<td class="content">
+This should only be used with care, and keeping in mind the potential cost
+</td>
+</tr>
+</table>
+</div>
+</section>
+<section class="slide" id="eliminating-client-side-joins">
+<h2>Eliminating Client-side Joins</h2>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="comments by video" src="images/cassandra/dev/data-modeling/physical/analysis-validation/client-side-joins/comments-by-video.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li><p>
+Pre-compute and store a join result<div class="ulist">
+<ul>
+<li>Advantage: efficiency</li>
+<li>Cost: possible data duplication</li>
+</ul>
+</div></p></li>
+<li><p>
+Examples<div class="ulist">
+<ul>
+<li>Find comments for all videos&#8201;&#8212;&#8201;queries a single table</li>
+<li>Find comments for a specific video&#8201;&#8212;&#8201;queries a single partition</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The table <code>comments_by_video</code> duplicates data for <code>title</code>, <code>type</code>, <code>tags</code>, and <code>preview_thumbnails</code>, and would not need to retrieve these columns from other tables.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="when-to-use-client-side-joins">
+<h2>When To Use Client-side Joins</h2>
+<div class="paragraph"><p><strong>Never, if you can avoid it</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Keep your queries efficient!</li>
+<li>Balance between data duplication and increased data size needs to be considered</li>
+<li>Going from 1 TB to 1 PB is possible, but does your budget allow for that?</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>When you have finite resources</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+A legitimate use case is when you need to cope with extensive data duplication<div class="ulist">
+<ul>
+<li>Can use <em>relatively</em> efficient joins</li>
+<li>Finding a balance is not easy&#8201;&#8212;&#8201;NP-hard, a.k.a. super-freakin' hard!</li>
+<li>A lookup query using a manually-built inverted index is a common scenario</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="using-an-inverted-index">
+<h2>Using An Inverted Index</h2>
+<div class="paragraph"><p><strong>Inverted index lookup&#8201;&#8212;&#8201;efficient index-based join</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="inverted index lookup" src="images/cassandra/dev/data-modeling/physical/analysis-validation/client-side-joins/inverted-index-lookup.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>An inverted index is a table that stores:</p></div>
+<div class="ulist">
+<ul>
+<li>Values to search on</li>
+<li>Identifiers that point to the raw data or content in another table</li>
+</ul>
+</div>
+<div class="paragraph"><p>Storing the raw data again in the index table would be an expensive duplication.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="referential-integrity">
+<h2>Referential Integrity</h2>
+<div class="ulist">
+<ul>
+<li>A value in one table requires the same value to exist in another table</li>
+<li>If there is a user in table <code>users_by_email</code>, then the user must also exist in table <code>users</code></li>
+</ul>
+</div>
+<div class="paragraph"><p><strong>Joins rely on referential integrity constraints to combine data</strong></p></div>
+<div class="imageblock" style="float: center">
+<div class="content">
+<img alt="users users by email" src="images/cassandra/dev/data-modeling/physical/analysis-validation/client-side-joins/users-users-by-email.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Referential integrity is not enforced in Cassandra</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Due to performance reasons&#8201;&#8212;&#8201;would require a read before a write</li>
+<li>Not an issue that has to be fixed on the Cassandra side</li>
+<li><p>
+Referential integrity can be enforced in an application design&#8201;&#8212;&#8201;more work for developers<div class="ulist">
+<ul>
+<li>Batches used to modify duplicate data</li>
+<li>Run Apache Spark on Cassandra to validate that duplicate data is consistent</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-transactions">
+<h2>Database Transaction</h2>
+<div class="paragraph"><p><strong>ACID transaction&#8201;&#8212;&#8201;Sequence of statements with special properties</strong></p></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:20%" />
+<col style="width:80%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Atomicity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All statements in a transaction succeed (commit),<br />
+or none of them do (rollback)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Consistency</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- Transactions cannot leave the database in an inconsistent state<br />
+- The new database state must satisfy transaction specifications<br />
+- All integrity constraints are satisfied</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Isolation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transactions do not interfere with each other</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Durability</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Completed transactions persist in the event of subsequent failure</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide" id="transactions-in-cassandra">
+<h2>Transactions In Cassandra</h2>
+<div class="ulist">
+<ul>
+<li><p>
+Cassandra does not support ACID transactions<div class="ulist">
+<ul>
+<li>They result in a significant performance penalty</li>
+<li>Not required for many use cases</li>
+</ul>
+</div></p></li>
+<li><p>
+A single write operation demonstrates ACID properties<div class="ulist">
+<ul>
+<li>INSERTs, UPDATEs, and DELETEs are atomic, isolated, and durable</li>
+<li>Tunable consistency for data replicated to nodes, but does not handle application integrity constraints</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</section>
+<section class="slide" id="cassandra-lightweight-transactions">
+<h2>Cassandra Lightweight Transactions</h2>
+<div class="paragraph"><p><strong>Compare and Set (CAS) operation with ACID properties</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Does a read to check a condition, and performs the INSERT / UPDATE / DELETE if the condition is true</li>
+<li>Essentially an ACID transaction at the partition level</li>
+<li>More expensive than regular reads and writes</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="lightweight-transaction-1" src="images/cassandra/dev/data-modeling/physical/analysis-validation/transactions/lightweight-transaction-1.svg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Lightweight transactions are similar to serial isolation level in relational databases.</p></div>
+<div class="paragraph"><p>The implementation of lightweight transactions is possible using a consensus protocol called Paxos.</p></div>
+<div class="paragraph"><p>Even with multiple concurrent operations, the Paxos protocol ensures that only one operation is modifying a partition at a time, without the use of performance-reducing locks.</p></div>
+<div class="paragraph"><p>However there is still a performance penalty since the implementation requires four round-trips between a coordinator and replica nodes.</p></div>
+<div class="paragraph"><p>Lightweight transactions work at the partition-level&#8212;&#8203;the write condition and the write itself target the same partition.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Compare and Set (CAS) operation with ACID properties</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Does a read to check a condition, and performs the INSERT / UPDATE / DELETE if the condition is true</li>
+<li>Essentially an ACID transaction at the partition level</li>
+<li>More expensive than regular reads and writes</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="lightweight-transaction-2" src="images/cassandra/dev/data-modeling/physical/analysis-validation/transactions/lightweight-transaction-2.svg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Lightweight transactions are similar to serial isolation level in relational databases.</p></div>
+<div class="paragraph"><p>The implementation of lightweight transactions is possible using a consensus protocol called Paxos.</p></div>
+<div class="paragraph"><p>Even with multiple concurrent operations, the Paxos protocol ensures that only one operation is modifying a partition at a time, without the use of performance-reducing locks.</p></div>
+<div class="paragraph"><p>However there is still a performance penalty since the implementation requires four round-trips between a coordinator and replica nodes.</p></div>
+<div class="paragraph"><p>Lightweight transactions work at the partition-level&#8212;&#8203;the write condition and the write itself target the same partition.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Compare and Set (CAS) operation with ACID properties</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Does a read to check a condition, and performs the INSERT / UPDATE / DELETE if the condition is true</li>
+<li>Essentially an ACID transaction at the partition level</li>
+<li>More expensive than regular reads and writes</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="lightweight-transaction-3" src="images/cassandra/dev/data-modeling/physical/analysis-validation/transactions/lightweight-transaction-3.svg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Lightweight transactions are similar to serial isolation level in relational databases.</p></div>
+<div class="paragraph"><p>The implementation of lightweight transactions is possible using a consensus protocol called Paxos.</p></div>
+<div class="paragraph"><p>Even with multiple concurrent operations, the Paxos protocol ensures that only one operation is modifying a partition at a time, without the use of performance-reducing locks.</p></div>
+<div class="paragraph"><p>However there is still a performance penalty since the implementation requires four round-trips between a coordinator and replica nodes.</p></div>
+<div class="paragraph"><p>Lightweight transactions work at the partition-level&#8212;&#8203;the write condition and the write itself target the same partition.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Compare and Set (CAS) operation with ACID properties</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Does a read to check a condition, and performs the INSERT / UPDATE / DELETE if the condition is true</li>
+<li>Essentially an ACID transaction at the partition level</li>
+<li>More expensive than regular reads and writes</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="lightweight-transaction-4" src="images/cassandra/dev/data-modeling/physical/analysis-validation/transactions/lightweight-transaction-4.svg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Lightweight transactions are similar to serial isolation level in relational databases.</p></div>
+<div class="paragraph"><p>The implementation of lightweight transactions is possible using a consensus protocol called Paxos.</p></div>
+<div class="paragraph"><p>Even with multiple concurrent operations, the Paxos protocol ensures that only one operation is modifying a partition at a time, without the use of performance-reducing locks.</p></div>
+<div class="paragraph"><p>However there is still a performance penalty since the implementation requires four round-trips between a coordinator and replica nodes.</p></div>
+<div class="paragraph"><p>Lightweight transactions work at the partition-level&#8212;&#8203;the write condition and the write itself target the same partition.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="using-lightweight-transactions">
+<h2>Using Lightweight Transactions</h2>
+<div class="paragraph"><p><strong>Create a new user</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="new user" src="images/cassandra/dev/data-modeling/physical/analysis-validation/transactions/new-user.svg" />
+</div>
+</div>
+<div class="paragraph"><p></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> users (user_id, first_name, last_name, email, password)
+<span class="keyword">VALUES</span> (<span class="string"><span class="delimiter">'</span><span class="content">tlberglund</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Tim</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Berglund</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">tim.berglund@datastax.com</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">12345678</span><span class="delimiter">'</span></span>)
+<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>;</code></pre>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Generate a reset password token and reset the password</strong></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">UPDATE</span> users
+<span class="class">SET</span> reset_token = <span class="integer">12345678</span>-abcd-abcd-abcd-abcd12345678
+<span class="keyword">WHERE</span> user_id = <span class="string"><span class="delimiter">'</span><span class="content">tlberglund</span><span class="delimiter">'</span></span>;</code></pre>
+</div>
+</div>
+<div class="paragraph"><p></p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">UPDATE</span> users
+<span class="class">SET</span> reset_token = <span class="predefined-constant">null</span>, password = <span class="string"><span class="delimiter">'</span><span class="content">trustno1</span><span class="delimiter">'</span></span>
+<span class="keyword">WHERE</span> user_id = <span class="string"><span class="delimiter">'</span><span class="content">tlberglund</span><span class="delimiter">'</span></span>
+<span class="keyword">IF</span> reset_token = <span class="integer">12345678</span>-abcd-abcd-abcd-abcd12345678;</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="schema-design-with-transactions">
+<h2>Schema Design With Transactions</h2>
+<div class="paragraph"><p><strong>Lightweight transactions are not your only option!</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Several other suitable design alternatives to consider<div class="ulist">
+<ul>
+<li>Write new values instead of updating previous values</li>
+<li>Batches can help to approximate transactions</li>
+<li>Use a processing system as middleware between applications and Cassandra</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>One example would be time-series data, which will write new values based on a timestamp and does not to update previous values.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-analysis-validation-data-aggregation">
+<h2>Data Aggregation</h2>
+<div class="paragraph"><p><strong>Built-in functions provide some summary form of data</strong></p></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<caption class="title">Table 1. Aggregate Functions</caption>
+<colgroup>
+<col style="width:25%" />
+<col style="width:50%" />
+<col style="width:25%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-center valign-top">Supported in Cassandra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SUM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total value from a column within selected rows</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="red">✘</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AVG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mean value of a column within selected rows</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="red">✘</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">COUNT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Count of selected rows</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="green">✔</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MIN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min value of a column within selected rows</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="red">✘</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MAX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max value of a column within selected rows</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><span class="red">✘</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Although COUNT is supported in Cassandra, it inefficiently has to do a full table scan while counting.<br />
+Avoid queries that would use the COUNT function, especially in production.<br />
+Cassandra 2.2 will have user-defined functions and aggregates, which will make the above functions available. See <a class="bare" href="http://cassandra.apache.org/doc/cql3/CQL-2.2.html#udfs">http://cassandra.apache.org/doc/cql3/CQL-2.2.html#udfs</a> and <a class="bare" href="http://cassandra.apache.org/doc/cql3/CQL-2.2.html#udas">http://cassandra.apache.org/doc/cql3/CQL-2.2.html#udas</a> for more details.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="how-to-do-data-aggregation">
+<h2>How To Do Data Aggregation</h2>
+<div class="paragraph"><p><strong>Possible solutions</strong></p></div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li><p>
+Update data aggregates on-the-fly in Cassandra<div class="ulist">
+<ul>
+<li>Same technique for linearizable transactions&#8212;&#8203;lightweight transactions</li>
+<li>Counter type</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Implement data aggregation on client-side</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Use Apache Spark for near real-time batch aggregation</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Use Apache Solr&#8201;&#8212;&#8201;Stats component</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The only solution done purely in Cassandra are: +</p></div>
+<div class="ulist">
+<ul>
+<li>Lightweight transactions, which is discussed elsewhere</li>
+<li>Counters, the focus of this section</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>The Counter type</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="ratings by video" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-aggregation/ratings-by-video.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Important data type for aggregation</li>
+<li>Increment, decrement, add or subtract the current value</li>
+<li>Counter operations internally requires a read before write</li>
+<li>May not be 100% accurate&#8212;&#8203;it&#8217;s not an idempotent operation</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">UPDATE</span> ratings_by_video
+<span class="class">SET</span> num_ratings = num_ratings + <span class="integer">1</span>,      <span class="comment">/* increment num_ratings by 1 */</span>
+    sum_ratings = sum_ratings + <span class="integer">5</span>       <span class="comment">/* add 5 to the value of sum_ratings */</span>
+<span class="keyword">WHERE</span> video_id = <span class="integer">12345678</span>-abcd-abcd-abcd-abcd12345678;</code></pre>
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The differentiation with counters is that the application doesn&#8217;t need to read or know what the current value of a column is. Cassandra will do that automatically and transparently.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Implementing data aggregation in an application</strong></p></div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="videos ratings" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-aggregation/videos-ratings.svg" />
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img alt="ratings by video" src="images/cassandra/dev/data-modeling/physical/analysis-validation/data-aggregation/ratings-by-video.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Retrieve data from Cassandra</li>
+<li>Aggregate data in an application</li>
+<li>Store the result back in Cassandra</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Implementing data aggregation in an application</strong></p></div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li><p>
+Periodically, query <strong>num_ratings</strong> and <strong>sum_ratings</strong><div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>num_ratings: 58
+sum_ratings = 477</code></pre>
+</div>
+</div></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li><p>
+On the application side, compute <strong>sum_ratings</strong> / <strong>num_ratings</strong> to get <strong>avg_rating</strong><div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code>477 / 58 = 8.2, avg_rating: 8.2</code></pre>
+</div>
+</div></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="openblock slide">
+<div class="content">
+<div class="ulist">
+<ul>
+<li><p>
+Update <strong>avg_rating</strong><div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">UPDATE</span> videos <span class="class">SET</span> avg_rating = <span class="float">8.2</span>
+<span class="keyword">WHERE</span> video_id = <span class="integer">12345678</span>-abcd-abcd-abcd-abcd12345678;</code></pre>
+</div>
+</div></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-14-data-aggregation">
+<h2>Exercise 14&#8212;&#8203;Implementing aggregation in your data model</h2>
+
+</section>
+<section class="slide transition-green" id="courses-DS220-transitions-physical-fixing-problem">
+<h2>Physical Optimization&#8212;&#8203;Fixing the Problems</h2>
+
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-key-optimizations">
+<h2>Keys</h2>
+<div class="paragraph"><p><span class="image"><img alt="unique" src="images/cassandra/dev/data-modeling/physical/key-optimizations/unique.jpg" width="100%" /></span></p></div>
+</section>
+<section class="slide" id="traditional-relational-key">
+<h2>Traditional Relational Key</h2>
+<div class="ulist">
+<ul>
+<li>Uniqueness</li>
+<li>Minimality</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="uniqueness">
+<h2>Uniqueness</h2>
+<div class="ulist">
+<ul>
+<li>Choose column(s) that uniquely identify each object</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="uniqueness" src="images/cassandra/dev/data-modeling/physical/key-optimizations/uniqueness.svg" /></span></p></div>
+<div class="paragraph notes"><p>A typical relational database key is the minimal sequence of columns/attributes that are unique. <em>title</em> is not guaranteed to be unique and makes a poor key choice for <em>videos</em>.</p></div>
+</section>
+<section class="slide" id="minimality">
+<h2>Minimality</h2>
+<div class="ulist">
+<ul>
+<li>Choose the minimum number of columns for uniqueness</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="minimality" src="images/cassandra/dev/data-modeling/physical/key-optimizations/minimality.svg" /></span></p></div>
+<div class="paragraph notes"><p><em>video_id</em>, <em>user_id</em>, <em>title</em>, and <em>description</em> combined are too much to have unique values. <em>video_id</em> alone will suffice here.</p></div>
+</section>
+<section class="slide" id="cassandra-key">
+<h2>Cassandra Key</h2>
+<div class="paragraph"><p><span class="image"><img alt="primary-key" src="images/cassandra/dev/data-modeling/physical/key-optimizations/primary-key.svg" /></span></p></div>
+<div class="paragraph notes"><p>Cassandra keys relax the minimality constraint because Cassandra primary keys define the partitioning key and clustering columns. We structure Cassandra keys to support a query.</p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="maintain-uniqueness" src="images/cassandra/dev/data-modeling/physical/key-optimizations/maintain-uniqueness.svg" /></span></p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="relax-minimality" src="images/cassandra/dev/data-modeling/physical/key-optimizations/relax-minimality.svg" /></span></p></div>
+<div class="paragraph notes"><p>Cassandra relaxes the minimality constraint to structure tables which optimally serve a specific queries.</p></div>
+</section>
+<section class="slide" id="natural-keys">
+<h2>Natural Keys</h2>
+<div class="paragraph"><p><span class="image"><img alt="natural-keys-1" src="images/cassandra/dev/data-modeling/physical/key-optimizations/natural-keys-1.png" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Real world attributes form natural keys. They already exist, straightforward to derive, meaningful, and easy to query.</p></div>
+<div class="paragraph"><p>Examples of this are taxpayer identifications numbers, employee identification numbers, email address, login/username, or a composite key of name, date of birth, and address.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="natural-keys-2" src="images/cassandra/dev/data-modeling/physical/key-optimizations/natural-keys-2.png" /></span></p></div>
+</section>
+<section class="slide" id="surrogate-key">
+<h2>Surrogate Key</h2>
+<div class="paragraph"><p><span class="image" style="float: right"><img alt="artificial" src="images/cassandra/dev/data-modeling/physical/key-optimizations/artificial.jpg" /></span></p></div>
+<div class="ulist">
+<ul>
+<li>Artificial</li>
+<li>Generated</li>
+<li>Meaningless to outside world</li>
+<li>Looks random</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="surrogate-key-example">
+<h2>Surrogate Key Example</h2>
+<div class="paragraph"><p><span class="image"><img alt="surrogate-keys-1" src="images/cassandra/dev/data-modeling/physical/key-optimizations/surrogate-keys-1.png" /></span></p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="surrogate-keys-2" src="images/cassandra/dev/data-modeling/physical/key-optimizations/surrogate-keys-2.png" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Identifying a user can be challenging because their name is not unique and their email address may change or not be a required attribute. Surrogate identifiers solve this problem.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="surrogate-key-2">
+<h2>Surrogate Key</h2>
+<div class="paragraph"><p><span class="image" style="float: right"><img alt="artificial" src="images/cassandra/dev/data-modeling/physical/key-optimizations/artificial.jpg" /></span></p></div>
+<div class="paragraph"><p><strong>Characteristics</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Conflict-free uniqueness</li>
+<li>Immutable</li>
+<li>Uniformity</li>
+<li>Compactness</li>
+<li>Performance</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Since surrogate keys are generated, they are guaranteed to be unique.</p></div>
+<div class="paragraph"><p>Since the outside world does not track surrogate keys, they are immutable. Whereas a natural key value can change over time, making you update all values spread throughout your database.</p></div>
+<div class="paragraph"><p>Surrogate keys all look the same, are compact, and take the same number of bytes, so they are naturally more performant than natural keys as well.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="uniqueness-constraint-violations">
+<h2>Uniqueness Constraint Violations</h2>
+<div class="ulist">
+<ul>
+<li>Lightweight transactions prevent upserts</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> users (id, first_name, last_name)
+<span class="keyword">VALUES</span> (<span class="integer">1</span>, <span class="string"><span class="delimiter">'</span><span class="content">Data</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Stax</span><span class="delimiter">'</span></span>);
+
+<span class="class">INSERT</span> <span class="class">INTO</span> users (id, first_name, last_name)
+<span class="keyword">VALUES</span> (<span class="integer">1</span>, <span class="string"><span class="delimiter">'</span><span class="content">Cassy</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Andra</span><span class="delimiter">'</span></span>);
+<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph notes"><p>Cassandra rejects the second insert because IF NOT EXISTS checks for a duplicate primary key value. There is a performance penalty with this approach, however, because Cassandra must perform a read before a write.</p></div>
+</section>
+<section class="slide" id="uniqueness-constraint-violations-2">
+<h2>Uniqueness Constraint Violations</h2>
+<div class="ulist">
+<ul>
+<li>Lightweight transactions only verify key values</li>
+<li>Surrogate keys may allow duplicate records</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="sql language-sql"><span class="class">INSERT</span> <span class="class">INTO</span> users (id, first_name, last_name)
+<span class="keyword">VALUES</span> (<span class="integer">1</span>, <span class="string"><span class="delimiter">'</span><span class="content">Data</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Stax</span><span class="delimiter">'</span></span>)
+<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>;
+
+<span class="class">INSERT</span> <span class="class">INTO</span> users (id, first_name, last_name)
+<span class="keyword">VALUES</span> (<span class="integer">42</span>, <span class="string"><span class="delimiter">'</span><span class="content">Data</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Stax</span><span class="delimiter">'</span></span>)
+<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph notes"><p>Your application must verify non-key column values for uniqueness when desired. Here we insert what could possibly be the same user twice. Cassandra (nor any other database) allows this because the actual key values are unique.</p></div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-table-optimizations">
+<h2>Table Optimizations</h2>
+<div class="paragraph"><p><strong>Fixing the problem</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Splitting partitions&#8212;&#8203;size manageability</li>
+<li>Vertical partitioning&#8212;&#8203;speed</li>
+<li>Merging partitions and tables&#8212;&#8203;speed and eliminate duplication</li>
+<li>Adding columns&#8212;&#8203;speed</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>All of these optimizations work towards faster query response time. We will discuss why each of these may be necessary and how we apply them.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="splitting-partitions-in-a-table">
+<h2>Splitting Partitions in a Table</h2>
+<div class="ulist">
+<ul>
+<li>Partitions may grow too large</li>
+</ul>
+</div>
+<div class="paragraph"><p>Example:</p></div>
+<div class="ulist">
+<ul>
+<li>Highly active user with 1,000 video interactions (pause, play, seek, etc.) per day will exceed the recommended partition value limit in two months</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="video interactions by user" src="images/cassandra/dev/data-modeling/physical/table-optimizations/video-interactions-by-user.svg" />
+</div>
+</div>
+<div class="paragraph notes"><p>The recommended max partition size is 100MBs or 100,000 values. There are two values per interaction in this table. A user will exceed this limit after 50,000 interactions.</p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>General strategy</strong></p></div>
+<div class="paragraph"><p><strong>Add another column to a partition key</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Existing column</li>
+<li>Artificial column</li>
+</ul>
+</div>
+<div class="paragraph"><p><strong>Rationale</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Fewer rows per partition</li>
+</ul>
+</div>
+<div class="paragraph notes"><p>Adding a column to the partition key divides the rows between more partitions because the additional column value adds another level of uniqueness between rows.</p></div>
+</section>
+<section class="slide" id="using-an-existing-column">
+<h2>Using an Existing Column</h2>
+<div class="paragraph"><p><strong>Convenient</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="split part existing" src="images/cassandra/dev/data-modeling/physical/table-optimizations/split-part-existing.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The table on the left stores all interactions for a single user into one partition. The optimized table on the right divides these interactions by each video the user interacts with.</p></div>
+<div class="paragraph"><p>This optimization also satisfies "partition per query" design methodology for its original query:</p></div>
+<div class="paragraph"><p>Q10: Find the video interactions for a user with a known id and specified video id (show the most recent interactions first).</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="using-an-artificial-column">
+<h2>Using an Artificial Column</h2>
+<div class="paragraph"><p><strong>Can control distribution</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="split part artificial" src="images/cassandra/dev/data-modeling/physical/table-optimizations/split-part-artificial.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>event_date would track only the day portion of the event (the time would be set to midnight and ignored, etc.). It is the application&#8217;s responsibility to maintain this invariant. This divides partitions by days. You have more control because you can tweak event_date to track weeks, months, years, etc. instead of single days.</p></div>
+<div class="paragraph"><p>Querying a user&#8217;s interactions over several days would then require retrieving multiple partitions. Having split the partition may be faster, however, because multiple nodes can concurrently retrieve and stream results instead of placing the load on a single node.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Take more control with "bucket" column</strong></p></div>
+<div class="paragraph"><p><span class="image"><img alt="split-part-bucket" src="images/cassandra/dev/data-modeling/physical/table-optimizations/split-part-bucket.svg" /></span></p></div>
+<div class="paragraph notes"><p>You can take explicit control by dividing the values yourself into a number of buckets. You determine your max bucket value, and then your application must ensure that each row&#8217;s bucket value is uniform.</p></div>
+</section>
+<section class="slide" id="vertical-partitioning-splitting-tables">
+<h2>Vertical Partitioning (Splitting Tables)</h2>
+<div class="paragraph"><p><strong>Benefits of vertical partitioning</strong></p></div>
+<div class="paragraph"><p><span class="image" style="float: right"><img alt="slice-board" src="images/cassandra/dev/data-modeling/physical/table-optimizations/slice-board.jpg" width="50%" /></span></p></div>
+<div class="ulist">
+<ul>
+<li>Some queries may perform faster</li>
+<li>Table partitions become smaller</li>
+<li>Faster to retrieve and more of them can be cached</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="split-table-1" src="images/cassandra/dev/data-modeling/physical/table-optimizations/split-table-1.svg" /></span></p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><span class="image"><img alt="split-table-2" src="images/cassandra/dev/data-modeling/physical/table-optimizations/split-table-2.svg" /></span></p></div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In this example, users will query for video metadata more often than watching the video. We split the video streaming data to its own table so our application does not unnecessarily pull it when displaying just the title, tags, etc.</p></div>
+<div class="paragraph"><p>Depending on your queries, you may need to adjust the primary key when you split a table.</p></div>
+<div class="paragraph"><p>Be careful to ensure that you don&#8217;t lose or orphan records in either table when performing the split. For example, if we are not careful in our application, we could store Interstellar&#8217;s metadata but fail to also store its streaming blob (or vice-versa).</p></div>
+<div class="paragraph"><p>Also ensure that you don&#8217;t require client-side joins when splitting a table. For example, splitting the streaming blob here seems like a good choice, but if we never allowed users to view video metadata without watching the video in the same action, we forced our application to do two queries now instead of one.</p></div>
+<div class="paragraph"><p>(Of course, what video streaming service would force you to watch a video before viewing the title, description, perhaps the cover art, etc. :)</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="merging-tables-and-partitions">
+<h2>Merging Tables and Partitions</h2>
+<div class="paragraph"><p><strong>Reverse of vertical partitioning</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Helpful to eliminate duplication</li>
+<li>May result in slower queries</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="merging-multiple-partitions">
+<h2>Merging Multiple Partitions</h2>
+<div class="paragraph"><p><strong>General strategy</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Introduce a new partition key and nest objects into new partitions</li>
+<li>Partition key may consist of existing or artificial columns</li>
+<li>Which of these three is the best choice?</li>
+</ul>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img alt="physical merge partition" src="images/cassandra/dev/data-modeling/physical/table-optimizations/physical-merge-partition.svg" />
+</div>
+</div>
+<div class="ulist notes">
+<ul>
+<li>Smaller partitions accessed by a query may be merged into one or a few larger partitions</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="adding-columns-to-a-table">
+<h2>Adding Columns to a Table</h2>
+<div class="paragraph"><p><strong>Example&#8212;&#8203;Computing an average rating</strong></p></div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img alt="physical add columns" src="images/cassandra/dev/data-modeling/physical/table-optimizations/physical-add-columns.svg" />
+</div>
+</div>
+<div class="ulist notes">
+<ul>
+<li>Columns that are used in a query to avoid a join&#8212;&#8203;possible duplication and faster queries</li>
+<li>Columns that store aggregate values for faster access</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-15-table-optimization">
+<h2>Exercise 15&#8212;&#8203;Table optimizations</h2>
+
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-physical-concurrent-access">
+<h2>Concurrent Access To Data</h2>
+<div class="ulist">
+<ul>
+<li>Multiple operations or transactions read and update the same value in a database</li>
+<li>Concurrent execution improves performance</li>
+<li>Concurrent execution may result in data consistency (correctness) problems</li>
+<li>Example&#8212;&#8203;two users submit their vote for video concurrently</li>
+</ul>
+</div>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="con access votes" src="images/cassandra/dev/data-modeling/physical/concurrent-access/con-access-votes.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="concurrent-access-using-counter-datatype">
+<h2>Concurrent Access Using Counter Datatype</h2>
+<div class="paragraph"><p><strong>Use COUNTER data type</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Correctness is not guaranteed</li>
+<li>Limited to integral columns and operations of addition or subtraction</li>
+<li>Performance penalty</li>
+</ul>
+</div>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="con access counter" src="images/cassandra/dev/data-modeling/physical/concurrent-access/con-access-counter.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="concurrent-access-using-lightweight-transactions">
+<h2>Concurrent Access Using Lightweight Transactions</h2>
+<div class="paragraph"><p><strong>Use lightweight transactions</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Correctness is guaranteed</li>
+<li>Any update operation</li>
+<li>Performance penalty</li>
+<li>Failed LWTs must be repeated</li>
+</ul>
+</div>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="con access LWT" src="images/cassandra/dev/data-modeling/physical/concurrent-access/con-access-LWT.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="isolate-computation-by-isolating-data">
+<h2>Isolate Computation by Isolating Data</h2>
+<div class="ulist">
+<ul>
+<li>Correctness is not an issue (no concurrent access)</li>
+<li>Commutative update operations are easier to deal with</li>
+<li>Fast writes&#8212;&#8203;more space required</li>
+<li>Data aggregation must be done by an application</li>
+<li>An aggregate value can be stored back to C*</li>
+</ul>
+</div>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="con access isolating" src="images/cassandra/dev/data-modeling/physical/concurrent-access/con-access-isolating.svg" />
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-16-finalizing-physical">
+<h2>Exercise 16&#8212;&#8203;Finalizing your physical data model</h2>
+
+</section>
+<section class="slide transition-green" id="courses-DS220-transitions-use-case-transition">
+<h2>Use Cases</h2>
+
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<form action="." class="goto-form" method="get">
+<label for="goto-slide">Go to Slide:</label>
+<input id="goto-slide" list="goto-datalist" name="slidenum" type="text" />
+<datalist id="goto-data-list"></datalist>
+<input type="submit" value="Go" />
+</form>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/d3.v2.js"></script>
+<script src="deck.js/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/split/deck.split.js"></script>
+<script src="deck.js/extensions/animation/deck.animation.js"></script>
+<script src="deck.js/extensions/deck.js-notes/deck.notes.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/clone/deck.clone.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="js/course.js"></script>
+<footer>
+<div class="flex-element deck-course">
+<p>&copy; 2016 DataStax. Use only with permission. &bull;
+<span class="course-title">Physical Data Modeling</span></p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://academy.datastax.com" target="blank">DataStax Academy</a>
+</div>
+<div class="deck-progressbar">
+<span></span>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

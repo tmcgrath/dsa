@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1598px" height="1036px" viewBox="0 0 1598 1036" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>killrvideo-workflow-exercise</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="2" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M545.5,3 L545.5,103" id="Line" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M545.5,103 L548.5,92.2 L542.5,92.2 L545.5,103 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M1090.5,12 L1090.5,104.5" id="Line-Copy" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-decoration-1" d="M1090.5,104.5 L1093.5,93.7 L1087.5,93.7 L1090.5,104.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M698.491121,189.5 L923.75,189.5" id="Line" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M923.75,189.5 L912.95,186.5 L912.95,192.5 L923.75,189.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M697.241121,610.5 L922.5,610.5" id="Line-Copy-3" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-3-decoration-1" d="M922.5,610.5 L911.7,607.5 L911.7,613.5 L922.5,610.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M1098.5,257.470262 L1098.5,526.5" id="Line-Copy-2" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-2-decoration-1" d="M1098.5,526.5 L1101.5,515.7 L1095.5,515.7 L1098.5,526.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M169.5,417.5 L169.5,530.5" id="Line" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M169.5,530.5 L172.5,519.7 L166.5,519.7 L169.5,530.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M543.5,265.5 L543.5,528.5" id="Line-Copy-6" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-6-decoration-1" d="M543.5,528.5 L546.5,517.7 L540.5,517.7 L543.5,528.5 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M169.75,417.5 L543.5,417.5" id="Line" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="933.25" y="115" width="325" height="150" rx="17"></rect>
+        <text id="Show-latest-videos-" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="978.534" y="186">Show latest videos </tspan>
+            <tspan x="990.938" y="220">added to the site</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="933.25" y="537" width="325" height="150" rx="17"></rect>
+        <text id="Show-a-video-and" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="983.484" y="608">Show a video and</tspan>
+            <tspan x="1036.376" y="642">its details</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="6" y="537" width="325" height="150" rx="17"></rect>
+        <text id="Show-basic-informati" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="20.234" y="609">Show basic information  </tspan>
+            <tspan x="89.184" y="643">about a user</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="375" y="113" width="325" height="150" rx="17"></rect>
+        <text id="User-logs-into-site" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="30" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="416.445" y="200">User logs into site</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="373" y="537" width="325" height="150" rx="17"></rect>
+        <text id="Show-videos-added" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="410.306" y="610">Show videos added</tspan>
+            <tspan x="476.932" y="644">by a user</tspan>
+        </text>
+        <text id="Q1" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="484" y="98">Q1</tspan>
+        </text>
+        <text id="Q2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="1018.25" y="97">Q2</tspan>
+        </text>
+        <text id="Q2-Copy-2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="866" y="173">Q2</tspan>
+        </text>
+        <text id="Q3" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="106" y="520">Q3</tspan>
+        </text>
+        <text id="Q4" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="480" y="520">Q4</tspan>
+        </text>
+        <text id="Q5" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="1032.25" y="521">Q5</tspan>
+        </text>
+        <text id="Q5-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="420" fill="#007B98">
+            <tspan x="870.5" y="595">Q5</tspan>
+        </text>
+        <g id="Access-Patterns" sketch:type="MSLayerGroup" transform="translate(2.000000, 712.000000)">
+            <rect id="Rectangle-29" stroke="#000000" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0.232932565" y="0" width="1589.76707" height="315"></rect>
+            <text id="Q1:-Find-a-user-with" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="36" font-weight="normal" fill="#000000">
+                <tspan x="20" y="106">Q1: Find a user with a </tspan>
+                <tspan x="382.088" y="106" font-weight="bold">specified email</tspan>
+                <tspan x="20" y="150">Q2: Find most recently uploaded </tspan>
+                <tspan x="556.22" y="150" font-weight="bold">videos</tspan>
+                <tspan x="668.216" y="150"></tspan>
+                <tspan x="20" y="194">Q3: Find a </tspan>
+                <tspan x="196.76" y="194" font-weight="bold">user with a specified id</tspan>
+                <tspan x="593.3" y="194"></tspan>
+                <tspan x="20" y="238">Q4: Find videos uploaded by a </tspan>
+                <tspan x="522.848" y="238" font-weight="bold">user with a known id</tspan>
+                <tspan x="877.448" y="238"> (show most recently uploaded videos first)</tspan>
+                <tspan x="20" y="282">Q5: Find a video with a </tspan>
+                <tspan x="400.088" y="282" font-weight="bold">specified video id</tspan>
+            </text>
+            <text id="ACCESS-PATTERNS" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="32" font-weight="bold" fill="#435B61">
+                <tspan x="19" y="49">ACCESS PATTERNS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1740px" height="913px" viewBox="0 0 1740 913" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>complete-chebotko</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="2" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M421,2 L421,50" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M421,50 L424,39.2 L418,39.2 L421,50 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1386,2 L1386,47" id="Line-Copy-5" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-5-decoration-1" d="M1386,47 L1389,36.2 L1383,36.2 L1386,47 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1028.04196,452 L837.398649,452" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M837.398649,452 L848.198649,455 L848.198649,449 L837.398649,452 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1611,294 L1611,319.598214" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1611,319.598214 L1614,308.798214 L1608,308.798214 L1611,319.598214 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1611.00378,291 L1159,291" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M1159,293.404762 L1159,326.219232" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1159,326.219232 L1162,315.419232 L1156,315.419232 L1159,326.219232 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M420,624.599138 L420,532.400862" id="Line-Copy" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M701,623.65739 L701,555" id="Line-Copy-2" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M1380,289 L1380,263" id="Line-Copy-3" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M1160,622 L1160,573" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1160,573 L1157,583.8 L1163,583.8 L1160,573 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1609,624 L1609,587.30309" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1609,587.30309 L1606,598.10309 L1612,598.10309 L1609,587.30309 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M1609,624 L422.494556,624" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M557.400233,114 L1242.59977,114" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1242.59977,114 L1231.79977,111 L1231.79977,117 L1242.59977,114 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M144,229.39823 L144,318.60177" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M144,318.60177 L147,307.80177 L141,307.80177 L144,318.60177 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M698.599855,229 L146.400145,229" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M699,230.39823 L699,319.60177" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M699,319.60177 L702,308.80177 L696,308.80177 L699,319.60177 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <path d="M420,166.355363 L420,320.00325" id="Line" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M420,320.00325 L423,309.20325 L417,309.20325 L420,320.00325 Z" stroke="#5D5D5D" stroke-width="4" stroke-linecap="square"></path>
+        <g id="UDT-List" sketch:type="MSLayerGroup" transform="translate(1379.000000, 640.000000)">
+            <rect id="Rectangle-29" stroke="#000000" stroke-width="0.8" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup" x="0.188952291" y="0" width="199.011048" height="265"></rect>
+            <text id="UDTs" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#435B61">
+                <tspan x="15.4125874" y="37.4777479">UDTs</tspan>
+            </text>
+            <g id="encoding" transform="translate(15.412587, 57.910992)">
+                <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="30.5641346" width="162.237762" height="110.191748"></rect>
+                <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="162.237762" height="30.5641346"></rect>
+                <text id="*encoding*" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2890951" font-weight="normal" fill="#1B7387">
+                    <tspan x="8.11188811" y="22.825916">*encoding*</tspan>
+                </text>
+                <text fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2890951" font-weight="normal">
+                    <tspan x="8.11188811" y="56.6073279">encoding</tspan>
+                    <tspan x="8.11188811" y="79.6073279">height</tspan>
+                    <tspan x="8.11188811" y="102.607328">width</tspan>
+                    <tspan x="8.11188811" y="125.607328" fill="#D1870E">{bit_rates}</tspan>
+                    <tspan x="95.2600199" y="125.607328"></tspan>
+                </text>
+            </g>
+        </g>
+        <g id="comments_by_video" sketch:type="MSLayerGroup" transform="translate(1028.000000, 332.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="29.9256873" width="262" height="202.573883"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="262" height="30.4261168"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8.01223242" y="23.1043814">comments_by_video</tspan>
+            </text>
+            <text id="video_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8.01223242" y="56.4329897">video_id</tspan>
+                <tspan x="8.01223242" y="79.4329897">posted_timestamp</tspan>
+                <tspan x="8.01223242" y="102.43299">user_id</tspan>
+                <tspan x="8.01223242" y="125.43299">comment</tspan>
+                <tspan x="8.01223242" y="148.43299">title</tspan>
+                <tspan x="8.01223242" y="171.43299">type</tspan>
+                <tspan x="8.01223242" y="194.43299">{tags}</tspan>
+                <tspan x="8.01223242" y="217.43299">&lt;preview_thumbnails&gt;</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="227.547401" y="56.4329897">K</tspan>
+                <tspan x="227.547401" y="79.4329897" font-family="Lucida Grande" fill="#D1870E">C↓</tspan>
+                <tspan x="253.216151" y="79.4329897" fill="#D1870E"></tspan>
+                <tspan x="227.547401" y="102.43299" font-family="Lucida Grande" fill="#D1870E">C↑</tspan>
+                <tspan x="253.216151" y="102.43299"></tspan>
+                <tspan x="227.547401" y="125.43299"></tspan>
+                <tspan x="227.547401" y="148.43299">S</tspan>
+                <tspan x="227.547401" y="171.43299">S</tspan>
+                <tspan x="227.547401" y="194.43299">S</tspan>
+                <tspan x="227.547401" y="217.43299">S</tspan>
+            </text>
+        </g>
+        <g id="comments_by_user-copy" sketch:type="MSLayerGroup" transform="translate(568.000000, 327.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="7.38964445e-13" y="30.4" width="261.20122" height="200.8"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="7.38964445e-13" y="0" width="261.20122" height="30.4"></rect>
+            <text id="comments_by_user" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="7.98780488" y="22.8">comments_by_user</tspan>
+            </text>
+            <text id="user_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="7.98780488" y="56.4">user_id</tspan>
+                <tspan x="7.98780488" y="79.4">posted_timestamp</tspan>
+                <tspan x="7.98780488" y="102.4">video_id</tspan>
+                <tspan x="7.98780488" y="125.4">comment</tspan>
+                <tspan x="7.98780488" y="148.4">title</tspan>
+                <tspan x="7.98780488" y="171.4">type</tspan>
+                <tspan x="7.98780488" y="194.4">{tags}</tspan>
+                <tspan x="7.98780488" y="217.4">&lt;preview_thumbnails&gt;</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="226.853659" y="56.4">K</tspan>
+                <tspan x="226.853659" y="79.4">C</tspan>
+                <tspan x="240.716059" y="79.4" font-family="Lucida Grande" fill="#D1870E">↓</tspan>
+                <tspan x="226.853659" y="103.4">C</tspan>
+                <tspan x="240.716059" y="103.4" font-family="Lucida Grande" fill="#D1870E">↑</tspan>
+                <tspan x="253.100434" y="103.4" fill="#D1870E"></tspan>
+            </text>
+        </g>
+        <g id="videos_by_user" sketch:type="MSLayerGroup" transform="translate(290.000000, 327.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="30.4291188" width="262" height="178.570881"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="262" height="30.4291188"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8.01223242" y="22.8045977">videos_by_user</tspan>
+            </text>
+            <text id="user_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8.01223242" y="56.4367816">user_id</tspan>
+                <tspan x="8.01223242" y="79.4367816">uploaded_timestamp</tspan>
+                <tspan x="8.01223242" y="102.436782">video_id</tspan>
+                <tspan x="8.01223242" y="125.436782">title</tspan>
+                <tspan x="8.01223242" y="148.436782">type</tspan>
+                <tspan x="8.01223242" y="171.436782">{tags}</tspan>
+                <tspan x="8.01223242" y="194.436782">&lt;preview_thumbnails&gt;</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="227.547401" y="56.4367816">K</tspan>
+                <tspan x="227.547401" y="79.4367816">C</tspan>
+                <tspan x="241.409801" y="79.4367816" font-family="Lucida Grande" fill="#D1870E">↓ </tspan>
+                <tspan x="253.987768" y="79.4367816" fill="#D1870E"></tspan>
+                <tspan x="227.547401" y="103.436782">C</tspan>
+                <tspan x="241.409801" y="103.436782" font-family="Lucida Grande" fill="#D1870E">↑</tspan>
+            </text>
+        </g>
+        <g id="latest_videos" sketch:type="MSLayerGroup" transform="translate(1249.000000, 54.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="29.6283525" width="262" height="179.371648"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="262" height="30.4291188"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8.01223242" y="22.8045977">latest_videos</tspan>
+            </text>
+            <text id="video_bucket" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8.01223242" y="55.6360153">video_bucket</tspan>
+                <tspan x="8.01223242" y="78.6360153">uploaded_timestamp</tspan>
+                <tspan x="8.01223242" y="101.636015">video_id</tspan>
+                <tspan x="8.01223242" y="124.636015">title</tspan>
+                <tspan x="8.01223242" y="147.636015">type</tspan>
+                <tspan x="8.01223242" y="170.636015">{tags}</tspan>
+                <tspan x="8.01223242" y="193.636015">&lt;preview_thumbnails&gt;</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="227.547401" y="56.4367816">K</tspan>
+                <tspan x="227.547401" y="79.4367816" font-family="Lucida Grande" fill="#D1870E">C↓</tspan>
+                <tspan x="253.216151" y="79.4367816"></tspan>
+                <tspan x="227.547401" y="102.436782">C</tspan>
+                <tspan x="241.409801" y="102.436782" font-family="Lucida Grande" fill="#D1870E">↑</tspan>
+            </text>
+        </g>
+        <g id="videos" sketch:type="MSLayerGroup" transform="translate(1479.000000, 326.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="30.3550296" width="260" height="223.668639"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="260" height="30.3550296"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8" y="22.7928994">videos</tspan>
+            </text>
+            <text id="video_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8" y="56.3431953">video_id</tspan>
+                <tspan x="8" y="79.3431953">uploaded_timestamp</tspan>
+                <tspan x="8" y="102.343195">title</tspan>
+                <tspan x="8" y="125.343195">description</tspan>
+                <tspan x="8" y="148.343195">type</tspan>
+                <tspan x="8" y="171.343195">url</tspan>
+                <tspan x="8" y="194.343195">*encoding*</tspan>
+                <tspan x="8" y="217.343195">{tags}</tspan>
+                <tspan x="8" y="240.343195">&lt;preview_thumbnails&gt;</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="220.8" y="56.3431953">K</tspan>
+                <tspan x="220.8" y="79.3431953"></tspan>
+                <tspan x="220.8" y="102.343195"></tspan>
+                <tspan x="220.8" y="125.343195"></tspan>
+                <tspan x="220.8" y="148.343195"></tspan>
+                <tspan x="220.8" y="171.343195"></tspan>
+                <tspan x="220.8" y="194.343195"></tspan>
+                <tspan x="220.8" y="217.343195"></tspan>
+                <tspan x="220.8" y="240.343195"></tspan>
+            </text>
+        </g>
+        <g id="users" sketch:type="MSLayerGroup" transform="translate(13.000000, 326.000000)">
+            <rect id="Body" stroke="#979797" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="30.3251232" width="262" height="131.674877"></rect>
+            <rect id="Header" stroke="#979797" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="1.13406821e-14" width="262" height="30.3251232"></rect>
+            <text id="Video_event" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8.01223242" y="22.7881773">users</tspan>
+            </text>
+            <text id="user_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8.01223242" y="56.3054187">user_id</tspan>
+                <tspan x="8.01223242" y="79.3054187">email</tspan>
+                <tspan x="8.01223242" y="102.305419">first_name</tspan>
+                <tspan x="8.01223242" y="125.305419">last_name</tspan>
+                <tspan x="8.01223242" y="148.305419">registration_date</tspan>
+            </text>
+            <text id="KKC" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="227.547401" y="56.3054187">K</tspan>
+            </text>
+        </g>
+        <g id="users_by_email" sketch:type="MSLayerGroup" transform="translate(297.000000, 56.000000)">
+            <rect id="Body" stroke="#B6BBB7" stroke-width="0.8" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="30.4" width="262" height="81.6"></rect>
+            <rect id="Header" stroke="#B6BBB7" stroke-width="0.8" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="262" height="30.4"></rect>
+            <text sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal" fill="#1B7387">
+                <tspan x="8.01223242" y="22">users_by_email</tspan>
+            </text>
+            <text id="email" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="19.2" font-weight="normal">
+                <tspan x="8.01223242" y="52.4">email</tspan>
+                <tspan x="8.01223242" y="75.4">password</tspan>
+                <tspan x="8.01223242" y="98.4">user_id</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Gill Sans" font-size="19.8857143" font-weight="normal">
+                <tspan x="225.944954" y="52.4">K</tspan>
+            </text>
+        </g>
+        <text id="Q3" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="83" y="319">Q3</tspan>
+        </text>
+        <text id="Q1" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="379" y="48">Q1</tspan>
+        </text>
+        <text id="Q2" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1201" y="105">Q2</tspan>
+        </text>
+        <text id="Q2-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1339" y="47">Q2</tspan>
+        </text>
+        <text id="Q5" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="651" y="320">Q5</tspan>
+        </text>
+        <text id="Q5" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="837" y="441">Q5</tspan>
+        </text>
+        <text id="Q6" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1111" y="328">Q6</tspan>
+        </text>
+        <text id="Q7" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1558" y="322">Q7</tspan>
+        </text>
+        <text id="Q7" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1558" y="605">Q7</tspan>
+        </text>
+        <text id="Q4" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="373" y="320">Q4</tspan>
+        </text>
+        <text id="Q6" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="28.8" font-weight="420" fill="#007B98">
+            <tspan x="1111" y="593">Q6</tspan>
+        </text>
+        <g id="Access-Patterns" sketch:type="MSLayerGroup" transform="translate(1.000000, 640.000000)">
+            <rect id="Rectangle-29" stroke="#000000" stroke-width="0.8" fill="#FFFFFF" filter="url(#filter-2)" sketch:type="MSShapeGroup" x="0.186289515" y="0" width="1317.81371" height="265.761343"></rect>
+            <text id="Q1:-Find-a-user-with" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#000000">
+                <tspan x="15.9951456" y="82.0504999">Q1: Find a user with a </tspan>
+                <tspan x="257.387146" y="82.0504999" font-weight="bold">specified email</tspan>
+                <tspan x="15.9951456" y="111.0505">Q2: Find most recently uploaded videos</tspan>
+                <tspan x="15.9951456" y="140.0505">Q3: Find a </tspan>
+                <tspan x="133.835146" y="140.0505" font-weight="bold">user with a specified id</tspan>
+                <tspan x="398.195146" y="140.0505"></tspan>
+                <tspan x="15.9951456" y="169.0505">Q4: Find videos uploaded by a </tspan>
+                <tspan x="351.227146" y="169.0505" font-weight="bold">user with a known id</tspan>
+                <tspan x="587.627146" y="169.0505"> (show most recently uploaded videos first)</tspan>
+                <tspan x="15.9951456" y="198.0505">Q5: Find comments posted by a </tspan>
+                <tspan x="368.171146" y="198.0505" font-weight="bold">user with a known id</tspan>
+                <tspan x="604.571146" y="198.0505"> (show most recently posted comments first)</tspan>
+                <tspan x="15.9951456" y="227.0505">Q6: Find comments posted for a </tspan>
+                <tspan x="370.811146" y="227.0505" font-weight="bold">video with a known id</tspan>
+                <tspan x="618.755146" y="227.0505"> (show most recent comments first)</tspan>
+                <tspan x="15.9951456" y="256.0505">Q7: Find a video with a </tspan>
+                <tspan x="269.387146" y="256.0505" font-weight="bold">specified video id</tspan>
+            </text>
+            <text id="ACCESS-PATTERNS" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" fill="#435B61">
+                <tspan x="15.1953883" y="37.762625">ACCESS PATTERNS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

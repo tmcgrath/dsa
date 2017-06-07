@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="387px" height="205px" viewBox="0 0 387 205" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>measurements-by-sensor-physical</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="videos_by_user-copy-3" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="385" height="165"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="385" height="38"></rect>
+            <text id="measurements_by_sens" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29">measurements_by_sensor</tspan>
+            </text>
+            <text id="sensor" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="71">sensor</tspan>
+                <tspan x="10" y="100" fill="#D1870E">parameter</tspan>
+                <tspan x="119.8" y="100"></tspan>
+                <tspan x="10" y="129">week_first_day</tspan>
+                <tspan x="10" y="158">second</tspan>
+                <tspan x="10" y="187">value</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="342" y="71">K</tspan>
+                <tspan x="342" y="100">K</tspan>
+                <tspan x="342" y="129">K</tspan>
+                <tspan x="342" y="158">C</tspan>
+                <tspan x="359.328" y="158" font-family="Lucida Grande">↓ </tspan>
+            </text>
+        </g>
+        <g id="TEXT-Copy-25" sketch:type="MSLayerGroup" transform="translate(259.500000, 51.000000)">
+            <text id="TEXT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="13.67" y="19.153">TEXT</tspan>
+            </text>
+            <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+        <g id="TEXT-Copy-26" sketch:type="MSLayerGroup" transform="translate(259.500000, 80.000000)">
+            <text id="TEXT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="13.67" y="19.153">TEXT</tspan>
+            </text>
+            <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+        <g id="INT-Copy-4" sketch:type="MSLayerGroup" transform="translate(245.500000, 168.000000)">
+            <text id="FLOAT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="14.82" y="19.153">FLOAT</tspan>
+            </text>
+            <rect id="Rectangle-26-Copy-4" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="84" height="25" rx="8"></rect>
+        </g>
+        <g id="TIMESTAMP-Copy-8" sketch:type="MSLayerGroup" transform="translate(199.500000, 109.000000)">
+            <rect id="Rectangle-26-Copy" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="130" height="25" rx="8"></rect>
+            <text id="TIMESTAMP" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="14.492" y="19">TIMESTAMP</tspan>
+            </text>
+        </g>
+        <g id="TEXT-Copy-27" sketch:type="MSLayerGroup" transform="translate(260.000000, 138.000000)">
+            <text id="INT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="21.005" y="19.153">INT</tspan>
+            </text>
+            <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+    </g>
+</svg>

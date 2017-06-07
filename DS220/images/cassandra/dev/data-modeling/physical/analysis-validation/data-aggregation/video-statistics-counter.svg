@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="327px" height="193px" viewBox="0 0 327 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" transform="translate(-1.000000, -1.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="1" y="39" width="327" height="155"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="1" y="1" width="327" height="38"></rect>
+            <text id="video_statistics_cou" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="11" y="30">video_statistics_counter</tspan>
+            </text>
+            <text id="year" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="11" y="72">year</tspan>
+                <tspan x="11" y="101">month</tspan>
+                <tspan x="11" y="130">day</tspan>
+                <tspan x="11" y="159">num_uploads</tspan>
+                <tspan x="11" y="188">sum_duration</tspan>
+            </text>
+            <text id="K-" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="285" y="72">K</tspan>
+                <tspan x="301.008" y="72" font-family="Lucida Grande" fill="#D1870E"> </tspan>
+                <tspan x="308.60175" y="72" fill="#D1870E"></tspan>
+                <tspan x="285" y="101" fill="#D1870E">C</tspan>
+                <tspan x="302.328" y="101" font-family="Lucida Grande" fill="#D1870E">↓</tspan>
+                <tspan x="285" y="130" fill="#D1870E">C</tspan>
+                <tspan x="302.328" y="130" font-family="Lucida Grande" fill="#D1870E">↓</tspan>
+                <tspan x="285" y="159" fill="#D1870E">++</tspan>
+                <tspan x="285" y="188" fill="#D1870E">++</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

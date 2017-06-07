@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="944px" height="176px" viewBox="0 0 944 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>attachment-chunks</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M431.5,89 L608,89" id="Line-Copy-9" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-9-decoration-1" d="M608,89 L597.2,86 L597.2,92 L608,89 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <path d="M3.5,89 L107,89" id="Line-Copy-8" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-8-decoration-1" d="M107,89 L96.2,86 L96.2,92 L107,89 Z" stroke="#5D5D5D" stroke-width="5" stroke-linecap="square"></path>
+        <g id="videos_by_user-copy" sketch:type="MSLayerGroup" transform="translate(115.000000, 1.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="327" height="136"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="327" height="38"></rect>
+            <text id="attachments_by_email" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29">attachments_by_email</tspan>
+            </text>
+            <text id="email_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="71">email_id</tspan>
+                <tspan x="10" y="100">file_name</tspan>
+                <tspan x="10" y="129">n_chunks</tspan>
+                <tspan x="10" y="158">type</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="284" y="71">K</tspan>
+                <tspan x="284" y="100">K</tspan>
+            </text>
+        </g>
+        <g id="Q-+-4.1" sketch:type="MSLayerGroup" transform="translate(29.000000, 44.000000)" font-family="Helvetica Neue" fill="#007B98" font-weight="420">
+            <text id="Q" sketch:type="MSTextLayer" font-size="36">
+                <tspan x="0" y="35">Q</tspan>
+            </text>
+            <text id="4.1" sketch:type="MSTextLayer" font-size="24">
+                <tspan x="26" y="35.204">4.1</tspan>
+            </text>
+        </g>
+        <g id="Q-+-4.1-Copy" sketch:type="MSLayerGroup" transform="translate(531.000000, 44.000000)" font-family="Helvetica Neue" fill="#007B98" font-weight="420">
+            <text id="Q" sketch:type="MSTextLayer" font-size="36">
+                <tspan x="0" y="35">Q</tspan>
+            </text>
+            <text id="4.2" sketch:type="MSTextLayer" font-size="24">
+                <tspan x="26" y="35.204">4.2</tspan>
+            </text>
+        </g>
+        <g id="videos_by_user-copy-2" sketch:type="MSLayerGroup" transform="translate(615.000000, 1.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="1" y="38" width="327" height="136"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="1" y="0" width="327" height="38"></rect>
+            <text id="chunks_by_attachment" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="11" y="29">chunks_by_attachment</tspan>
+            </text>
+            <text id="email_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="11" y="71">email_id</tspan>
+                <tspan x="11" y="100">file_name</tspan>
+                <tspan x="11" y="129">chunk</tspan>
+                <tspan x="11" y="158">value</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="285" y="71">K</tspan>
+                <tspan x="285" y="100">K</tspan>
+                <tspan x="285" y="129">K</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

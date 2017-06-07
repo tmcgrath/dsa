@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.2" name="generator" />
+<title>Logical Data Modeling</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{font-weight: normal}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#00}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/goto/deck.goto.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/datastax.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<section class="slide" id="title-slide">
+<h1>Logical Data Modeling</h1>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-logical-query-driven-methodology">
+<h2>Data Modeling Methodology</h2>
+<div class="paragraph"><p><strong>Process to design a logical model</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Uses a top-down approach</li>
+<li>Can be algorithmically defined</li>
+<li>Effective in the long run—vs. dark art</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="query driven methodology" src="images/cassandra/dev/data-modeling/logical/query-driven-methodology/query-driven-methodology.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="query-driven-data-modeling">
+<h2>Query-Driven Data Modeling</h2>
+<div class="paragraph"><p>&nbsp;</p></div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img alt="workflow" src="images/cassandra/dev/data-modeling/logical/query-driven-methodology/workflow.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>This methodology uses the conceptual data model, application workflow and access patterns as inputs to generate the logical data model.</p></div>
+<div class="paragraph"><p>This is done using the methodology&#8217;s  mapping rules and patterns to guide schema design and to ensure that the resulting logical model is correct and works properly.</p></div>
+<div class="paragraph"><p>This logical model is described using the Chebotko diagram notation.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="logical-model">
+<h2>Logical Model</h2>
+<div class="paragraph"><p><strong>Chebotko Diagram</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Visual diagram for Cassandra tables and access patterns</li>
+</ul>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img alt="chebotko diagram" src="images/cassandra/dev/data-modeling/logical/query-driven-methodology/chebotko-diagram.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-logical-chebotko-diagrams">
+<h2>Chebotko Diagrams</h2>
+<div class="ulist">
+<ul>
+<li>Graphical representation of Cassandra database schema design</li>
+<li>Documents the logical and physical data model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="chebotko diagram 1" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/chebotko-diagram-1.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Graphical representation of Cassandra database schema design</li>
+<li>Documents the logical and physical data model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="chebotko diagram 2" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/chebotko-diagram-2.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Graphical representation of Cassandra database schema design</li>
+<li>Documents the logical and physical data model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="chebotko diagram 3" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/chebotko-diagram-3.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Graphical representation of Cassandra database schema design</li>
+<li>Documents the logical and physical data model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="chebotko diagram 4" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/chebotko-diagram-4.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Graphical representation of Cassandra database schema design</li>
+<li>Documents the logical and physical data model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="chebotko diagram 5" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/chebotko-diagram-5.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="chebotko-diagram-notation">
+<h2>Chebotko Diagram Notation</h2>
+<div class="paragraph"><p><strong>Table representation</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Logical-level shows column names and properties</li>
+<li>Physical-level also shows the column data type</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="table schema" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/table-schema.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Although the physical-level Chebotko diagram appears to only have some additional information, it actually reflects the later optimized database schema after performing the analysis and validation steps. It should have all the information needed to instantiate the table in CQL.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Access patterns</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Directed links and query label shows how tables are accessed</li>
+<li>Similar to the application workflow, but now with our logical information</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="access patterns" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/access-patterns.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Logical UDT diagram</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Represents user defined types and tuples</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="logical udt diagrams" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/logical-udt-diagrams.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>At the logical level, the name of a UDT diagram is the column name&#8212;&#8203;including the column notation.</li>
+<li>For tuples, field names are used at the logical level.</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Physical UDT diagram</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Represents user defined types and tuples</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="physical udt diagrams" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/physical-udt-diagrams.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>At the physical level, a name is given to a UDT or will default to <code>&lt;column_name&gt;_type</code>.</li>
+<li>For tuples, field names are not kept at the physical level.</li>
+<li>CQL types are only captured at the physical level.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide" id="example-chebotko-diagram">
+<h2>Example Chebotko Diagram</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="complete chebotko" src="images/cassandra/dev/data-modeling/logical/chebotko-diagrams/complete-chebotko.svg" />
+</div>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-logical-principles">
+<h2>Cassandra Data Modeling Principles</h2>
+<div class="ulist">
+<ul>
+<li>Know your data</li>
+<li>Know your queries</li>
+<li>Nest data</li>
+<li>Duplicate data</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The principles reflect the key takeaways from the data-modeling-wins vertex.
+These slides goes into these principles in more detail when transitioning from a conceptual model.</p></div>
+<div class="paragraph"><p>Nesting and duplicating data is essentially data denormalization.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="know-your-data">
+<h2>Know Your Data</h2>
+<div class="paragraph"><p><strong>Understanding the data is the key to successful design</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Data captured by conceptual data model</li>
+<li>Define what is stored in database</li>
+<li>Preserve properties so that data is organized correctly</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="er diagram" src="images/cassandra/dev/data-modeling/logical/principles/er-diagram.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Components of the conceptual data model includes:</p></div>
+<div class="ulist">
+<ul>
+<li>Entities</li>
+<li>Relationships</li>
+<li>Attributes</li>
+<li>Keys</li>
+<li>Cardinality constraints</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Key constraints affect schema design</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Entity and relationship keys affect the table primary keys</li>
+<li>Primary key uniquely identifies a row / entity / relationship</li>
+<li>Composed of a key and possibly additional columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="primary key" src="images/cassandra/dev/data-modeling/logical/principles/primary-key.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Both tables can store the same data about videos but the data organization is different.</p></div>
+<div class="paragraph"><p>The key of <code>video</code> is represented by column <code>video_id</code>.</p></div>
+<div class="paragraph"><p>The primary key of <code>videos_by_user</code> includes additional columns besides <code>video_id</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Cardinality constraints affect the key for relationships</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="cardinality constraints" src="images/cassandra/dev/data-modeling/logical/principles/cardinality-constraints.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>One-to-One relationship can use the key from either entity.</p></div>
+<div class="paragraph"><p>Many-to-Many uses the key from both entities.</p></div>
+<div class="paragraph"><p><code>uploads'</code> key (top): <code>User id</code>.</p></div>
+<div class="paragraph"><p><code>comments on'</code> key (bottom): User <code>id</code> and Video <code>id</code>.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="know-your-queries">
+<h2>Know Your Queries</h2>
+<div class="paragraph"><p><strong>Queries directly affect schema design</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Queries captured by application workflow model</li>
+<li>Table schema design changes if queries change</li>
+</ul>
+</div>
+<div class="paragraph"><p><span class="image"><img alt="application-workflow" src="images/cassandra/dev/data-modeling/logical/principles/application-workflow.svg" /></span></p></div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Schema design organizes data to efficiently run queries</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Partition per query&#8201;&#8212;&#8201;<strong>ideal</strong></li>
+<li>Partition+ per query&#8201;&#8212;&#8201;<strong>acceptable</strong></li>
+<li>Table scan&#8201;&#8212;&#8201;<strong>anti-pattern</strong></li>
+<li>Multi-table&#8201;&#8212;&#8201;<strong>anti-pattern</strong></li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Multiple queries can be executed in parallel, which makes partition per query the most efficient. However it is possible to design queries to execute serially, such as in the case of client-side joins. This is where a query will execute first, and then a subsequent query can be executed based on the previous result. This may not be as efficient even if retrieving only a single partition per query. Client-side joins may be discussed later in more detail.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Partition per query</strong></p></div>
+<div class="ulist">
+<ul>
+<li>The most efficient access pattern</li>
+<li>Query accesses only one partition to retrieve results</li>
+<li>Partition can be single-row or multi-row</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="partition query" src="images/cassandra/dev/data-modeling/logical/principles/partition-query.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Examples:</p></div>
+<div class="ulist">
+<ul>
+<li>Find information for a specified user&#8212;&#8203;retrieve one row / partition.</li>
+<li>Find all comments for a specified user&#8212;&#8203;retrieve many rows in one partition.</li>
+</ul>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+An extreme form of this is to model all data into as few partitions as possible, which may make them too large and have undesirable performance.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Partition+ per query</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Less efficient access pattern but not necessarily bad</li>
+<li>Query needs to access multiple partitions to retrieve results</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="multi partition query" src="images/cassandra/dev/data-modeling/logical/principles/multi-partition-query.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>An example would be "Find movies that match one of multiple genres".</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Table scan and Multi-table</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Least efficient type of query but may be needed in some cases</li>
+<li>Query needs to access all partitions in a table(s) to retrieve results</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="table query" src="images/cassandra/dev/data-modeling/logical/principles/table-query.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>An example of a multi-table query would be "Retrieve all data in a database".</p></div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This is a pattern you do not want to use frequently.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph"><p>You may know what you&#8217;re doing if you are actively minimizing data redundancy and performing relatively efficient, client-side joins.
+More information about this may be discussed later for data duplication factor and client side joins.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="nest-data">
+<h2>Nest Data</h2>
+<div class="paragraph"><p><strong>Data nesting is the main data modeling technique</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Nesting organizes multiple entities into a single partition</li>
+<li>Supports partition per query data access</li>
+<li><p>
+Three data nesting mechanisms<div class="ulist">
+<ul>
+<li>Clustering columns&#8212;&#8203;multi-row partitions</li>
+<li>Collection columns</li>
+<li>User-defined type columns</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Clustering columns - primary data nesting mechanism</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Partition key identifies an entity that other entities will nest into</li>
+<li>Values in a clustering column identify the nested entities</li>
+<li>Multiple clustering columns implement multi-level nesting</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="nest data clustering" src="images/cassandra/dev/data-modeling/logical/principles/nest-data-clustering.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Table <code>videos</code> does not do data nesting.</p></div>
+<div class="paragraph"><p>Table <code>actors_by_video</code> nests all videos that an actor was featured into a partition for that actor&#8212;&#8203;the partition is identified by <code>video_id</code>.</p></div>
+<div class="paragraph"><p>The shaded region denotes nested data.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>User-defined type&#8212;&#8203;secondary data nesting mechanism</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Represents one-to-one relationship, but can use in conjunction with collections</li>
+<li>Easier than working with multiple collection columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="nest data udt" src="images/cassandra/dev/data-modeling/logical/principles/nest-data-udt.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>`video_type is a user-defined type.</p></div>
+<div class="paragraph"><p>Table <code>videos_by_user</code> nests all videos as a collection in the <code>videos</code> column with the <code>video_type</code> type.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="duplicate-data">
+<h2>Duplicate Data</h2>
+<div class="paragraph"><p><strong>Better to duplicate than to join data</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Partition per query and data nesting may result in data duplication<div class="ulist">
+<ul>
+<li>Query results are pre-computed and materialized</li>
+<li>Data can be duplicated across tables, partitions, and / or rows</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="duplicate" src="images/cassandra/dev/data-modeling/logical/principles/duplicate.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Different "views" of the same data = different queries.</p></div>
+<div class="paragraph"><p>Duplicating data in Cassandra across multiple tables, partitions, and rows is a common practice that is required to efficiently support different queries over the same data.</p></div>
+<div class="paragraph"><p>In the Cassandra world, the trade-off between space efficiency and time efficiency is almost always in favor of the latter. Normalization is not a priority here.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Data duplication can scale, joins cannot</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="duplicate join" src="images/cassandra/dev/data-modeling/logical/principles/duplicate-join.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>With duplication, Cassandra essentially works as "join on write", needing to possibly write data to multiple tables. This contrasts with relational databases that normalizes data and "joins on read".</p></div>
+<div class="paragraph"><p>Query: Find information about videos that includes a specified actor.</p></div>
+<div class="paragraph"><p>Design on the left requires a join: If there are 10 videos with the same actor, table <code>videos</code> must be queried for 10 partitions, which may reside on 10 different nodes.</p></div>
+<div class="paragraph"><p>Design on the right requires no join and accesses only one partition for that query.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-logical-mapping-rules">
+<h2>Mapping Rules</h2>
+<div class="paragraph"><p><strong>For the query-driven methodology</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Mapping rules ensure that a logical data model is correct</li>
+<li>Each query has a corresponding table</li>
+<li>Tables are designed to allow queries to execute properly</li>
+<li>Tables return data in the correct order</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Mapping Rule 1: Entities and relationships</li>
+<li>Mapping Rule 2: Equality search attributes</li>
+<li>Mapping Rule 3: Inequality search attributes</li>
+<li>Mapping Rule 4: Ordering attributes</li>
+<li>Mapping Rule 5: Key attributes</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="mr1-entities-and-relationships">
+<h2>MR1: Entities And Relationships</h2>
+<div class="ulist">
+<ul>
+<li>Entity and relationship types map to tables</li>
+<li>Entities and relationships map to partitions or rows</li>
+<li>Partition may have data about one or more entities and relationships</li>
+<li>Attributes are represented by columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 1" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-1.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may have an incomplete data model
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Data from the conceptual level must also be preserved at the logical level.<br />
+The same data can be duplicated across multiple tables, partitions, or rows.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Entity and relationship types map to tables</li>
+<li>Entities and relationships map to partitions or rows</li>
+<li>Partition may have data about one or more entities and relationships</li>
+<li>Attributes are represented by columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 2" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-2.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may have an incomplete data model
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Data from the conceptual level must also be preserved at the logical level.<br />
+The same data can be duplicated across multiple tables, partitions, or rows.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Entity and relationship types map to tables</li>
+<li>Entities and relationships map to partitions or rows</li>
+<li>Partition may have data about one or more entities and relationships</li>
+<li>Attributes are represented by columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 3" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-3.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may have an incomplete data model
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Data from the conceptual level must also be preserved at the logical level.<br />
+The same data can be duplicated across multiple tables, partitions, or rows.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Entity and relationship types map to tables</li>
+<li>Entities and relationships map to partitions or rows</li>
+<li>Partition may have data about one or more entities and relationships</li>
+<li>Attributes are represented by columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 4" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-4.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may have an incomplete data model
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Data from the conceptual level must also be preserved at the logical level.<br />
+The same data can be duplicated across multiple tables, partitions, or rows.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Entity and relationship types map to tables</li>
+<li>Entities and relationships map to partitions or rows</li>
+<li>Partition may have data about one or more entities and relationships</li>
+<li>Attributes are represented by columns</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 5" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-5.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may have an incomplete data model
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Data from the conceptual level must also be preserved at the logical level.<br />
+The same data can also be duplicated across multiple tables, partitions, or rows.<br />
+A partition may have data about one or more entities and relationships.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Relationship type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Each relationship becomes a row in the table</li>
+<li>Relationship type attributes are represented by columns</li>
+<li>Queries and relationship cardinality affects the design of the primary key</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr1 relationship" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr1-relationship.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Table <code>videos_by_user</code> supports queries on <code>user_id</code>, and optionally, <code>video_id</code>.<br />
+Table <code>users_by_video</code> supports queries on <code>video_id</code>.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="mr2-equality-search-attributes">
+<h2>MR2: Equality Search Attributes</h2>
+<div class="paragraph"><p><strong>Attributes to query on must be in the front of the primary key</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Primary key is an ordered set of columns, made up of partition key and clustering columns</li>
+<li>A partition key is formed by one or more of the leading primary key columns</li>
+<li>Supported queries must include all partition key columns in the query</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr2 1" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr2-1.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means that you may not be able to query on a specific column
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong>
+Table can only be queried on columns that make up the front of a primary key, which must include all partition key columns.
+The table can also be queried on all of the primary key columns.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Entity type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Equality search attributes become initial columns of a primary key</li>
+<li>Querying on: <code>title</code> and <code>type</code></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr2 entity" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr2-entity.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>All tables support queried on <code>title</code> and <code>type</code>. However the ordering of the primary key columns can change what columns can be queried.
+In 'videos_by_title_type', <code>title</code> and <code>type</code> must both be queried since they make up the primary key.
+In <code>videos_by_title</code>, <code>title</code> is first and makes up the partition key, and can always be queried. <code>type</code> can only be queried if <code>title</code> is queried too.
+In <code>videos_by_type</code>, <code>type</code> is first and can always be queried, and <code>title</code> can only be queried in addition with <code>type</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Relationship type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Equality search attributes become initial columns of a primary key</li>
+<li>Querying on: <code>last name</code> and <code>first name</code></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr2 relationship" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr2-relationship.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>All tables support querying on <code>last_name</code> and <code>first_name</code>.
+In addition, all tables support querying on <code>last_name</code> and <code>first_name</code> and <code>video_id</code>.
+<code>videos_by_user_2</code> can also query on just one column: <code>last_name</code>.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="mr3-inequality-search-attributes">
+<h2>MR3: Inequality Search Attributes</h2>
+<div class="paragraph"><p><strong>Inequality search attributes become clustering columns</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Clustering columns follow partition key columns in a primary key</li>
+<li>The column involved in an inequality search must come after columns in the primary key that are used in an equality search</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr3 1" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr3-1.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means you may not be able to do a certain inequality search or range scan
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Partition key columns do not allow for inequality searches, although there is a token-based inequality search.
+However, results from a token-based query are not meaningful for the commonly used partitioners.
+For queries that require an inequality search but without an equality search, an arbitrary column or bucket can be created for use as a search predicate.</p></div>
+<div class="paragraph"><p><strong>Rationale</strong>
+Clustering columns support inequality (range) query.
+Only one clustering column can be used in an inequality predicate.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Entity type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Inequality search attributes become clustering columns</li>
+<li>Querying on: <em> <code>last_name</code> = ? and <code>registration_date</code> &gt; ?</em></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr3 entity" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr3-entity.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In <code>users</code>, <code>registration_date</code> is a clustering column.<br />
+The primary keys are formed by columns that are queried on, <code>last_name</code> (equality), and <code>registration_date</code> (inequality).<br />
+The primary keys also include columns that correspond to the key attributes, <code>user_id</code>.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Relationship type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Inequality search attributes become clustering columns</li>
+<li>Querying on: <em> <code>user_id</code> = ? and <code>uploaded_timestamp</code> &gt; ?</em></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr3 relationship" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr3-relationship.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In table <code>videos_by_user</code>, uploaded_timestamp is a clustering column.</p></div>
+<div class="paragraph"><p>How is the primary key formed?
+* Equality search attributes
+* Inequality search attributes
+* Key attributes</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="mr4-ordering-attributes">
+<h2>MR4: Ordering Attributes</h2>
+<div class="paragraph"><p><strong>Ordering attributes map to clustering columns</strong></p></div>
+<div class="ulist">
+<ul>
+<li>In each partition, CQL rows are ordered based on the clustering columns</li>
+<li>Ascending or descending order</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr4 1" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr4-1.svg" />
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule means the query may not return column values in the order you want
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Entity type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Ordering attributes become clustering columns</li>
+<li>Querying on: <em> <code>last_name</code> = ? and <code>registration_date</code> &gt; ?</em></li>
+<li>Ordering attributes: <em> <code>registration_date</code> (ASC)</em></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr4 entity" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr4-entity.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In both tables, <code>registration_date</code> is a clustering column. The tables maintain the DESC and ASC order, respectively, for the rows in each partition.
+Retrieving default ordering is efficient. It can also be reversed in a query, which is slightly less efficient.
+Setting CLUSTERING ORDER BY can order columns that wouldn&#8217;t be possible for a ORDER BY query, such as having <code>registration_date</code> DESC and <code>user_id</code> ASC.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Relationship type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Ordering attributes become clustering columns</li>
+<li>Querying on: <em> <code>user_id</code> = ? and <code>uploaded_timestamp</code> &gt; ?</em></li>
+<li>Ordering attributes: <em> <code>uploaded_timestamp</code> (DESC)</em></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr4 relationship" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr4-relationship.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><code>uploaded_timestamp</code> (DESC) and <code>video_id</code> (ASC) are clustering columns.</p></div>
+<div class="paragraph"><p>How is the primary key formed?
+* Equality search attributes <code>user_id</code>
+* Inequality search attributes <code>uploaded_timestamp</code>
+* Ordering attributes <code>uploaded_timestamp</code>, <code>video_id</code>
+* Key attributes <code>video_id</code></p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="mr5-key-attributes">
+<h2>MR5: Key Attributes</h2>
+<div class="paragraph"><p><strong>Key attributes map to primary key columns</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Primary key must include the columns that represent key attributes</li>
+<li>Position and order of such columns may vary</li>
+<li>Primary key may have additional columns to support specific queries</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Violating this rule may result in upsert operations&#8212;&#8203;loss of data
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><strong>Rationale</strong><br />
+Entities and relationships are uniquely identified by key attribute values.<br />
+Row in a table is uniquely identified by primary key column values.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Entity type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Entity type key attributes are included as primary key columns</li>
+<li>Queries also affect primary key design</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr5 entity" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr5-entity.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Key attribute for entity type <code>User</code>: <code>id</code>.<br />
+Tables <code>users</code> and <code>users_by_last_name</code> have the column <code>user_id</code> that correspond to the key attribute and are part of the primary key for these tables.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Relationship type example</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Relationship type key attributes are included as primary key columns</li>
+<li>Queries affect primary key design</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mr5 relationship" src="images/cassandra/dev/data-modeling/logical/mapping-rules/mr5-relationship.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Key attribute for relationship <code>posts</code>: <code>id</code>.<br />
+<code>id</code> represents a role of <code>Video</code> in a relationship; a video can only participate in the relationship one time.<br />
+Tables <code>videos_by_user</code> and <code>users_by_video</code> have column <code>video_id</code> that corresponds to the key attribute and is part of the primary keys for these tables.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="applying-mapping-rules">
+<h2>Applying Mapping Rules</h2>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 1" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-1.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order&#8212;&#8203;MR1</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 2" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-2.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order&#8212;&#8203;MR1&#8212;&#8203;MR2</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 3" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-3.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order&#8212;&#8203;MR1&#8212;&#8203;MR2&#8212;&#8203;MR3</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 4" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-4.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order&#8212;&#8203;MR1&#8212;&#8203;MR2&#8212;&#8203;MR3&#8212;&#8203;MR4</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 5" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-5.svg" />
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Create a table schema from the conceptual data model and for each query</li>
+<li>Apply the mapping rules in order&#8212;&#8203;MR1&#8212;&#8203;MR2&#8212;&#8203;MR3&#8212;&#8203;MR4&#8212;&#8203;MR5</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="apply mp 6" src="images/cassandra/dev/data-modeling/logical/mapping-rules/apply-mp-6.svg" />
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-11-mapping-rules">
+<h2>Exercise 11&#8212;&#8203;Extend the KillrVideo Logical Model</h2>
+
+</section>
+<section class="slide" id="cassandra-dev-data-modeling-logical-mapping-patterns">
+<h2>Mapping Patterns</h2>
+<div class="ulist">
+<ul>
+<li>Semi-formal definitions for common mapping use cases</li>
+<li>Provides a graphical reference for designing a logical model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-1.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Only covers use cases that nest data with the clustering column mechanism.</li>
+<li>Ordering of the results is not taken into consideration.</li>
+<li>These limitations mean that mapping patterns complement modeling principles and mapping rules, but doesn&#8217;t replace them.</li>
+<li>Still need to consider modeling principles and mapping rules.</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Semi-formal definitions for common mapping use cases</li>
+<li>Provides a graphical reference for designing a logical model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns 2" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-2.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Only covers use cases that nest data with the clustering column mechanism.</li>
+<li>Ordering of the results is not taken into consideration.</li>
+<li>These limitations mean that mapping patterns complement modeling principles and mapping rules, but doesn&#8217;t replace them.</li>
+<li>Still need to consider modeling principles and mapping rules.</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Semi-formal definitions for common mapping use cases</li>
+<li>Provides a graphical reference for designing a logical model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns 3" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-3.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Only covers use cases that nest data with the clustering column mechanism.</li>
+<li>Ordering of the results is not taken into consideration.</li>
+<li>These limitations mean that mapping patterns complement modeling principles and mapping rules, but doesn&#8217;t replace them.</li>
+<li>Still need to consider modeling principles and mapping rules.</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="ulist">
+<ul>
+<li>Semi-formal definitions for common mapping use cases</li>
+<li>Provides a graphical reference for designing a logical model</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns 4" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-4.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>Only covers use cases that nest data with the clustering column mechanism.</li>
+<li>Ordering of the results is not taken into consideration.</li>
+<li>These limitations mean that mapping patterns complement modeling principles and mapping rules, but doesn&#8217;t replace them.</li>
+<li>Still need to consider modeling principles and mapping rules.</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Helps guide schema design</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Based on mapping rules and modeling principles for correctness and efficiency</li>
+<li>Enables automation of a schema design</li>
+<li>For each query, find an applicable mapping pattern and apply it</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="query-driven-methodology-mapping-patterns">
+<h2>Query-Driven Methodology Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Nine different patterns to use, depending on query requirements</strong></p></div>
+<div class="ulist">
+<ul>
+<li>(2) Entity mapping patterns</li>
+<li>(2) 1:1 relationship mapping patterns</li>
+<li>(2) 1:n relationship mapping patterns</li>
+<li>(2) m:n relationship mapping patterns</li>
+<li>(1) Hierarchical mapping pattern</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<table class="tableblock frame-all grid-all" style="width:100%">
+<colgroup>
+<col style="width:33%" />
+<col style="width:33%" />
+<col style="width:33%" />
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Mapping Pattern</th>
+<th class="tableblock halign-left valign-top">Data Nesting</th>
+<th class="tableblock halign-left valign-top">Duplication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entity and 1:1 relationship&#8212;&#8203;partitioned by key attributes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entity and 1:1 relationship&#8212;&#8203;partitioned by non-key attributes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1:n relationship</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maybe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m:n relationship</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hierarchical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Entities and 1:1 relationships partitioned by key attributes may have data nesting if there are multiple key attributes.
+Entities and 1:1 relationships partitioned by non-key attributes will only have duplicated data if querying on a set-valued attribute, which essentially would be converted to a 1:n or m:n relationship.
+1:n relationships may have data duplication if querying on entity on the right.
+m:n relationships patterns potentially the most expensive data duplication</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="entity-mapping-patterns">
+<h2>Entity Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Query attributes = key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns entity 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-entity-1.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>A slightly different entity called <code>Movie</code> is used for this example, where <code>title</code> and <code>release year</code> make up the key attributes for the entity <code>Movie</code>.</p></div>
+<div class="paragraph"><p>Key attributes are in blue, regular attributes are in green.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Query attributes != key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns entity 2" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-entity-2.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>A slightly different entity called <code>Movie</code> is used for this example, where <code>title</code> and <code>release year</code> make up the key attributes for the entity <code>Movie</code>.</p></div>
+<div class="paragraph"><p>Key attributes are in blue, regular attributes are in green.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="relationship-mapping-patterns">
+<h2>Relationship Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Design a table for a query accessing a relationship of multiple entities</strong></p></div>
+<div class="ulist">
+<ul>
+<li><p>
+Mapping patterns vary depending on the relationship cardinality<div class="ulist">
+<ul>
+<li>1:1 relationship</li>
+<li>1:n relationship</li>
+<li>m:n relationship</li>
+</ul>
+</div></p></li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>1:1 relationship mapping patterns</strong></p></div>
+<div class="ulist">
+<ul>
+<li>1:1 relationship mapping is similar to entity mapping</li>
+<li>Relationship entities can be merged together into one entity</li>
+<li>The key attributes can be derived from either one of the entities</li>
+</ul>
+</div>
+<div style="page-break-after: always"></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel 1 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-1-1.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>In this 1:1 relationship, attributes from both entities were merged together, and the key attributes from <code>Movie</code> was arbitrarily chosen to be used for the merged entity <code>Movie - First Showing</code>.</p></div>
+<div class="paragraph"><p>For the <code>Movie</code> and <code>Movie - First Showing</code> entity, key attributes are in blue and regular attributes are in green.
+For the <code>First Showing</code> entity, key attribute are in red and regular attributes are in orange.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="1-n-relationship-mapping-patterns">
+<h2>1:n Relationship Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Query attributes = key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel 1 n 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-1-n-1.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Primary key: All query attributes, followed by all key attributes of <code>User uploads Video</code>.
+Static columns: Non-key attributes of <code>User</code>, if and only if all key attributes of <code>User</code> are part of the partition key.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Query attributes != key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel 1 n 2" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-1-n-2.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Primary key: All query attributes, followed by all key attributes of <code>User uploads Video</code>.
+Additional <code>User</code> attributes can be added to the table at the cost of duplicating them for every video.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>n:1 relationship is the reverse direction of 1:n relationship</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel n 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-n-1.svg" />
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>Mapping is similar to a 1:1 relationship with data duplication</li>
+<li>Data nesting only if the table is partitioned by non-key attributes</li>
+<li>Attributes for the entity on the right will be duplicated</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>For the <code>Video</code> entity, key attributes are in blue and regular attributes are in green.
+For the <code>User</code> entity, key attribute are in red and regular attributes are in orange.
+Attributes for the relationship <code>is uploaded by</code> is in white.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="m-n-relationship-mapping-patterns">
+<h2>m:n Relationship Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Query attributes = key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel m n 1" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-m-n-1.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Primary key: All query attributes, followed by all key attributes of <code>Video features Actor</code>.
+Static columns: Non-key attributes of <code>Video</code>, if and only if all key attributes of <code>Video</code> are part of the partition key.
+Columns <code>title</code> and <code>description</code> are not included in the table to the right due to unwanted duplication.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Query attributes != key attributes</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns rel m n 2" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-rel-m-n-2.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Primary key: All query attributes, followed by all key attributes of <code>Video features Actor</code>.
+Potentially expensive data duplication.</p></div>
+</div>
+</div>
+</section>
+<section class="slide" id="hierarchical-mapping-patterns">
+<h2>Hierarchical Mapping Patterns</h2>
+<div class="paragraph"><p><strong>Three approaches to designing hierarchies</strong></p></div>
+<div class="ulist">
+<ul>
+<li>Creates one table as a supertype for hierarchies</li>
+<li>Simplest to use with both covering and not covering constraints</li>
+<li>Separate table for each type (not discussed here)</li>
+<li>Table per subtype (not discussed here)</li>
+</ul>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>Not only is there no duplication, but there is also no wasted space due to Cassandra&#8217;s storage model.
+Other databases may still allocate disk space even if columns do not have values.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Disjoint</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns hierarchical disjoint" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-hierarchical-disjoint.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p>The <code>type</code> column is used to specify the video&#8217;s type, and can be <code>TV Show</code>, <code>Movie</code>, or something else.</p></div>
+</div>
+</div>
+<div style="page-break-after: always"></div>
+<div class="paragraph"><p><strong>Not Disjoint</strong></p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="mapping patterns hierarchical not disjoint" src="images/cassandra/dev/data-modeling/logical/mapping-patterns/mapping-patterns-hierarchical-not-disjoint.svg" />
+</div>
+</div>
+<div class="openblock notes">
+<div class="content">
+<div class="paragraph"><p><code>type</code> is now a set column so that multiple types can be assigned to a video.</p></div>
+</div>
+</div>
+</section>
+<section class="slide transition-purple" id="courses-DS220-exercise-placeholders-exercise-12-mapping-patterns">
+<h2>Exercise 12&#8212;&#8203;Map additional requirements for KillrVideo</h2>
+
+</section>
+<section class="slide transition-green" id="courses-DS220-transitions-physical-transition">
+<h2>Physical Data Model</h2>
+<div class="imageblock" style="float: ">
+<div class="content">
+<img alt="physical trans" src="images/courses/DS220/transitions/physical-transition/physical-trans.svg" />
+</div>
+</div>
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<form action="." class="goto-form" method="get">
+<label for="goto-slide">Go to Slide:</label>
+<input id="goto-slide" list="goto-datalist" name="slidenum" type="text" />
+<datalist id="goto-data-list"></datalist>
+<input type="submit" value="Go" />
+</form>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/d3.v2.js"></script>
+<script src="deck.js/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/split/deck.split.js"></script>
+<script src="deck.js/extensions/animation/deck.animation.js"></script>
+<script src="deck.js/extensions/deck.js-notes/deck.notes.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/clone/deck.clone.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="js/course.js"></script>
+<footer>
+<div class="flex-element deck-course">
+<p>&copy; 2016 DataStax. Use only with permission. &bull;
+<span class="course-title">Logical Data Modeling</span></p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://academy.datastax.com" target="blank">DataStax Academy</a>
+</div>
+<div class="deck-progressbar">
+<span></span>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

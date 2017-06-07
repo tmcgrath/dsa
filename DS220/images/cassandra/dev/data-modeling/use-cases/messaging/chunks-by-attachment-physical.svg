@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="330px" height="176px" viewBox="0 0 330 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>chunks-by-attachment-physical</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="videos_by_user-copy-2" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="327" height="136"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="327" height="38"></rect>
+            <text id="chunks_by_attachment" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29">chunks_by_attachment</tspan>
+            </text>
+            <text id="email_id" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="71">email_id</tspan>
+                <tspan x="10" y="100">file_name</tspan>
+                <tspan x="10" y="129">chunk</tspan>
+                <tspan x="10" y="158">value</tspan>
+            </text>
+            <text id="K" fill="#D1870D" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="284" y="71">K</tspan>
+                <tspan x="284" y="100">K</tspan>
+                <tspan x="284" y="129">K</tspan>
+            </text>
+        </g>
+        <g id="TIMEUUID-Copy-8" sketch:type="MSLayerGroup" transform="translate(145.000000, 51.000000)">
+            <text id="TIMEUUID" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="23.002" y="19">TIMEUUID</tspan>
+            </text>
+            <rect id="Rectangle-26-Copy-3" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="130" height="25" rx="8"></rect>
+        </g>
+        <g id="TEXT-Copy-36" sketch:type="MSLayerGroup" transform="translate(204.000000, 137.500000)">
+            <text id="BLOB" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="10.826" y="19.153">BLOB</tspan>
+            </text>
+            <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+        <g id="TEXT-Copy-37" sketch:type="MSLayerGroup" transform="translate(204.500000, 80.000000)">
+            <text id="TEXT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="13.67" y="19.153">TEXT</tspan>
+            </text>
+            <rect id="Rectangle-26" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+        <g id="INT-Copy-5" sketch:type="MSLayerGroup" transform="translate(204.000000, 109.000000)">
+            <text id="INT" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#344446">
+                <tspan x="21.005" y="19">INT</tspan>
+            </text>
+            <rect id="Rectangle-26-Copy-4" stroke="#979797" sketch:type="MSShapeGroup" x="0" y="0" width="70" height="25" rx="8"></rect>
+        </g>
+    </g>
+</svg>

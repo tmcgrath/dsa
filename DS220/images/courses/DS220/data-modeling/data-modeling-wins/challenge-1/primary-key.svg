@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1254px" height="213px" viewBox="0 0 1254 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="primary-key" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-2" stroke="#D2D3D4" fill="#EAEAEB" sketch:type="MSShapeGroup" x="304.874332" y="45" width="948.125668" height="167" rx="5"></rect>
+            <rect id="Rectangle-2-Copy" stroke="#D2D3D4" fill="#FDFDFE" sketch:type="MSShapeGroup" x="304.874332" y="45" width="948.125668" height="41" rx="5"></rect>
+            <text id="user" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica" font-size="28" font-weight="normal">
+                <tspan x="529.759057" y="74.00015" fill="#007B98">user</tspan>
+            </text>
+            <text id="email" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica" font-size="28" font-weight="normal">
+                <tspan x="912.31084" y="75.99995" fill="#007B98">email</tspan>
+            </text>
+            <text id="name" fill="#000000" sketch:type="MSTextLayer" font-family="Helvetica" font-size="28" font-weight="normal" sketch:alignment="right">
+                <tspan x="1140.95898" y="73.99985" fill="#007B98">name</tspan>
+            </text>
+            <rect id="Rectangle-2-Copy-2" stroke="#D2D3D4" fill="#FDFDFE" sketch:type="MSShapeGroup" x="304.874332" y="126" width="948.125668" height="41"></rect>
+            <text id="a7e78478-0a54-4949-9" fill="#007B98" sketch:type="MSTextLayer" font-family="Helvetica" font-size="24" font-weight="normal">
+                <tspan x="337.822955" y="114.9999">a7e78478-0a54-4949-90f3-14ec4cbea40c</tspan>
+            </text>
+            <text id="jbellis@datastax.com" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="840.64951" y="115.0001">jbellis@datastax.com</tspan>
+            </text>
+            <text id="Jonathan" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="1124.21045" y="115">Jonathan</tspan>
+            </text>
+            <text id="67657da3-4443-46ab-b60a-510a658fc7bb" fill="#007B98" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="336.506132" y="156">67657da3-4443-46ab-b60a-510a658fc7bb</tspan>
+            </text>
+            <text id="matt@datastax.com" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="846.948515" y="154">matt@datastax.com</tspan>
+            </text>
+            <text id="Matt" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.5" font-weight="normal">
+                <tspan x="1149.65472" y="156">Matt</tspan>
+            </text>
+            <path d="M1097.94594,47 L1097.94594,210.608398" id="Line-Copy" stroke="#D2D3D4" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <text id="3b1f62b1-386b-46e3-b" fill="#007B98" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="342.375131" y="197.9999">3b1f62b1-386b-46e3-b55d-00f1abbafb2b</tspan>
+            </text>
+            <text id="patrick@datastax.com" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="835.217554" y="196.0001">patrick@datastax.com</tspan>
+            </text>
+            <text id="Patrick" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica" font-size="23.8823529" font-weight="normal">
+                <tspan x="1136.62319" y="198">Patrick</tspan>
+            </text>
+            <path d="M800.713904,47 L800.713904,210.608398" id="Line" stroke="#D2D3D4" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <text fill="#007B98" sketch:type="MSTextLayer" font-family="Helvetica" font-size="32" font-weight="normal">
+                <tspan x="0" y="44">primary key</tspan>
+            </text>
+            <text id="Users" fill="#007B98" sketch:type="MSTextLayer" font-family="Helvetica" font-size="32" font-weight="normal">
+                <tspan x="316.600267" y="31.8671875">Users</tspan>
+            </text>
+        </g>
+        <path d="M172.5,36.5 L500.5,66.5" id="Line" stroke="#007B98" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M500.5,66.5 L490.018142,62.5287713 L489.471643,68.503831 L500.5,66.5 Z" stroke="#007B98" stroke-width="3" stroke-linecap="square"></path>
+    </g>
+</svg>

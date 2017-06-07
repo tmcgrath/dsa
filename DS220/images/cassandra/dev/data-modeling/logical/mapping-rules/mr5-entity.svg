@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1152px" height="455px" viewBox="0 0 1152 455" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>mr5-entity</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M215,221.363281 L167.481583,221.363281" id="Line-Copy-53" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M300,193.363281 L286.25,150.363281" id="Line-Copy-54" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M384.25,189.363281 L426.25,161.363281" id="Line-Copy-56" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M432,219.363281 L483,205.363281" id="Line-Copy-57" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M224,199.363281 L167.25,161.363281" id="Line-Copy-55" stroke="#B6BBB7" stroke-width="3" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <g id="entity_white-copy" sketch:type="MSLayerGroup" transform="translate(213.500000, 188.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <rect id="entity_white" sketch:type="MSShapeGroup" x="0.5" y="0.34749349" width="220" height="70"></rect>
+        </g>
+        <g id="attribute_white-copy-26" sketch:type="MSLayerGroup" transform="translate(3.500000, 186.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <ellipse id="attribute_white" sketch:type="MSShapeGroup" cx="82" cy="33.3474935" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <g id="attribute_white-copy-27" sketch:type="MSLayerGroup" transform="translate(204.500000, 92.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <ellipse id="attribute_white" sketch:type="MSShapeGroup" cx="82" cy="33.3474935" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <g id="attribute_white-copy-34" sketch:type="MSLayerGroup" transform="translate(382.500000, 103.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <ellipse id="attribute_white" sketch:type="MSShapeGroup" cx="82" cy="33.3474935" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <text id="id-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" text-decoration="underline" fill="#B94850">
+            <tspan x="78.665" y="222.863281">id</tspan>
+        </text>
+        <text id="last-name-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="247.985" y="130.863281">last name</tspan>
+        </text>
+        <g id="attribute_white-copy-28" sketch:type="MSLayerGroup" transform="translate(34.500000, 112.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <ellipse id="attribute_white" sketch:type="MSShapeGroup" cx="82" cy="33.3474935" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <text id="first-name-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="77.657" y="150.863281">first name</tspan>
+        </text>
+        <text id="email-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="441.661" y="140.863281">email</tspan>
+        </text>
+        <g id="attribute_white-copy-35" sketch:type="MSLayerGroup" transform="translate(478.500000, 171.863281)" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0">
+            <ellipse id="attribute_white" sketch:type="MSShapeGroup" cx="82" cy="33.3474935" rx="82" ry="32.4583333"></ellipse>
+        </g>
+        <text id="registration-date-copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="normal" sketch:alignment="middle" fill="#B94850">
+            <tspan x="493.66" y="208.863281">registration date</tspan>
+        </text>
+        <text id="User-Copy" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="22" font-weight="420" sketch:alignment="middle" fill="#1B7387">
+            <tspan x="295.861" y="229.863281">User</tspan>
+        </text>
+        <g id="videos" sketch:type="MSLayerGroup" transform="translate(816.000000, 1.863281)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="335" height="170"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="335" height="38"></rect>
+            <text id="users" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29">users</tspan>
+            </text>
+            <text id="user_id" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="71">user_id</tspan>
+                <tspan x="10" y="100">email</tspan>
+                <tspan x="10" y="129">first_name</tspan>
+                <tspan x="10" y="158">last_name</tspan>
+                <tspan x="10" y="187">registration_date</tspan>
+            </text>
+            <text id="K" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="276" y="71">K</tspan>
+                <tspan x="276" y="100"></tspan>
+                <tspan x="276" y="129"></tspan>
+                <tspan x="276" y="158"></tspan>
+                <tspan x="276" y="187"></tspan>
+                <tspan x="276" y="216"></tspan>
+                <tspan x="276" y="245"></tspan>
+                <tspan x="276" y="274"></tspan>
+            </text>
+        </g>
+        <g id="videos-copy" sketch:type="MSLayerGroup" transform="translate(816.000000, 245.863281)">
+            <rect id="Body" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="38" width="335" height="170"></rect>
+            <rect id="Header" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="0" width="335" height="38"></rect>
+            <text id="users_by_name" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal" fill="#1B7387">
+                <tspan x="10" y="29">users_by_name</tspan>
+            </text>
+            <text id="last_name" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="10" y="71">last_name</tspan>
+                <tspan x="10" y="100">first_name</tspan>
+                <tspan x="10" y="129">user_id</tspan>
+                <tspan x="10" y="158">email</tspan>
+                <tspan x="10" y="187">registration_date</tspan>
+            </text>
+            <text id="K" fill="#D1870E" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="normal">
+                <tspan x="276" y="71">K</tspan>
+                <tspan x="276" y="100">K</tspan>
+                <tspan x="276" y="129">C</tspan>
+                <tspan x="293.328" y="129" font-family="Lucida Grande">↑</tspan>
+                <tspan x="308.808469" y="129"></tspan>
+                <tspan x="276" y="158"></tspan>
+                <tspan x="276" y="187"></tspan>
+                <tspan x="276" y="216"></tspan>
+                <tspan x="276" y="245"></tspan>
+                <tspan x="276" y="274"></tspan>
+                <tspan x="276" y="303"></tspan>
+                <tspan x="276" y="332"></tspan>
+            </text>
+        </g>
+        <path d="M676,227.863281 L757,227.863281" id="Line-Copy" stroke="#979797" stroke-width="8" stroke-linecap="square" fill="#979797" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-decoration-1" d="M757,227.863281 L746.2,224.863281 L746.2,230.863281 L757,227.863281 Z" stroke="#979797" stroke-width="8" stroke-linecap="square" fill="#979797"></path>
+    </g>
+</svg>

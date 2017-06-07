@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1624px" height="248px" viewBox="0 0 1624 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>mapping-transition</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-1-Copy-6" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="695.001534" y="76.717774" width="235" height="90"></rect>
+        <rect id="Rectangle-1-Copy-5" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="1387.00153" y="76.717774" width="235" height="90"></rect>
+        <rect id="Rectangle-1" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="2" y="2" width="235" height="90"></rect>
+        <rect id="Rectangle-1-Copy" stroke="#989F9C" stroke-width="3" fill="#C4C8C7" sketch:type="MSShapeGroup" x="2" y="156" width="235" height="90"></rect>
+        <rect id="Rectangle-1-Copy-2" stroke="#5CA2B4" stroke-width="4" fill="#F9FDFF" sketch:type="MSShapeGroup" x="328" y="76.175781" width="273" height="90" rx="12"></rect>
+        <rect id="Rectangle-1-Copy-4" stroke="#B6BBB7" stroke-width="3" fill="#F0F0F0" sketch:type="MSShapeGroup" x="1022.00153" y="76.717774" width="273" height="90" rx="10"></rect>
+        <path d="M604.5,122.5 L686.001534,122.5" id="Line" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M686.001534,122.5 L675.201534,119.5 L675.201534,125.5 L686.001534,122.5 L686.001534,122.5 Z" id="Line-decoration-1" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M277.929037,137.5 L322.001534,137.5" id="Line-Copy-3" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M322.001534,137.5 L311.201534,134.5 L311.201534,140.5 L322.001534,137.5 L322.001534,137.5 Z" id="Line-Copy-3-decoration-1" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M933.501534,123.041993 L1015.00306,123.041993" id="Line-Copy-5" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M1015.00306,123.041993 L1004.20306,120.041993 L1004.20306,126.041993 L1015.00306,123.041993 L1015.00306,123.041993 Z" id="Line-Copy-5-decoration-1" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M1298.50153,123.041993 L1380.00306,123.041993" id="Line-Copy-2" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M1380.00306,123.041993 L1369.20306,120.041993 L1369.20306,126.041993 L1380.00306,123.041993 L1380.00306,123.041993 Z" id="Line-Copy-2-decoration-1" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M239.422852,202.435547 L276.505801,202.435547 L276.505802,136.571289" id="Path-6" stroke="#435B61" stroke-width="2" sketch:type="MSShapeGroup"></path>
+        <path d="M277.929037,110.717774 L322.001534,110.717774" id="Line-Copy-4" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup" transform="translate(299.965285, 111.217774) scale(1, -1) translate(-299.965285, -111.217774) "></path>
+        <path d="M322.001534,111.717774 L311.201534,108.717774 L311.201534,114.717774 L322.001534,111.717774 L322.001534,111.717774 Z" id="Line-Copy-4-decoration-1" stroke="#435B61" stroke-width="2" fill="#435B61" sketch:type="MSShapeGroup"></path>
+        <path d="M239.422852,112.683105 L276.505801,112.683105 L276.505802,47.053627" id="Path-6-Copy" stroke="#435B61" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(257.964327, 79.868366) scale(1, -1) translate(-257.964327, -79.868366) "></path>
+        <text id="Conceptual" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="420" sketch:alignment="middle" fill="#799AA0">
+            <tspan x="55.708" y="41.175781">Conceptual</tspan>
+            <tspan x="55.48" y="70.175781">Data Model</tspan>
+        </text>
+        <text id="Application" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="420" sketch:alignment="middle" fill="#799AA0">
+            <tspan x="55.312" y="192.503418">Application</tspan>
+            <tspan x="65.98" y="221.503418">Workflow</tspan>
+        </text>
+        <text id="Logical" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="420" sketch:alignment="middle" fill="#405255">
+            <tspan x="771.752" y="114.704">Logical</tspan>
+            <tspan x="747.98" y="143.704">Data Model</tspan>
+        </text>
+        <text id="Mapping-Conceptual" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="bold" sketch:alignment="middle" fill="#0B687D">
+            <tspan x="345.412" y="115.704">Mapping Conceptual</tspan>
+            <tspan x="407.86" y="144.704">to Logical</tspan>
+        </text>
+        <text id="Physical" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="420" sketch:alignment="middle" fill="#405255">
+            <tspan x="1112.02553" y="114.704">Physical</tspan>
+            <tspan x="1088.26553" y="143.704">Optimization</tspan>
+        </text>
+        <text id="Physical" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="24" font-weight="420" sketch:alignment="middle" fill="#405255">
+            <tspan x="1458.02553" y="115.704">Physical</tspan>
+            <tspan x="1440.48153" y="144.704">Data Model</tspan>
+        </text>
+    </g>
+</svg>

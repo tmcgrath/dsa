@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1822px" height="738px" viewBox="0 0 1822 738" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>shared-keyspace-query-rewriting-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-path-Copy-2" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="674" y="223" width="468" height="127.049" rx="22.5"></rect>
+        <text id="Application-" fill="#D1870D" filter="url(#filter-1)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="48" font-weight="normal" sketch:alignment="middle">
+            <tspan x="787.544" y="271">Application </tspan>
+            <tspan x="736.016" y="328">Query Rewriting</tspan>
+        </text>
+        <rect id="Rectangle-path-Copy-3" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="283" y="2" width="180" height="117.78"></rect>
+        <text id="Tenant-Copy" fill="#007B98" filter="url(#filter-2)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal" sketch:alignment="middle">
+            <tspan x="308.292" y="50">Tenant</tspan>
+            <tspan x="359.244" y="102">A</tspan>
+        </text>
+        <text id="Tenant" fill="#007B98" filter="url(#filter-3)" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="44" font-weight="normal" sketch:alignment="middle">
+            <tspan x="1383.292" y="48">Tenant</tspan>
+            <tspan x="1433.43" y="100">B</tspan>
+        </text>
+        <rect id="Rectangle-path-Copy-4" stroke="#404040" stroke-width="3" sketch:type="MSShapeGroup" x="1358" y="2" width="180" height="117.78"></rect>
+        <path d="M482.5,107.5 L656.5,215.5" id="Line-Copy" stroke="#007B98" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-Copy-decoration-1" d="M656.5,215.5 L648.905975,207.255561 L645.741798,212.353402 L656.5,215.5 Z" stroke="#007B98" stroke-width="7" stroke-linecap="square"></path>
+        <path d="M1339.5,108.5 L1152.5,215.5" id="Line" stroke="#007B98" stroke-width="7" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M1152.5,215.5 L1163.36386,212.740174 L1160.38402,207.53243 L1152.5,215.5 Z" stroke="#007B98" stroke-width="7" stroke-linecap="square"></path>
+    </g>
+</svg>
